@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BrowserApp</string>
+    <string name="hint_search">Search</string>
+    <string name="app_logo">BrowserApp</string>
+</resources>
