@@ -38,4 +38,11 @@
         android:text="All Tabs"
         android:drawableLeft="@drawable/all_tabs"
         />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:drawableLeft="@drawable/all_tabs"
+        />
 </LinearLayout>

@@ -18,56 +18,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal">
+        <include layout="@layout/activity_title_bar" />
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:contentDescription="@string/app_logo"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            android:src="@drawable/toys" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="321dp"
+            android:layout_height="89dp"
+            android:autofillHints=""
+            android:backgroundTint="#152D32"
+            android:ems="10"
+            android:hint="@string/hint_search"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="#8300CDFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Bookmarks"
+            android:textAllCaps="true"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="321dp"
-        android:layout_height="89dp"
-        android:autofillHints=""
-        android:backgroundTint="#152D32"
-        android:ems="10"
-        android:hint="@string/hint_search"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textColor="#8300CDFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/showOptionsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/arrow_left" />
 
-    <ViewStub
-        android:id="@+id/options_list_stub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:inflatedId="@+id/options_list"
-        android:layout="@layout/options_list"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:visibility="visible" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
