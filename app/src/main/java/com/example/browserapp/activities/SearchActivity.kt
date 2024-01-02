@@ -3,16 +3,21 @@ package com.example.browserapp.activities
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.browserapp.R
 import com.example.browserapp.adapters.SearchAdapter
 import com.example.browserapp.dataClasses.bingSearch.BingSearch
 import com.example.browserapp.endpoint
-import com.example.browserapp.getSearchWebResult
+import com.example.browserapp.getSearchWebResultAsync
+import com.example.browserapp.searchTerm
 import com.example.browserapp.subscriptionKey
 import com.google.gson.Gson
 import com.google.gson.JsonParser
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.InputStreamReader
 
 class SearchActivity : AppCompatActivity() {
@@ -25,11 +30,26 @@ class SearchActivity : AppCompatActivity() {
         rvSearchResult = findViewById(R.id.rvSearchResult)
         rvSearchResult.layoutManager = LinearLayoutManager(this)
         rvSearchResult.setHasFixedSize(true)
-        Log.d("TAGINN","SUB KEY = ${subscriptionKey}")
-        val webSearchValues = getSearchWebResult("gol gappay", subscriptionKey, endpoint)?.webPages?.value
 
-        Log.d("TAGINN", webSearchValues.toString())
-        rvSearchResult.adapter = SearchAdapter(webSearchValues)
+         Log.d("TAGINN", "SUB KEY = ${subscriptionKey}")
+
+        lifecycleScope.launch {
+            val webSearchValues = try {
+                getSearchWebResultAsync(searchTerm, subscriptionKey, endpoint)
+            } catch (e: Exception) {
+                Log.e("TAGINN", "Error fetching search results: ${e.message}")
+                null // Return null to indicate error
+            }
+
+            withContext(Dispatchers.Main) {
+                if (webSearchValues != null) {
+                    Log.d("TAGINN", webSearchValues.toString())
+                    rvSearchResult.adapter = SearchAdapter(webSearchValues.webPages?.value)
+                } else {
+                    // Handle error cases, e.g., display an error message
+                }
+            }
+        }
     }
 
     fun readJsonToBingSearch(): BingSearch {

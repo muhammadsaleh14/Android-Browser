@@ -23,6 +23,8 @@ class SearchAdapter(private val searchItems: List<BingSearch.WebPages.Value?>?) 
         // Bind data to the views in the item layout
 
         holder.bindImage(currentItem?.thumbnailUrl)
+        holder.snippet.text = currentItem?.snippet
+        holder.displayUrl.text = currentItem?.displayUrl
 
         // ... (bind other views as needed)
     }
