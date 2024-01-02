@@ -1,4 +1,4 @@
-package com.example.browserapp
+package com.example.browserapp.activities
 
 import android.os.Bundle
 import android.view.View
@@ -6,15 +6,15 @@ import android.view.ViewStub
 import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.example.browserapp.R
 
 // TODO: image not showing
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsButton)
+        val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
         val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
         val optionsList: View? = optionsListStub.inflate()
 
@@ -36,4 +36,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }

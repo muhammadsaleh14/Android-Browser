@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#C8C7C7"
     android:padding="5dp"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
 
     <LinearLayout
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center_horizontal">
-        <include layout="@layout/activity_title_bar" />
+        <include layout="@layout/title_bar" />
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
@@ -63,7 +63,16 @@
     </LinearLayout>
 
 
-
-
+    <ViewStub
+        android:id="@+id/options_list_stub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:inflatedId="@+id/options_list"
+        android:layout="@layout/options_list"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

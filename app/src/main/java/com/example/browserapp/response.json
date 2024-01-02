@@ -1,0 +1,1276 @@
+{
+  "_type": "SearchResponse",
+  "errors": [
+    {
+      "code": "InvalidAuthorization",
+      "subCode": "AuthorizationMissing",
+      "message": "Authorization is required.",
+      "moreDetails": "Subscription key is not recognized."
+    }
+  ],
+  "queryContext": {
+    "originalQuery": "gol gappay"
+  },
+  "webPages": {
+    "webSearchUrl": "https://www.bing.com/search?q\u003dgol+gappay",
+    "totalEstimatedMatches": 1440000,
+    "value": [
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.0",
+        "contractualRules": [
+          {
+            "_type": "ContractualRules/LicenseAttribution",
+            "targetPropertyName": "snippet",
+            "targetPropertyIndex": 0,
+            "mustBeCloseToContent": true,
+            "license": {
+              "name": "CC-BY-SA",
+              "url": "http://creativecommons.org/licenses/by-sa/3.0/"
+            },
+            "licenseNotice": "Text under CC-BY-SA license"
+          }
+        ],
+        "name": "Panipuri - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Panipuri",
+        "thumbnailUrl": "https://www.bing.com/th?id\u003dOIP.YWTsjQAVvYd-MRo5Of2T4AHaE7\u0026w\u003d80\u0026h\u003d80\u0026c\u003d1\u0026pid\u003d5.1",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://en.wikipedia.org/wiki/Panipuri",
+        "snippet": "Place: Meerut, Uttar Pradesh, India. Panipuri ( pānīpūrī ⓘ) [a] is a deep-fried breaded sphere filled with potato, onion, or chickpea. It is a common street food in the Indian subcontinent. It is often spiced with tamarind chutney, chili powder, or chaat masala. [2] [3] [4] A Bengali variant, fuchka, [b] uses spiced mashed potatoes as the ...",
+        "dateLastCrawled": "2023-12-30T04:10:00.0000000Z",
+        "primaryImageOfPage": {
+          "thumbnailUrl": "https://www.bing.com/th?id\u003dOIP.YWTsjQAVvYd-MRo5Of2T4AHaE7\u0026w\u003d80\u0026h\u003d80\u0026c\u003d1\u0026pid\u003d5.1",
+          "width": 80,
+          "height": 80,
+          "imageId": "OIP.YWTsjQAVvYd-MRo5Of2T4AHaE7"
+        },
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4767761937283670\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dBZTHabAdAHl4IKT24dL9hv39i8DC7rQp",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.1",
+        "name": "Gol Gappay Recipe in Urdu and English - Ammi Jaan Kitchen",
+        "url": "https://ammijaankitchen.com/gol-gappay-recipe/",
+        "thumbnailUrl": "https://www.bing.com/th?id\u003dOIP.RJ2y2z1_nM81izE44R4jPwHaEL\u0026w\u003d80\u0026h\u003d80\u0026c\u003d1\u0026pid\u003d5.1",
+        "datePublished": "2020-06-03T00:00:00.0000000",
+        "datePublishedDisplayText": "Jun 3, 2020",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://ammijaankitchen.com/gol-gappay-recipe",
+        "snippet": "Prepare Khatta Pani/ Imli Chatni. Take Tamarind pulp ½ cup in a bowl. Add Salt ½ tsp, Surk Mirch – Red chilli powder ½ tsp. Now add Chaat Masala ½ tsp in it. Mix it then add Kala Namak – Black Salt ½ tsp and Bhuna Safaid Zeera – Roasted Cumin Seed ½ tsp. Further, add Water to taste to make Khatta Pani.",
+        "dateLastCrawled": "2023-12-27T07:01:00.0000000Z",
+        "primaryImageOfPage": {
+          "thumbnailUrl": "https://www.bing.com/th?id\u003dOIP.RJ2y2z1_nM81izE44R4jPwHaEL\u0026w\u003d80\u0026h\u003d80\u0026c\u003d1\u0026pid\u003d5.1",
+          "width": 80,
+          "height": 80,
+          "imageId": "OIP.RJ2y2z1_nM81izE44R4jPwHaEL"
+        },
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4613628437266819\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003djX4hd3D94jkyCRm_nOkdTEVVYPY3hNnY",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.2",
+        "name": "Gol Gappe|Official Trailer|17th Feb 2023|Binnu D|Rajat B|B N Sharma ...",
+        "url": "https://www.youtube.com/watch?v\u003dWGFcLkcoIYI",
+        "datePublished": "2023-02-01T00:00:00.0000000",
+        "datePublishedDisplayText": "Feb 1, 2023",
+        "video": {
+          "webSearchUrl": "https://www.bing.com/videos/search?q\u003dgol%20gappay\u0026view\u003ddetail\u0026mid\u003d1C008E65333E8717C6AF1C008E65333E8717C6AF",
+          "thumbnailUrl": "https://www.bing.com/th?id\u003dOVP.DcddwaA_S8lP16ehHB9ZhQEsDh\u0026w\u003d128\u0026h\u003d72\u0026c\u003d4\u0026rs\u003d1\u0026pid\u003d6.1",
+          "duration": "2:31",
+          "videoId": "1C008E65333E8717C6AF1C008E65333E8717C6AF"
+        },
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dWGFcLkcoIYI",
+        "snippet": "𝑺𝒖𝒃𝒔𝒄𝒓𝒊𝒃𝒆 𝒕𝒐 𝑾𝒂𝒕𝒄𝒉 𝒕𝒉𝒆 𝑩𝑬𝑺𝑻 𝑶𝑭 𝑴𝑶𝑽𝑰𝑬𝑺 𝒉𝒆𝒓𝒆 : https://bit.ly ...",
+        "dateLastCrawled": "2023-12-27T16:02:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4898547987062295\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dYooJo1OJQu6zmiq9wz4ih-Jz523ydYFD",
+        "language": "en",
+        "isNavigational": false,
+        "richFacts": [
+          {
+            "label": {
+              "text": "Video Duration"
+            },
+            "items": [
+              {
+                "text": "3 min"
+              }
+            ],
+            "hint": {
+              "text": "MEDIA:DURATION"
+            }
+          },
+          {
+            "label": {
+              "text": "Author"
+            },
+            "items": [
+              {
+                "text": "Zee Studios"
+              }
+            ],
+            "hint": {
+              "text": "BASE:AUTHOR"
+            }
+          },
+          {
+            "label": {
+              "text": "Views"
+            },
+            "items": [
+              {
+                "text": "3882158"
+              }
+            ],
+            "hint": {
+              "text": "BASE:VIEWSCOUNT"
+            }
+          }
+        ]
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.3",
+        "name": "A Complete Guide For making Gol Gappa at Home Step by Step By ... - YouTube",
+        "url": "https://www.youtube.com/watch?v\u003dHIXbFj1z9Lk",
+        "datePublished": "2021-12-16T00:00:00.0000000",
+        "datePublishedDisplayText": "Dec 16, 2021",
+        "video": {
+          "webSearchUrl": "https://www.bing.com/videos/search?q\u003dgol%20gappay\u0026view\u003ddetail\u0026mid\u003d0615DA81CA2B06D68F490615DA81CA2B06D68F49",
+          "thumbnailUrl": "https://www.bing.com/th?id\u003dOVP.AiKdDo7UkeD2WYPHJUNlCQEsDh\u0026w\u003d128\u0026h\u003d72\u0026c\u003d4\u0026rs\u003d1\u0026pid\u003d6.1",
+          "duration": "11:06",
+          "videoId": "0615DA81CA2B06D68F490615DA81CA2B06D68F49"
+        },
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dHIXbFj1z9Lk",
+        "snippet": "today you\u0027ll learn how to make A Complete Guide For making Gol Gappa at Home Step by Step By Chef Hafsa | Gol Gappa Recipe with this recipe you\u0027ll be able to...",
+        "dateLastCrawled": "2023-12-24T21:17:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4582648847732632\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dzkS4sWwIbo4j8qHsaB6gedO8sD14tcTa",
+        "language": "en",
+        "isNavigational": false,
+        "richFacts": [
+          {
+            "label": {
+              "text": "Video Duration"
+            },
+            "items": [
+              {
+                "text": "11 min"
+              }
+            ],
+            "hint": {
+              "text": "MEDIA:DURATION"
+            }
+          },
+          {
+            "label": {
+              "text": "Author"
+            },
+            "items": [
+              {
+                "text": "Hafsa\u0027s Kitchen"
+              }
+            ],
+            "hint": {
+              "text": "BASE:AUTHOR"
+            }
+          },
+          {
+            "label": {
+              "text": "Views"
+            },
+            "items": [
+              {
+                "text": "9054630"
+              }
+            ],
+            "hint": {
+              "text": "BASE:VIEWSCOUNT"
+            }
+          }
+        ]
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.4",
+        "name": "Homemade Gol Gappay Recipe | Step by Step Recipe",
+        "url": "https://www.therecipespk.com/gol-gappay/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.therecipespk.com/gol-gappay",
+        "snippet": "Gol gappe is a combination of sweet and sour tastes. Gol Gappay are a little tricky to make at home, maybe you cannot make them on the first attempt. But don’t be disheartened and try once more and finally, you will succeed. This is my proven Gol Gapay recipe and I have made it several times; with 1 cup flour, you can make 20-25 gol gapay.",
+        "dateLastCrawled": "2023-12-26T07:10:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4707129881551156\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dXciVsM2twClcjk9eC2c8w6sga4lU5_0_",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.5",
+        "name": "Gol gappay – the well-rounded snack - Pakistan - DAWN.COM",
+        "url": "https://www.dawn.com/news/1203977",
+        "datePublished": "2015-08-31T00:00:00.0000000",
+        "datePublishedDisplayText": "Aug 31, 2015",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.dawn.com/news/1203977",
+        "snippet": "Gol gappay are a favourite among both young and old.—. Photos by Khurram Amin. RAWALPINDI: Crispy round papri cups, boiled chickpeas, cubed potatoes and spicy tamarind water; yes, we’re ...",
+        "dateLastCrawled": "2023-12-06T09:59:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4746703706077239\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003diaqGt9QWQkRujSOpPuHKbw2GcUbxU7bg",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.6",
+        "name": "Gol Gappay Recipe - Food.com",
+        "url": "https://www.food.com/recipe/gol-gappay-123810",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.food.com/recipe/gol-gappay-123810",
+        "snippet": "*Directions for Gol gappay. Mix the white flour and semolina together and knead into a hard dough. Set aside. Flatten into a very thin sheet and cut into 2\" diameter circles with a cookie cutter. Deep fry in cooking oil until golden. *Directions for Dip(pani). Combine all of the ingredients for the dip together in a grinder and grind well.",
+        "dateLastCrawled": "2023-11-17T04:16:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4809998633220809\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dEIC2SfT63RyLVc3fb5CoLEIQqcKvT103",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.7",
+        "name": "Best Golgappa Recipe (Atta \u0026 Suji) Step By Step - Whiskaffair",
+        "url": "https://www.whiskaffair.com/golgappa/",
+        "datePublished": "2018-08-28T00:00:00.0000000",
+        "datePublishedDisplayText": "Aug 28, 2018",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.whiskaffair.com/golgappa",
+        "snippet": "How to make Suji Golgappa Step By Step. Mix sooji, maida, and salt in a bowl. Add warm water and knead to make dough of medium-soft texture. Cover the dough with a damp cloth and keep aside for 15 minutes. Knead the dough once again for a minute and divide it into 4 equal parts.",
+        "dateLastCrawled": "2023-12-29T03:04:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4942988008758183\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003d4elCBsmoMKDHz5DvZR0USw8KF2Mw2UQz",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.8",
+        "name": "GOL GAPAPY Recipe | Original Pani Puri Recipe - YouTube",
+        "url": "https://www.youtube.com/watch?v\u003ddnLsTHChfd0",
+        "datePublished": "2020-04-18T00:00:00.0000000",
+        "datePublishedDisplayText": "Apr 18, 2020",
+        "video": {
+          "webSearchUrl": "https://www.bing.com/videos/search?q\u003dgol%20gappay\u0026view\u003ddetail\u0026mid\u003d4AB668201DCCFE07C1324AB668201DCCFE07C132",
+          "thumbnailUrl": "https://www.bing.com/th?id\u003dOVP.YunZfHovaAeC3yb_gpQGggHgFo\u0026w\u003d128\u0026h\u003d72\u0026c\u003d4\u0026rs\u003d1\u0026pid\u003d6.1",
+          "duration": "23:42",
+          "videoId": "4AB668201DCCFE07C1324AB668201DCCFE07C132"
+        },
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003ddnLsTHChfd0",
+        "snippet": "GOL GAPAPY Recipe | Complete and Original Pani Puri Recipe | Commercial Pani Puri at home | By BaBa Food RRCLink⬇⬇گول کپوں کی مکمل ریسپی،پانی،چٹنیاں، اور ...",
+        "dateLastCrawled": "2023-11-05T12:42:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4748198361442818\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003d5_iYxYL5I7hvOw4DMiHXj0C7qBIAzK4R",
+        "language": "en",
+        "isNavigational": false,
+        "richFacts": [
+          {
+            "label": {
+              "text": "Video Duration"
+            },
+            "items": [
+              {
+                "text": "24 min"
+              }
+            ],
+            "hint": {
+              "text": "MEDIA:DURATION"
+            }
+          },
+          {
+            "label": {
+              "text": "Author"
+            },
+            "items": [
+              {
+                "text": "BaBa Food RRC"
+              }
+            ],
+            "hint": {
+              "text": "BASE:AUTHOR"
+            }
+          },
+          {
+            "label": {
+              "text": "Views"
+            },
+            "items": [
+              {
+                "text": "1994680"
+              }
+            ],
+            "hint": {
+              "text": "BASE:VIEWSCOUNT"
+            }
+          }
+        ]
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.9",
+        "name": "Gol Gappay And Panipuri Recipes in Urdu - UrduPoint",
+        "url": "https://www.urdupoint.com/cooking/recipes/gol-gappay-and-panipuri-228.html",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.urdupoint.com/cooking/recipes/gol-gappay-and-panipuri-228.html",
+        "snippet": "Gol gappay recipe. Gol gappay or pani puri is the most favorite and unique dish of subcontinent region.Urdu Point facilitate its users by giving gol gappay recipe.To avoid any language barrier, Urdu Point gives gol gappay recipe in Urdu.Urdu Point also provide accurate gol gappay banane ka tarika in Urdu.Users wants to know gol gappay recipe in English.",
+        "dateLastCrawled": "2023-12-25T17:07:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4795593319121675\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dYfoRo6CIXkOEyKu53MiUIWL4M37NPdAK",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.10",
+        "name": "Street Style Gol Gappay – Food Fusion",
+        "url": "https://www.foodfusion.com/recipe/street-style-gol-gappay/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.foodfusion.com/recipe/street-style-gol-gappay",
+        "snippet": "Prepare Gol Gappay Puri: In a bowl,add semolina,all-purpose flour and mix well. Gradually add water \u0026 knead until semi hard dough is formed,cover with damp cloth \u0026 let it rest for 30 minutes. Knead dough again for 6-8 minutes then divide the dough into four parts. Take one part and make a ball,grease working surface with oil \u0026 roll out thinly ...",
+        "dateLastCrawled": "2023-12-29T19:12:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d5046586903514339\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dzJmEGZTb7iH27GV3XiHpv8Rr_QDppJ58",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.11",
+        "name": "Top 15 Gol Gappa Places In Lahore Every Foodie Must Try",
+        "url": "https://lovinpakistan.com/gol-gappa-places-in-lahore/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://lovinpakistan.com/gol-gappa-places-in-lahore",
+        "snippet": "Molvi Sahab Gol Gappay. One of the best and most famous gol gappa places in Lahore with a fantastic taste, and they serve the best crispy and mouth-watering Pani Puris. In addition, this place has ample space for families, and their service is fast and helpful. For every street food lover, It is a must-go gol gappa place in Lahore.",
+        "dateLastCrawled": "2023-12-28T17:27:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4818648710521122\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dsTb-Ls01d5-PRL6eff4eQficRKxa6e38",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.12",
+        "name": "850+ Golgappa Stock Photos, Pictures \u0026 Royalty-Free Images - iStock",
+        "url": "https://www.istockphoto.com/photos/golgappa",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.istockphoto.com/photos/golgappa",
+        "snippet": "Pani puri or gol gappay with dahi, chnnay, spicy water, chutney and sauceserved dish isolated on background top view of indian spices food Pani puri or gol gappay with dahi, chnnay, spicy water, chutney and sauceserved dish isolated on background top view of indian spices food golgappa stock pictures, royalty-free photos \u0026 images",
+        "dateLastCrawled": "2023-12-22T04:22:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4750435890103214\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003d-rYGWV6A7GBwP8wgFaYvugtAY9lHQNs6",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.13",
+        "name": "Pani Puri Recipe | Gol Gappa Recipe - By Food Fusion - YouTube",
+        "url": "https://www.youtube.com/watch?v\u003dY1dbWOQkL-A",
+        "datePublished": "2017-01-02T00:00:00.0000000",
+        "datePublishedDisplayText": "Jan 2, 2017",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dY1dbWOQkL-A",
+        "snippet": "The best Pani Puri Recipe you will find or if you want to call it gol gappay along with khatta pani \u0026 khatti meethi chatni. Now learn how to make them at hom...",
+        "dateLastCrawled": "2023-11-18T00:28:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4510875637585758\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dCMoZt9_y3rIDTxkVttpKMNxzbRd9BmYB",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.14",
+        "name": "Pani Puri / Gol Gappay – Food Fusion",
+        "url": "https://www.foodfusion.com/recipe/pani-puri-gol-gappay/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.foodfusion.com/recipe/pani-puri-gol-gappay",
+        "snippet": "In bowl, add semolina,all-purpose flour,salt and water,mix and knead well to form a dough. Cover with damp cloth for 30 minutes. Knead again until smooth (5-6 mins) and divide the dough into two balls. Grease working surface with oil and roll the ball with the help of rolling pin into a flat round circle.",
+        "dateLastCrawled": "2023-12-27T03:41:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4934544108891676\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dW_UenLUi4c3D-LOlJWHxZvJNwlJfXi4m",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.15",
+        "name": "10 Best Street Food in Lahore [Updated 2024] - Pakistani Healthy Recipes",
+        "url": "https://www.pakistanihealthyrecipes.com/best-street-food-in-lahore/",
+        "datePublished": "2023-06-17T00:00:00.0000000",
+        "datePublishedDisplayText": "Jun 17, 2023",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.pakistanihealthyrecipes.com/best-street-food-in-lahore",
+        "snippet": "Tufail Bhai Gol Gappay is a must-visit spot for an extraordinary street food experience in Lahore, especially if you’re a fan of Gol Gappay (Pani Puri). What sets this place apart is the remarkable variety of flavours infused into the Gol Gappa water. It’s truly astonishing how they transform a single base into four distinct and delicious ...",
+        "dateLastCrawled": "2023-12-29T23:29:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4783623106199649\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003doEMlp5JqOvx_Vw78ASZwxlsqR8kfhIt8",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.16",
+        "name": "Islamabad Best Gol Gappay - Vouch Blog",
+        "url": "https://www.vouch365.com/blog/best-gol-gappay-in-islamabad/",
+        "datePublished": "2023-09-25T00:00:00.0000000",
+        "datePublishedDisplayText": "Sep 25, 2023",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.vouch365.com/blog/best-gol-gappay-in-islamabad",
+        "snippet": "Gol Gappay, also known as paani puri or puchka, is a popular street food snack people across Pakistan love. These small crispy puris are filled with a tangy mixture of chickpeas, potatoes, and flavored water, creating flavor in every bite. In Islamabad, Gol Gappay holds a special place in the hearts of food enthusiasts and locals, making it an ...",
+        "dateLastCrawled": "2023-12-27T13:47:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4653146435111380\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dAuHIxYLv2DBEAfdb7cAh2lMxt8RDT9bI",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.17",
+        "name": "Gol Gappay Pakistani recipe in Urdu || How to make Pani Puri in ...",
+        "url": "https://www.youtube.com/watch?v\u003dwN3b4iHeW7Y",
+        "datePublished": "2017-07-09T00:00:00.0000000",
+        "datePublishedDisplayText": "Jul 9, 2017",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dwN3b4iHeW7Y",
+        "snippet": "gol gappay pakistani recipe in urdu . gol gappay banane ka tarika in urdu . Gol Gappay Pakistani recipe in Urdu || How to make Pani Puri in Pakistan / India...",
+        "dateLastCrawled": "2023-08-01T02:24:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4587437724011934\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dBsVbHFMoLY4mICiYk7a3GfE3a8691Yz6",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.18",
+        "name": "280+ Golgappe Stock Photos, Pictures \u0026 Royalty-Free Images - iStock",
+        "url": "https://www.istockphoto.com/photos/golgappe",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.istockphoto.com/photos/golgappe",
+        "snippet": "pani puri or gol gappay with raita, sweet sauce and spicy water served in dish isolated on table top view of indian and pakistani food pani puri or gol gappay with raita, sweet sauce and spicy water served in dish isolated on table top view of indian and pakistani food golgappe stock pictures, royalty-free photos \u0026 images",
+        "dateLastCrawled": "2023-12-28T14:10:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4571262739547436\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dmOi_rxOZCFsexVSKT4GcY04hW6hWULGG",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.19",
+        "name": "Golgappe (2023) - IMDb",
+        "url": "https://www.imdb.com/title/tt11912042/",
+        "datePublished": "2023-02-17T00:00:00.0000000",
+        "datePublishedDisplayText": "Feb 17, 2023",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.imdb.com/title/tt11912042",
+        "snippet": "Golgappe: Directed by Smeep Kang, Nasir Zaman. With Rajat Bedi, Bindu Bhullar, Binnu Dhillon, Ihana Dhillon. Three friends Jaggi, Pali and Nathuram run a fast-food outlet. Don of Punjab, Bagga kidnaps Dr. Chawla\u0027s wife and demands 10 lacs for compensation. A telecommunication mix up occurs and the call gets diverted to the Golgappe outlet.",
+        "dateLastCrawled": "2023-12-26T03:17:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4775621722586985\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dwxcEEpUDiC57s7ztUp6rdkZAy_pe0XKu",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.20",
+        "name": "Gol Gappay Recipe | Shireen Anwar | Masala TV",
+        "url": "https://www.masala.tv/gol-gappay-recipe/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.masala.tv/gol-gappay-recipe",
+        "snippet": "Methods. In a bowl mix together Semolina 1 cup, Flour ½ cup. Mash ki daal ka aata 2 tbsp knead with club soda to form a stiff dough. Keep aside for 30 minutes, knead once again, make marbles size balls with little oil on your hands. Roll into puri, keep between two layers of wet cloth, roll all of them.",
+        "dateLastCrawled": "2023-12-21T19:17:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4677447358423806\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003diz81tP6xtChPDo0Utwjp_oP9l2i5XgNt",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.21",
+        "name": "Panipuri Maker In Cooking Game - Apps on Google Play",
+        "url": "https://play.google.com/store/apps/details?id\u003dcom.babyloft.panipuri.maker.cooking.golgappas.chef.make",
+        "datePublished": "2023-02-24T00:00:00.0000000",
+        "datePublishedDisplayText": "Feb 24, 2023",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://play.google.com/store/apps/details?id\u003dcom.babyloft.panipuri.maker.cooking...",
+        "snippet": "• Make Gol Gappay and Panipuri • Fun Cooking Game of Delicious Gol Gappay • A New Kitchen Adventure Cooking Game A brilliant movie time snack for girls. Not only girls but little boys also love this tasty and powerful panipuri snacks from South Asia region, Australia and US. There are lots of ingredients used in panipuri and golgappas ...",
+        "dateLastCrawled": "2023-12-11T01:21:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4795352805825244\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dKG2dDFroHc-ErNBlxvceLOVXQ7k5_WY8",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.22",
+        "name": "Gol Gappay Recipe in Urdu | Golgappa recipe in urdu | Gol Gappay Banane ...",
+        "url": "https://kfoods.com/recipes/gol-gappay_urid34",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://kfoods.com/recipes/gol-gappay_urid34",
+        "snippet": "Gol gappay recipe is served with its special chutney, boiled chickpeas, boiled potatoes and enjoyed. Access the most desirable recipes online posted on this page. You can prepare Gol Gappayonline along with the required ingredients and method so you can note them and prepare it with ease. Gol gappay is prepared and loved by every individual in Pakistan especially they are very popular among ...",
+        "dateLastCrawled": "2023-11-10T13:28:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4774084115309023\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dtR578u_L8eB7AKynbr-DIlC4yYphGVQ4",
+        "language": "ur",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.23",
+        "name": "Gol Gappay at Southall | Delicious Food at Ealing London | street food ...",
+        "url": "https://www.youtube.com/watch?v\u003dl8aQjHTrG2I",
+        "datePublished": "2021-11-27T00:00:00.0000000",
+        "datePublishedDisplayText": "Nov 27, 2021",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dl8aQjHTrG2I",
+        "snippet": "Gol Gappay at Southall | Delicious Food at Ealing London | street food london | Haris Food Travel\u0027\u0027\u0027\u0027\u0027...",
+        "dateLastCrawled": "2023-11-26T21:27:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4576665949905080\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dUDqw2FAlP3AhOh9H7108jVUDA49I5crX",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.24",
+        "name": "11 Best Street Food in Karachi - Pakistan - Pakistan Travel Blog",
+        "url": "https://www.pakistantravelblog.com/11-best-street-food-in-karachi-pakistan/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.pakistantravelblog.com/11-best-street-food-in-karachi-pakistan",
+        "snippet": "Gol gappay is a popular street food in karachi. Don’t miss out on Karachi’s famous street chaat and gol gappas. The entire subcontinent is famous for its street foods, particularly the spicy kind. Take, for instance, chaat. A savoury snack made by mixing fried dough, spices, potatoes and served in many varieties. Another important snack ...",
+        "dateLastCrawled": "2023-12-25T17:35:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d5057483108778501\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dbzSWCNMw50n74LibTR9bZqUd0LfRkI-i",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.25",
+        "name": "22 Most Popular Pakistani Foods You Should Try - Nomad Paradise",
+        "url": "https://nomadparadise.com/pakistani-food/",
+        "datePublished": "2022-11-28T00:00:00.0000000",
+        "datePublishedDisplayText": "Nov 28, 2022",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://nomadparadise.com/pakistani-food",
+        "snippet": "Gol gappay are circular crisps with a broken shell, stuffed with goodness. To maximize the flavor, Pakistanis fill each gol gappay with sauce, dip it in chili water, and crunch away. These popular street foods snacks can be found at street vendor stalls, fairs, festivals, and weddings. They are a must-try Pakistani food in regions across the ...",
+        "dateLastCrawled": "2023-12-27T23:16:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4605566646354808\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003d3D2tW5uScYEuXvvFh8f2qpMnvty7yewK",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.26",
+        "name": "Gol gappa | food | Britannica",
+        "url": "https://www.britannica.com/topic/gol-gappa",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.britannica.com/topic/gol-gappa",
+        "snippet": "Gol gappa (also known as pani puri) is a popular bite-size chaat consisting of a hollow, crispy-fried puffed ball that is filled with potato, chickpeas, onions, spices, and flavoured water, usually tamarind or mint, and popped into one’s mouth whole. Many types of chaat are…. Read More. Other articles where gol gappa is discussed: chaat ...",
+        "dateLastCrawled": "2023-12-26T07:20:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4738831037635603\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dvcwSwCwxrPZq-JR9WzpBiQmPfcofvfCf",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.27",
+        "name": "Gol Gappay Recipe - Pani Puri recipe - Naush Kitchen Routine",
+        "url": "https://www.naushkitchenroutine.com/gol-gappay-recipe-pani-puri-recipe/",
+        "datePublished": "2020-07-09T00:00:00.0000000",
+        "datePublishedDisplayText": "Jul 9, 2020",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.naushkitchenroutine.com/gol-gappay-recipe-pani-puri-recipe",
+        "snippet": "Gol Guppay/Pani puri. Mix semolina, all-purpose flour, wheat flour and salt. Add half cup luke warm water and start mixing. Add more water as needed. Make a soft dough like play dough. Do not over mix otherwise the dough will become tough. Cover with a cling wrap and keep aside for 15 minutes.",
+        "dateLastCrawled": "2023-12-14T10:39:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4607112971358625\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dLKaoLaE2xbcvEp3kUznwULVgc_HWYhae",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.28",
+        "name": "280+ Gol Gappe Stock Photos, Pictures \u0026 Royalty-Free Images - iStock",
+        "url": "https://www.istockphoto.com/photos/gol-gappe",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.istockphoto.com/photos/gol-gappe",
+        "snippet": "pani puri or gol gappay with raita, sweet sauce and spicy water served in dish isolated on table top view of indian and pakistani food pani puri or gol gappay with raita, sweet sauce and spicy water served in dish isolated on table top view of indian and pakistani food gol gappe stock pictures, royalty-free photos \u0026 images",
+        "dateLastCrawled": "2023-12-30T00:08:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4896933072994472\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dJC8fqI9NrYmy3gj0DYx95-Zx1yCmfXul",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.29",
+        "name": "Perfect Gol Gappay Pani Puri 100% Phuli Recipe in Urdu Hindi - RKK",
+        "url": "https://www.youtube.com/watch?v\u003dnynwOuLAEsM",
+        "datePublished": "2019-02-22T00:00:00.0000000",
+        "datePublishedDisplayText": "Feb 22, 2019",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dnynwOuLAEsM",
+        "snippet": "Perfect Gol Gapay Pani Puri 100% Phuli Recipe in Urdu Hindi - RKKYe hai meri recipe pani puri ya phir gol gapon kay layen perfect results 100% phuli. Umeed h...",
+        "dateLastCrawled": "2023-08-21T20:20:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4823970167067738\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dGwwHBfJe7ceRsE5D2R4gffoWFtQjInFH",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.30",
+        "name": "Golgappe (2023) Full Punjabi Movie - video Dailymotion",
+        "url": "https://www.dailymotion.com/video/x8j7fsb",
+        "datePublished": "2023-03-18T00:00:00.0000000",
+        "datePublishedDisplayText": "Mar 18, 2023",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.dailymotion.com/video/x8j7fsb",
+        "snippet": "Watch the hilarious comedy of Golgappe (2023), a full Punjabi movie starring Binnu Dhillon, Rajat Bedi and Navneet Kaur Dhillon. Enjoy the fun-filled story of three friends who embark on a crazy adventure to find their true love.",
+        "dateLastCrawled": "2023-12-30T00:30:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4569330150882634\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dKLuuk3NLC8od5FMz5vzCeZWnd_SwEw-P",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.31",
+        "name": "Where to get best gol matol gol gappay (گول گپے) in Karachi?",
+        "url": "https://alladitta.com/where-to-get-best-gol-gappay-karachirachi/",
+        "datePublished": "2021-01-25T00:00:00.0000000",
+        "datePublishedDisplayText": "Jan 25, 2021",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://alladitta.com/where-to-get-best-gol-gappay-karachirachi",
+        "snippet": "Gol gappay are small airy balls made of flour and semolina rolled out into very small puris (roti, bread) and deep fried to a golden shade. And then cooled and stored in air tight containers. The puri hollow puri is then slightly crushed from the top and filled with the yummy ingredients, and the recipe changes from places to places and bring ...",
+        "dateLastCrawled": "2023-12-27T08:17:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d5066154785403677\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dMmuVfm05mKr_0nwg2Ve5_pjfhb1nvvI1",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.32",
+        "name": "Gol Gappay Easy Recipe | گول گپے بنانے کا مکمل طریقہ | Pani Puri | BaBa ...",
+        "url": "https://www.youtube.com/watch?v\u003dLFK2AMYoqpk",
+        "datePublished": "2021-07-16T00:00:00.0000000",
+        "datePublishedDisplayText": "Jul 16, 2021",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dLFK2AMYoqpk",
+        "snippet": "Asslam-o-Alaikum Dosto Aj me ap k lye laya hun Easy Golgappa Recipe.golgappa | pani puri recipe | golgappe | pani puri recipe video | puri recipe | perfect p...",
+        "dateLastCrawled": "2023-07-23T18:14:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4886960154152495\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003diydNucrYdV6uVRi9jIl3VAh-JO29roWv",
+        "language": "ur",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.33",
+        "name": "Gol Gappay with Chana Chaat \u0026 Sev - Fauzia’s Kitchen Fun",
+        "url": "https://fauziaskitchenfun.com/recipe/snacks-bites/gol-gappay-with-chana-chaat-sev/",
+        "datePublished": "2012-04-20T00:00:00.0000000",
+        "datePublishedDisplayText": "Apr 20, 2012",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://fauziaskitchenfun.com/recipe/snacks-bites/gol-gappay-with-chana-chaat-sev",
+        "snippet": "First, prepare the chaat. Mix together all the channa chaat ingredients in a bowl. Taste and adjust flavours according to your preference. The result will look like this: Chana Chaat. Here is my tamarind sauce recipe: Sweet Tamarind. Next, prepare the pooris/puris. Mix all the poori ingredients together and knead with water to make a firm dough.",
+        "dateLastCrawled": "2023-12-14T01:52:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4514320199608362\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dWwlwS7CuIF0E4EkI4qSx-vaRP-mepYsv",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.34",
+        "name": "Golgappa recipe | panipuri recipe - Bless My Food By Payal",
+        "url": "https://blessmyfoodbypayal.com/golgappa-recipe-panipuri-recipe-panipuri-filling-recipe-easy-puchka-recipe/",
+        "datePublished": "2020-04-22T00:00:00.0000000",
+        "datePublishedDisplayText": "Apr 22, 2020",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://blessmyfoodbypayal.com/golgappa-recipe-panipuri-recipe-panipuri-filling-recipe...",
+        "snippet": "Golgappa or gol gappay is called in northern part of india especially Delhi, Punjab and our city jammu. Panipuri in maharashtra, Paani patashi in Haryana, Fulki in Madhya Pradesh and Pani ke batashe in Uttar Pradesh. Bihar, Jharkhand \u0026 Bengal calls it Puchka/phuchka.",
+        "dateLastCrawled": "2023-12-25T07:08:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4741442380066530\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dnoQ6YQJaqHRsKN9CVdeJKHl5bFCj3c6n",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.35",
+        "name": "Celebrating Pani Puri Doodle - Google Doodles",
+        "url": "https://doodles.google/doodle/celebrating-pani-puri/",
+        "datePublished": "2023-07-12T00:00:00.0000000",
+        "datePublishedDisplayText": "Jul 12, 2023",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://doodles.google/doodle/celebrating-pani-puri",
+        "snippet": "This Doodle’s Key Themes. Food and Drink Reoccuring Doodle Characters. Explore a Random Theme. This interactive game Doodle celebrates pani puri — a popular South Asian street food made of a crispy shell stuffed with potatoes, chickpeas, spices, or chilis and flavoured waters. The Story.",
+        "dateLastCrawled": "2023-12-30T19:14:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4571215644277245\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003df0yJhTlOVfcev752l49yKGdxlIbhSn0g",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.36",
+        "name": "Gol Gappay Recipe by SooperChef - YouTube",
+        "url": "https://www.youtube.com/watch?v\u003dJLQ-MP8VjEo",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dJLQ-MP8VjEo",
+        "snippet": "Wonderful Gol gappay Recipe to try at home. Do share your experience.#GolGappayRecipe #GolGappay #SooperChefIngredients:1/2 cup Semolina1/2 cum Maida1 cup Fl...",
+        "dateLastCrawled": "2023-03-25T23:22:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d5054790296670947\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dFNtSsQ21mpL6pzOmEpPU_s5eu0UMzkz_",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.37",
+        "name": "GOL GAPPAY | MALKOO Ft. AK | NEW PUNJABI SONG | LATEST SONG 2021",
+        "url": "https://www.youtube.com/watch?v\u003dgxfHIws6Ea8",
+        "datePublished": "2021-03-18T00:00:00.0000000",
+        "datePublishedDisplayText": "Mar 18, 2021",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dgxfHIws6Ea8",
+        "snippet": "Malkoo Studio presenting a brand new Super Hit Song \" GOL GAPPAY\" this is a very fresh idea full of fun , jolt and ofcourse punjabi music.Hello Friends ...",
+        "dateLastCrawled": "2023-10-18T23:56:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4835450614991393\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dW0GZjEt4oUOW6O_kPQ-VqAqiOXuzWiIu",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.38",
+        "name": "10 Mouthwatering and Delicious Pakistani Snacks - TravelWL",
+        "url": "https://travelswl.com/delicious-pakistani-snacks/",
+        "datePublished": "2022-01-24T00:00:00.0000000",
+        "datePublishedDisplayText": "Jan 24, 2022",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://travelswl.com/delicious-pakistani-snacks",
+        "snippet": "Gol Gappay is one of the most popular street snacks found in not only Pakistan but other Asian countries as well. These mouthwatering Pakistani treats are made with fried dough filled inside with chickpeas and topped with different types of chutneys, tamarind sauce etc. You can find gol gappay being sold at every corner on the streets of big ...",
+        "dateLastCrawled": "2023-12-29T16:48:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4751904768131764\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dx2G1qWbFRaJw6silNe1kquKBfMBUuZ0x",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.39",
+        "name": "5 Spots for the Best Chai and Snacks in Islamabad You Just Can’t Ignore",
+        "url": "https://www.foodnerd.pk/blogs/5-spots-for-the-best-chai-amp-snacks-in-islamabad-you-just-can-t-ignore",
+        "datePublished": "2023-01-22T00:00:00.0000000",
+        "datePublishedDisplayText": "Jan 22, 2023",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.foodnerd.pk/blogs/5-spots-for-the-best-chai-amp-snacks-in-islamabad-you...",
+        "snippet": "Quetta Teas and Tea does some of the best chai in the city. Tucked away in a corner of F-10 Markaz of Islamabad, Quetta Teas and Tea is a small shop, who has set-up few tables outside the shop and in the middle of the Markaz. They prepare the finest Kashmiri chai that has a huge following. Quetta Teas and Tea is the first pick for people living ...",
+        "dateLastCrawled": "2023-11-28T08:45:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4535666193733727\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dGaGaZKjsZNAOlSS2HmkCoveoq547FgJW",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.40",
+        "name": "Gol Gappe Calories, Carbs \u0026 Nutrition Facts | MyFitnessPal",
+        "url": "https://www.myfitnesspal.com/food/calories/generic-gol-gappe-16051851",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.myfitnesspal.com/food/calories/generic-gol-gappe-16051851",
+        "snippet": "Calorie Goal 1775 Cal. 225/2000Cal left. Fitness Goals: Heart Healthy. Fat 55 g. 12/67g left. Sodium 2300 mg. --/2300mg left. Cholesterol 300 mg.",
+        "dateLastCrawled": "2023-12-26T05:39:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4919163825306254\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dtauCtSCXfn-8-k6k0EMx_inBAN54AzpU",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.41",
+        "name": "Gol Gappay Challenge #golgappa #golgappachallenge #food",
+        "url": "https://www.youtube.com/watch?v\u003dNBYIFpTZmJA",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dNBYIFpTZmJA",
+        "snippet": "Gol Gappay Challenge 🤤#zahraaliworld #foodworld #shorts #challenge #foodshorts #streetfoodstyle #panipuri #golgappe #golgappelover #golgappa #golgappacha...",
+        "dateLastCrawled": "2023-12-30T08:20:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d1714000603802\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003deZOoTGF0g8q4P_qrjJ-PpsQfWLywIp_N",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.42",
+        "name": "Baba Gol Gappay menu delivery | Order food online | foodpanda",
+        "url": "https://www.foodpanda.pk/chain/ck3rs/baba-gol-gappay",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.foodpanda.pk/chain/ck3rs",
+        "snippet": "Order Baba Gol Gappay delivery now! Check Baba Gol Gappay menu and prices Order online, get you food delivered to your home or office Fast order \u0026 easy payment. Log in. Sign up. EN. Homepage. Baba Gol Gappay; Pakistani; Savouries; Baba Gol Gappay. Free delivery. Rs. 249 Minimum. Rs. 7.99 Service Fee. 2.8/5 (100+) See reviews.",
+        "dateLastCrawled": "2023-12-29T13:20:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4955404760338372\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dxBzGMh_a91_NdXusu9f3FqnxbgoCwsuV",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.43",
+        "name": "5 best places that sells Golgappas in K-Town - ARY Digital",
+        "url": "https://arydigital.tv/5-best-places-sells-golgappas-k-town/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://arydigital.tv/5-best-places-sells-golgappas-k-town",
+        "snippet": "Liaquatabad’s Famous Gol Gappay: Situated at Liaquatabad , the place is famous with its specialty and sells best gol gappay. Sherry Chaat House: Situated at Phase 4 , the gol gappay is filled with mithi chutney and cream , gathers a divine taste that one would not stop from having another plate.",
+        "dateLastCrawled": "2023-12-27T23:09:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4819331602927330\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dsLoYnxrsXYCPlGtJ-xB067suKbgxVh4S",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.44",
+        "name": "Gol Gappay or Pani Puri | Pakistan Atlas",
+        "url": "https://pakistanatlas.com/food/gol-gappay-or-pani-puri/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://pakistanatlas.com/food/gol-gappay-or-pani-puri",
+        "snippet": "Gol gappay are basically thin crispy balls which are poked. Chickpeas, potatoes, tamarind and spices are put in those balls and dipped in the hot and zesty water mixture. Each ball has to be eaten quickly at one shot. This is the fun and challenging part. This snack is more famous among the girls.",
+        "dateLastCrawled": "2023-11-29T11:22:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4650659647074366\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003d90fTbgttE2VC4AkyfB06aWTbdJVCUwqJ",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.45",
+        "name": "Gol Gappa Chaat – Food Fusion",
+        "url": "https://www.foodfusion.com/recipe/gol-gappa-chaat/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.foodfusion.com/recipe/gol-gappa-chaat",
+        "snippet": "Prepare Gol Gappay: -In a bowl,add semolina,all-purpsoe flour,salt \u0026 mix well. -Gradually add water \u0026 knead until dough is formed (dough must be hard),cover with damp cloth \u0026 lid and let it rest for 30-45 minutes. -Knead dough again until smooth.",
+        "dateLastCrawled": "2023-12-28T04:12:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4841205878690414\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003djIyLPnNb9jaZhoEpWX4OgKjxIQtuGMjg",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.46",
+        "name": "Gol Gappay Banane Ka Tarika In Urdu How To Make Golgappa At ... - YouTube",
+        "url": "https://www.youtube.com/watch?v\u003dNBwpx31-0vU",
+        "datePublished": "2017-11-12T00:00:00.0000000",
+        "datePublishedDisplayText": "Nov 12, 2017",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dNBwpx31-0vU",
+        "snippet": "گول گپے بنانے کا طریقہ#Pakistani Recipe Recipe Step By Step #Cooking #Food #RecipesLIKE | COMMENT | SHARE | SUBSCRIBE#Recipe Written In Urdu Subscribe Our C...",
+        "dateLastCrawled": "2023-11-05T00:23:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4879615755093164\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dD3zZdGufr_uq_hapFCURLn82va8AVtX5",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.47",
+        "name": "Street Food: Gol Gappay - گول گپے - Pani Puri - YouTube",
+        "url": "https://www.youtube.com/watch?v\u003dt44-r0kFUkM",
+        "datePublished": "2014-07-18T00:00:00.0000000",
+        "datePublishedDisplayText": "Jul 18, 2014",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.youtube.com/watch?v\u003dt44-r0kFUkM",
+        "snippet": "Gol Gappay گول گپے PanipuriThe golgappa (also known as panipuri), is a popular street snack in Pakistan, India, Bangladesh, and Nepal. It consists of a round...",
+        "dateLastCrawled": "2023-12-26T06:04:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4536258903490135\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dhTwZOjaDbIEO2jxd-C4VvTIrULbrdDgm",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.48",
+        "name": "LAHORE RESTAURANT - 258 Photos \u0026 127 Reviews - Yelp",
+        "url": "https://www.yelp.com/biz/lahore-restaurant-secaucus",
+        "about": [
+          {
+            "_type": "CreativeWork",
+            "aggregateRating": {
+              "ratingValue": 0,
+              "reviewCount": 334
+            }
+          }
+        ],
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.yelp.com/biz/lahore-restaurant-secaucus",
+        "snippet": "Now to the food, only one word can describe it, \"YUMMY\". We ordered the White chicken Karahi, tawa Keema, daal mash, garlic naan, roti, gol gappay, kheer \u0026 ras Malai. Also ordered the mango mojito. The menu has a lot of other really good authentic Lahori items on it. The service was really good and every one was very friendly \u0026 professional.",
+        "dateLastCrawled": "2023-12-27T10:13:00.0000000Z",
+        "language": "en",
+        "isNavigational": false,
+        "richFacts": [
+          {
+            "label": {
+              "text": "Location"
+            },
+            "items": [
+              {
+                "text": "1277 Paterson Plank Rd Secaucus, NJ 07094"
+              }
+            ],
+            "hint": {
+              "text": "ADDRESS:LOCATIONGENERAL"
+            }
+          }
+        ]
+      },
+      {
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.49",
+        "name": "Chocolate Gol Gappay – Food Fusion",
+        "url": "https://www.foodfusion.com/recipe/chocolate-gol-gappay/",
+        "isFamilyFriendly": true,
+        "displayUrl": "https://www.foodfusion.com/recipe/chocolate-gol-gappay",
+        "snippet": "Prepare Gol Gappay Puri: In a bowl,add semolina,all-purpose flour and mix well. Gradually add water \u0026 knead until semi hard dough is formed,cover with damp cloth \u0026 let it rest for 30 minutes. Knead dough again for 6-8 minutes then divide the dough into four parts. Take one part and make a ball,grease working surface with oil \u0026 roll out thinly ...",
+        "dateLastCrawled": "2023-09-13T10:22:00.0000000Z",
+        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q\u003dgol+gappay\u0026d\u003d4563218399445927\u0026mkt\u003den-US\u0026setlang\u003den-US\u0026w\u003dTRvpmNaYgUgbHNgIB4oc0eAJBZp7w7C9",
+        "language": "en",
+        "isNavigational": false
+      }
+    ]
+  },
+  "relatedSearches": {
+    "id": "https://api.bing.microsoft.com/api/v7/#RelatedSearches",
+    "value": [
+      {
+        "text": "gol gappay near me",
+        "displayText": "gol gappay near me",
+        "webSearchUrl": "https://www.bing.com/search?q\u003dgol+gappay+near+me"
+      },
+      {
+        "text": "gol gappay pics",
+        "displayText": "gol gappay pics",
+        "webSearchUrl": "https://www.bing.com/search?q\u003dgol+gappay+pics"
+      },
+      {
+        "text": "gol gappay recipe",
+        "displayText": "gol gappay recipe",
+        "webSearchUrl": "https://www.bing.com/search?q\u003dgol+gappay+recipe"
+      },
+      {
+        "text": "best gol gappay in lahore",
+        "displayText": "best gol gappay in lahore",
+        "webSearchUrl": "https://www.bing.com/search?q\u003dbest+gol+gappay+in+lahore"
+      },
+      {
+        "text": "gol gappay movie",
+        "displayText": "gol gappay movie",
+        "webSearchUrl": "https://www.bing.com/search?q\u003dgol+gappay+movie"
+      },
+      {
+        "text": "how to make golgappa pani",
+        "displayText": "how to make golgappa pani",
+        "webSearchUrl": "https://www.bing.com/search?q\u003dhow+to+make+golgappa+pani"
+      },
+      {
+        "text": "what is golgappa",
+        "displayText": "what is golgappa",
+        "webSearchUrl": "https://www.bing.com/search?q\u003dwhat+is+golgappa"
+      },
+      {
+        "text": "gol gappa selling person",
+        "displayText": "gol gappa selling person",
+        "webSearchUrl": "https://www.bing.com/search?q\u003dgol+gappa+selling+person"
+      }
+    ]
+  },
+  "rankingResponse": {
+    "mainline": {
+      "items": [
+        {
+          "answerType": "WebPages",
+          "resultIndex": 0,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.0"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 1,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.1"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 2,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.2"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 3,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.3"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 4,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.4"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 5,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.5"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 6,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.6"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 7,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.7"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 8,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.8"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 9,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.9"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 10,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.10"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 11,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.11"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 12,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.12"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 13,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.13"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 14,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.14"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 15,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.15"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 16,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.16"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 17,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.17"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 18,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.18"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 19,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.19"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 20,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.20"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 21,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.21"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 22,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.22"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 23,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.23"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 24,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.24"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 25,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.25"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 26,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.26"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 27,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.27"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 28,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.28"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 29,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.29"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 30,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.30"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 31,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.31"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 32,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.32"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 33,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.33"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 34,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.34"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 35,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.35"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 36,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.36"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 37,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.37"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 38,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.38"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 39,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.39"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 40,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.40"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 41,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.41"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 42,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.42"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 43,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.43"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 44,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.44"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 45,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.45"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 46,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.46"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 47,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.47"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 48,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.48"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 49,
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.49"
+          }
+        }
+      ]
+    },
+    "sidebar": {
+      "items": [
+        {
+          "answerType": "RelatedSearches",
+          "value": {
+            "id": "https://api.bing.microsoft.com/api/v7/#RelatedSearches"
+          }
+        }
+      ]
+    }
+  }
+}
