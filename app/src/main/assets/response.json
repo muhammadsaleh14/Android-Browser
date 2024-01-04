@@ -862,6 +862,341 @@
       }
     ]
   },
+  "videos": {
+    "id": "https://api.bing.microsoft.com/api/v7/#Videos",
+    "readLink": "https://api.bing.microsoft.com/api/v7/videos/search?q=multan+videos",
+    "webSearchUrl": "https://www.bing.com/videos/search?q=multan+videos",
+    "isFamilyFriendly": true,
+    "value": [
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=0E4C95381656BC52F8280E4C95381656BC52F828",
+        "name": "Best Documentary On Multan City | Discover Pakistan TV - 4K Ultra HD",
+        "description": "اس ویڈیو میں Discover Pakistan Tv آپ کو ملتان کے بارے میں حیرت انگیز حقائق دکھاتا ہے۔ ملتان ایشیا کے سب سے قدیم مسلسل آباد شہروں میں سے ایک ہے، جس کی تاریخ قدیم دور تک پھیلی ہوئی ہے۔ قدیم شہر مشہور ملتان ...",
+        "thumbnailUrl": "https://tse1.mm.bing.net/th?id=OVP.-0TEbNmCYATren9-v5KU_gEsDh&pid=Api",
+        "datePublished": "2022-12-12T17:00:45.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Discover Pakistan"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=tXwloL2Skco",
+        "hostPageUrl": "https://www.youtube.com/watch?v=tXwloL2Skco",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=tXwloL2Skco",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT13M22S",
+        "motionThumbnailUrl": "https://tse1.mm.bing.net/th?id=OM1.KPhSvFYWOJVMDg_1677548703&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/tXwloL2Skco?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 132404,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=7B9A2EF55CFE57F1FC767B9A2EF55CFE57F1FC76",
+        "name": "MULTAN (Official Video) Mannat Noor | Nadhoo Khan | Harish Verma | Wamiqa Gabbi | White Hill Music",
+        "description": "White Hill Music presents new Punjabi song MULTAN from movie Nadhoo Khan starring Harish Verma Directed by Imran Sheikh produced Harpreet Singh Devgun. Achint Goel, Rakesh Dahiya. its Loud Road Films & Music Tym Production presentation. Music on White Hill Music. Song Credits Song : Multan Singer : Mannat Noor Music : Gurmeet Singh Music ...",
+        "thumbnailUrl": "https://tse4.mm.bing.net/th?id=OVP.AZAV4sj-vVE4UOZWTmq3xAHgFo&pid=Api",
+        "datePublished": "2019-03-29T06:30:11.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Ishtar Punjabi"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=LRIVptgUfV4",
+        "hostPageUrl": "https://www.youtube.com/watch?v=LRIVptgUfV4",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=LRIVptgUfV4",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT3M12S",
+        "motionThumbnailUrl": "https://tse4.mm.bing.net/th?id=OM1.dvzxV_5c9S6aew_1694540782&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/LRIVptgUfV4?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 19697321,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=55081325F5FACEE9FD1655081325F5FACEE9FD16",
+        "name": "Multan City Pakistan 🇵🇰 || Multan City Local Markets and Street food || Ranbir Tiwary Vlogs",
+        "description": "Namaskar Dosto kaise ho Aap…To Dosto Aajki video mai Hm Pakistan k Multan City ko Explore krne waly hain udhr k Street food udhr ki Beauty or Local markets Sabkuch. to Dosto vlogs ko last tak dekhna or Agar ye Vlog ap logo ko acha lage to plzz Isko like or Share krna naa bhole Or agar Aap logo ko Aisy New Videos or dekhni hai to Channel ko ...",
+        "thumbnailUrl": "https://tse3.mm.bing.net/th?id=OVP.WrUbGMbVaLLZrrOkHhifEgEsDh&pid=Api",
+        "datePublished": "2022-10-05T03:53:39.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Ranbir Tiwary Vlogs"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=_TLpQZVa83o",
+        "hostPageUrl": "https://www.youtube.com/watch?v=_TLpQZVa83o",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=_TLpQZVa83o",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT20M26S",
+        "motionThumbnailUrl": "https://tse3.mm.bing.net/th?id=OM1.Fv3pzvr1JRMIVQ&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/_TLpQZVa83o?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 498707,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=0F732040FF5D60026EE30F732040FF5D60026EE3",
+        "name": "Manpreet Toor | \"Multan\" Mannat Noor (Nadhoo Khan | Harish Verma | Wamiqa Gabbi)",
+        "description": "Join my ONLINE DANCE WORKSHOPS NOW at http://www.DanceWithManpreet.com !!! Manpreet Toor's newest video Multan, by Mannat Noor starring Nadhoo Khan, Harish Verma, Wamiqa Gabbi by White Hill Music. This is a follow up to her latest hit videos Laung Laachi, Dilbar, Lahore, Tu Cheez, Wonderland, Yeah Baby and more! BUSINESS INQUIRIES: Email: info ...",
+        "thumbnailUrl": "https://tse2.mm.bing.net/th?id=OVP.MMAzPmSgxvzzgnHdZIDUNQHgFo&pid=Api",
+        "datePublished": "2019-04-20T01:44:42.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Manpreet Toor"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=LrL92ovT39I",
+        "hostPageUrl": "https://www.youtube.com/watch?v=LrL92ovT39I",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=LrL92ovT39I",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT1M29S",
+        "motionThumbnailUrl": "https://tse2.mm.bing.net/th?id=OM2.424CYF3_QCBzDw_1641630343&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/LrL92ovT39I?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 4464006,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=5561C2C362E5239044C15561C2C362E5239044C1",
+        "name": "Short Highlights | Multan Sultans vs Lahore Qalandars | Match 34 Final | HBL PSL 8 | MI2",
+        "description": "Short Highlights | Multan Sultans vs Lahore Qalandars | Match 34 Final | HBL PSL 8 | MI2 #HBLPSL8 | #SabSitarayHumaray | #MSvLQ Pakistan Super League is a franchise T20 cricket tournament organized by the Pakistan Cricket Board. Top international and local cricketers represent six cities of Pakistan. All content is copyright protected & managed ...",
+        "thumbnailUrl": "https://tse3.mm.bing.net/th?id=OVP.E0Ck5UqPDgPe0StyLDJn6gHgFo&pid=Api",
+        "datePublished": "2023-03-18T20:29:22.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Pakistan Super League"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=POWEUK_ELTM",
+        "hostPageUrl": "https://www.youtube.com/watch?v=POWEUK_ELTM",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=POWEUK_ELTM",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT9M36S",
+        "motionThumbnailUrl": "https://tse3.mm.bing.net/th?id=OM.wUSQI-Viw8JhVQ&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/POWEUK_ELTM?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 2183203,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=3849DC36D819ABE1C0C73849DC36D819ABE1C0C7",
+        "name": "Full Highlights | Karachi Whites vs Multan | Match 29 | 2nd Semi Final | Pakistan Cup 2023/24 | PCB",
+        "description": "Full Highlights | Karachi Whites vs Multan | Match 29 | 2nd Semi Final | Pakistan Cup 2023/24 | PCB #PakistanCup | #KHIWvMUL Buy official Pakistan Cricket merchandise: https://shop.pcb.com.pk/ Welcome to the official page of Pakistan Cricket Board. Get all your Pakistan Cricket updates here! You can access exclusive player interviews, match ...",
+        "thumbnailUrl": "https://tse1.mm.bing.net/th?id=OVP.b9cOps15mHgy8EDps5kdZwHgFo&pid=Api",
+        "datePublished": "2023-11-17T13:04:30.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Pakistan Cricket"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=0aKY3QyJUcA",
+        "hostPageUrl": "https://www.youtube.com/watch?v=0aKY3QyJUcA",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=0aKY3QyJUcA",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT23M57S",
+        "motionThumbnailUrl": "https://tse1.mm.bing.net/th?id=OM.x8DhqxnYNtxJOA&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/0aKY3QyJUcA?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 485557,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=00EAB292AEF6B57D8AA200EAB292AEF6B57D8AA2",
+        "name": "Heavy Fight | Kieron Pollard vs Shaheen Afridi | Lahore vs Multan | Match 31 | HBL PSL 8 | MI2A",
+        "description": "Heavy Fight | Kieron Pollard vs Shaheen Afridi | Lahore Qalandars vs Multan Sultans | Match 31 | HBL PSL 8 | MI2A #LQvMS | #HBLPSL8 | #SabSitarayHumaray | #SportsCentral For Latest Updates Follow Us On Facebook & Instagram NOW https://www.facebook.com/Sports-Central-100403292093264/ https://instagram.com/sportscentral_drm Welcome to Sports ...",
+        "thumbnailUrl": "https://tse2.mm.bing.net/th?id=OVP.cl33LzMWK1mbzT-YLBtGcAEsDh&pid=Api",
+        "datePublished": "2023-03-15T16:09:28.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Sports Central"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=gYH3-SKlzw8",
+        "hostPageUrl": "https://www.youtube.com/watch?v=gYH3-SKlzw8",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=gYH3-SKlzw8",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT1M58S",
+        "motionThumbnailUrl": "https://tse2.mm.bing.net/th?id=OM.oop9tfaukrLqAA_1684186726&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/gYH3-SKlzw8?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 4332671,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=FF97A745782218104D1FFF97A745782218104D1F",
+        "name": "Final Match PSL8 Multan Sultan Vs Lahore Qalander || Full Comedy || Umar920",
+        "description": "#PSL8Final #multanvslahore Assalam O Alaikom Aj Ki Video Men Ap Dekhen ge PSL Final match Orignal Tu dekh liya match ye bhi dekhen maza na ay To Paise Wapas 🤣🤣 See in video #final #pslfinal #multanvslahore #MsVsLQFinal #finalhighlights #LahoreVsMultanHighlight #highlights #cricket #cricketlover #cricketcomedy #cricketfunnyvideo # ...",
+        "thumbnailUrl": "https://tse1.mm.bing.net/th?id=OVP.fVs6Uc6TFoSEp_WfVo93VgEsDh&pid=Api",
+        "datePublished": "2023-03-19T05:26:52.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Umar_ 920"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=qSSSaW5NsKw",
+        "hostPageUrl": "https://www.youtube.com/watch?v=qSSSaW5NsKw",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=qSSSaW5NsKw",
+        "width": 1080,
+        "height": 1920,
+        "duration": "PT3M58S",
+        "motionThumbnailUrl": "https://tse1.mm.bing.net/th?id=OM2.H00QGCJ4RaeX_w_1684230299&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/qSSSaW5NsKw?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 585110,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=23684FC8FCFC7BB4CFC423684FC8FCFC7BB4CFC4",
+        "name": "2nd Innings Highlights | Peshawar Zalmi vs Multan Sultans | Match 27 | HBL PSL 8 | MI2T #HBLPSL8 | #SabSitarayHumaray | #PZvMS",
+        "description": "2nd Innings Highlights | Peshawar Zalmi vs Multan Sultans | Match 27 | HBL PSL 8 | MI2T #HBLPSL8 | #SabSitarayHumaray | #PZvMS",
+        "thumbnailUrl": "https://tse3.mm.bing.net/th?id=OVP.2YTwB6py3LYbJJwKSAMWVQEsCo&pid=Api",
+        "datePublished": "2023-03-10T18:56:53.0000000",
+        "publisher": [
+          {
+            "name": "Facebook"
+          }
+        ],
+        "creator": {
+          "name": "Pakistan Super League"
+        },
+        "contentUrl": "https://www.facebook.com/thePSL/videos/2nd-innings-highlights-peshawar-zalmi-vs-multan-sultans-match-27-hbl-psl-8-mi2t-/157133810548365/",
+        "hostPageUrl": "https://www.facebook.com/thePSL/videos/2nd-innings-highlights-peshawar-zalmi-vs-multan-sultans-match-27-hbl-psl-8-mi2t-/157133810548365/",
+        "encodingFormat": "",
+        "hostPageDisplayUrl": "https://www.facebook.com/thePSL/videos/2nd-innings-highlights-peshawar-zalmi-vs-multan-sultans-match-27-hbl-psl-8-mi2t-/157133810548365/",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT8M28S",
+        "embedHtml": "<iframe src=\"https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/thePSL/videos/2nd-innings-highlights-peshawar-zalmi-vs-multan-sultans-match-27-hbl-psl-8-mi2t-/157133810548365/&show_text=0&width=410&height=238\" width=\"410\" height=\"238\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allowFullScreen=\"true\"></iframe>",
+        "viewCount": 4439696,
+        "thumbnail": {
+          "width": 160,
+          "height": 89
+        },
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=5D5FF091B66BEA701FA65D5FF091B66BEA701FA6",
+        "name": "Aima Baig's Live Performance at Super 11 Asia Cup 2023 curtain-raiser | PCB | MA2L",
+        "description": "Aima Baig's live performance of the Pakistan national song at Super 11 Asia Cup 2023 curtain-raiser at Multan Cricket Stadium. #AsiaCup2023 Buy official Pakistan Cricket merchandise: https://shop.pcb.com.pk/ Welcome to the official page of Pakistan Cricket Board. Get all your Pakistan Cricket updates here! You can access exclusive player ...",
+        "thumbnailUrl": "https://tse2.mm.bing.net/th?id=OVP.9jxcsKzVV3WXnrWRUJGEPQHgFo&pid=Api",
+        "datePublished": "2023-08-30T14:29:34.0000000",
+        "publisher": [
+          {
+            "name": "YouTube"
+          }
+        ],
+        "creator": {
+          "name": "Pakistan Cricket"
+        },
+        "isAccessibleForFree": true,
+        "contentUrl": "https://www.youtube.com/watch?v=hzHYti9wPmU",
+        "hostPageUrl": "https://www.youtube.com/watch?v=hzHYti9wPmU",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=hzHYti9wPmU",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT2M17S",
+        "motionThumbnailUrl": "https://tse2.mm.bing.net/th?id=OM.ph9w6mu2kfBfXQ&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/hzHYti9wPmU?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 2351560,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      }
+    ],
+    "scenario": "List"
+  },
   "relatedSearches": {
     "id": "https://api.bing.microsoft.com/api/v7/#RelatedSearches",
     "value": [

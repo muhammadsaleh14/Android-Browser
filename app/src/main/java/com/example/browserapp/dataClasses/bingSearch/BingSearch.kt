@@ -6,6 +6,7 @@ data class BingSearch(
     val queryContext: QueryContext?,
     val rankingResponse: RankingResponse?,
     val relatedSearches: RelatedSearches?,
+    val videos: Videos?,
     val webPages: WebPages?
 ) {
     data class Error(
@@ -60,6 +61,53 @@ data class BingSearch(
             val text: String?,
             val webSearchUrl: String?
         )
+    }
+
+    data class Videos(
+        val id: String?,
+        val isFamilyFriendly: Boolean?,
+        val readLink: String?,
+        val scenario: String?,
+        val value: List<Value?>?,
+        val webSearchUrl: String?
+    ) {
+        data class Value(
+            val allowHttpsEmbed: Boolean?,
+            val allowMobileEmbed: Boolean?,
+            val contentUrl: String?,
+            val creator: Creator?,
+            val datePublished: String?,
+            val description: String?,
+            val duration: String?,
+            val embedHtml: String?,
+            val encodingFormat: String?,
+            val height: Int?,
+            val hostPageDisplayUrl: String?,
+            val hostPageUrl: String?,
+            val isAccessibleForFree: Boolean?,
+            val isSuperfresh: Boolean?,
+            val motionThumbnailUrl: String?,
+            val name: String?,
+            val publisher: List<Publisher?>?,
+            val thumbnail: Thumbnail?,
+            val thumbnailUrl: String?,
+            val viewCount: Int?,
+            val webSearchUrl: String?,
+            val width: Int?
+        ) {
+            data class Creator(
+                val name: String?
+            )
+
+            data class Publisher(
+                val name: String?
+            )
+
+            data class Thumbnail(
+                val height: Int?,
+                val width: Int?
+            )
+        }
     }
 
     data class WebPages(

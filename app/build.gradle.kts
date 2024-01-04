@@ -17,6 +17,11 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
+    buildFeatures {
+        viewBinding = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -36,6 +41,8 @@ android {
 }
 
 dependencies {
+    implementation ("androidx.fragment:fragment-ktx:1.4.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation ("dev.icerock.moko:resources:0.20.1") // Or a newer version
     implementation ("io.github.cdimascio:dotenv-kotlin:6.2.2") // Or a newer version
@@ -45,6 +52,9 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

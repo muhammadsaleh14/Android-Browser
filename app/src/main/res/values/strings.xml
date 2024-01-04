@@ -2,4 +2,6 @@
     <string name="app_name">BrowserApp</string>
     <string name="hint_search">Search</string>
     <string name="app_logo">BrowserApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

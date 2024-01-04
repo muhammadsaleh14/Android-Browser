@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <include layout="@layout/title_bar"/>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,14 +15,13 @@
         android:gravity="center">
 
         <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/appIcon"
-        android:layout_width="60dp"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/app_logo"
-        android:src="@drawable/toys"
-        app:shapeAppearance="@style/RoundImageShape"
-        android:layout_gravity="left"
-            />
+            android:id="@+id/appIcon"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_logo"
+            android:src="@drawable/toys"
+            app:shapeAppearance="@style/RoundImageShape"
+            android:layout_gravity="left"/>
 
         <EditText
             android:id="@+id/searchTerm"
@@ -31,8 +30,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="text"
-            android:text="Name"
-            />
+            android:text="Name" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
