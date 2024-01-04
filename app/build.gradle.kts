@@ -6,15 +6,18 @@ plugins {
 android {
     namespace = "com.example.browserapp"
     compileSdk = 34
-
+    buildFeatures {
+        buildConfig = true
+    }
     defaultConfig {
         applicationId = "com.example.browserapp"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField ("String", "SUBSCRIPTION_KEY", "\"a9ec21e2545c4c368d7275059df7f799\"")
     }
 
 

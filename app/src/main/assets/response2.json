@@ -1,723 +1,836 @@
 {
-  "_type": "SearchResponse",
+  "_type": "Images",
+  "instrumentation": {
+    "_type": "ResponseInstrumentation"
+  },
+  "readLink": "images\/search?q=gol gappay",
+  "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=gol gappay&FORM=OIIARP",
   "queryContext": {
-    "originalQuery": "multan videos"
+    "originalQuery": "gol gappay",
+    "alterationDisplayQuery": "gol gappay",
+    "alterationOverrideQuery": "+gol gappay",
+    "alterationMethod": "AM_JustChangeIt",
+    "alterationType": "CombinedAlterationsChained"
   },
-  "webPages": {
-    "webSearchUrl": "https://www.bing.com/search?q=multan+videos",
-    "totalEstimatedMatches": 218000,
-    "value": [
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.0",
-        "name": "Best Documentary On Multan City | Discover Pakistan TV - YouTube",
-        "url": "https://www.youtube.com/watch?v=tXwloL2Skco",
-        "video": {
-          "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=0E4C95381656BC52F8280E4C95381656BC52F828",
-          "thumbnailUrl": "https://www.bing.com/th?id=OVP.-0TEbNmCYATren9-v5KU_gEsDh&w=128&h=72&c=4&rs=1&pid=6.1",
-          "duration": "13:22",
-          "videoId": "0E4C95381656BC52F8280E4C95381656BC52F828"
-        },
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.youtube.com/watch?v=tXwloL2Skco",
-        "snippet": "اس ویڈیو میں Discover Pakistan Tv آپ کو ملتان کے بارے میں حیرت انگیز حقائق دکھاتا ہے۔ملتان ایشیا کے سب سے قدیم مسلسل ...",
-        "dateLastCrawled": "2023-10-28T13:09:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4746793901497739&mkt=en-US&setlang=en-US&w=gW_bgkPXUCNul5sXkSgRLKdsfWo_bOFl",
-        "language": "en",
-        "isNavigational": false,
-        "richFacts": [
-          {
-            "label": {
-              "text": "Video Duration"
-            },
-            "items": [
-              {
-                "text": "13 min"
-              }
-            ],
-            "hint": {
-              "text": "MEDIA:DURATION"
-            }
-          },
-          {
-            "label": {
-              "text": "Author"
-            },
-            "items": [
-              {
-                "text": "Discover Pakistan"
-              }
-            ],
-            "hint": {
-              "text": "BASE:AUTHOR"
-            }
-          },
-          {
-            "label": {
-              "text": "Views"
-            },
-            "items": [
-              {
-                "text": "132404"
-              }
-            ],
-            "hint": {
-              "text": "BASE:VIEWSCOUNT"
-            }
-          }
-        ]
+  "totalEstimatedMatches": 391,
+  "nextOffset": 19,
+  "currentOffset": 1,
+  "value": [
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=2289ECF858E4FD549D5CAFCDC54D477B5F31DF2A&simid=607989979008810772",
+      "name": "Golgappa Chaat Recipe by Archana's Kitchen",
+      "thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?id=OIP.aCiSgDYEH7XaAiZyt6u5GQHaFq&pid=Api",
+      "datePublished": "2016-05-15T00:45:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/www.archanaskitchen.com\/images\/archanaskitchen\/1-Author\/Aarti_Sharma\/Gol_Gappa_Chaat.jpg",
+      "hostPageUrl": "https:\/\/www.archanaskitchen.com\/gol-gappa-chaat-recipe",
+      "contentSize": "111717 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/www.archanaskitchen.com\/gol-gappa-chaat-recipe",
+      "width": 960,
+      "height": 735,
+      "hostPageDomainFriendlyName": "Archana's Kitchen",
+      "hostPageDiscoveredDate": "2016-05-15T00:45:26.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 362
       },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.1",
-        "name": "Multan | Cinematic Drone Footage | Discover Pakistan - YouTube",
-        "url": "https://www.youtube.com/watch?v=NrlNNRH4ffM",
-        "video": {
-          "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=8CC3FDA778CFC5C50E158CC3FDA778CFC5C50E15",
-          "thumbnailUrl": "https://www.bing.com/th?id=OVP.epDLvPyveUWaP6i1fwfftAEsDh&w=128&h=72&c=4&rs=1&pid=6.1",
-          "duration": "2:09",
-          "videoId": "8CC3FDA778CFC5C50E158CC3FDA778CFC5C50E15"
-        },
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.youtube.com/watch?v=NrlNNRH4ffM",
-        "snippet": "270 14K views 3 years ago #pakistan #multan #discoverpakistan Multan is a city in Punjab, Pakistan. Located on the banks of the Chenab River, Multan is Pakistan's 7th largest city, and is the...",
-        "dateLastCrawled": "2023-06-12T16:33:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4675304174729992&mkt=en-US&setlang=en-US&w=ZOCENzQ90-tOFUk0U8CJZzNQ0CDB_ces",
-        "language": "en",
-        "isNavigational": false,
-        "richFacts": [
-          {
-            "label": {
-              "text": "Video Duration"
-            },
-            "items": [
-              {
-                "text": "2 min"
-              }
-            ],
-            "hint": {
-              "text": "MEDIA:DURATION"
-            }
-          },
-          {
-            "label": {
-              "text": "Author"
-            },
-            "items": [
-              {
-                "text": "MP Aerial"
-              }
-            ],
-            "hint": {
-              "text": "BASE:AUTHOR"
-            }
-          },
-          {
-            "label": {
-              "text": "Views"
-            },
-            "items": [
-              {
-                "text": "14484"
-              }
-            ],
-            "hint": {
-              "text": "BASE:VIEWSCOUNT"
-            }
-          }
-        ]
+      "imageInsightsToken": "ccid_aCiSgDYE*cp_A73AB4E21C55DE6EFEDE6903C8DF4BD6*mid_2289ECF858E4FD549D5CAFCDC54D477B5F31DF2A*simid_607989979008810772*thid_OIP.aCiSgDYEH7XaAiZyt6u5GQHaFq",
+      "insightsMetadata": {
+        "recipeSourcesCount": 0,
+        "pagesIncludingCount": 11,
+        "availableSizesCount": 11
       },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.2",
-        "name": "Multan Pakistan Videos and HD Footage - Getty Images",
-        "url": "https://www.gettyimages.com/videos/multan-pakistan",
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.gettyimages.com/videos/multan-pakistan",
-        "snippet": "Multan Pakistan Videos and HD Footage - Getty Images Browse Getty Images' premium collection of high-quality, authentic Multan Pakistan stock videos and stock footage. Royalty-free 4K, HD, and analog stock Multan Pakistan videos are available for license in film, television, advertising, and corporate settings. Browse Boards AI Generator Sign in",
-        "dateLastCrawled": "2024-01-01T07:46:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4722518738629022&mkt=en-US&setlang=en-US&w=GUVu6HD1JFtjjfHHXJlT3DgiykWa95iS",
-        "language": "en",
-        "isNavigational": false
-      },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.3",
-        "name": "Multan Videos and HD Footage - Getty Images",
-        "url": "https://www.gettyimages.com/videos/multan",
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.gettyimages.com/videos/multan",
-        "snippet": "at least nine people were killed and 42 others wounded in an explosion on a congested road in the central pakistani city of multan on sunday police... - multan stock videos & royalty-free footage",
-        "dateLastCrawled": "2023-12-27T04:59:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4621836122875088&mkt=en-US&setlang=en-US&w=BaW77VI3oTs1xPnuX74xY-hw8yBMz7g9",
-        "language": "en",
-        "isNavigational": false
-      },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.4",
-        "name": "Multan City Of Saints | AirVuz",
-        "url": "https://www.airvuz.com/video/Multan-City-Of-Saints?id=579c8d632f2140129ba2bdba",
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.airvuz.com/video/Multan-City-Of-Saints?id=579c8d632f2140129ba2bdba",
-        "snippet": "13 6 Report Collection THIS VIDEO IS FEATURED IN: Pakistan Pakistan from the Sky 157 Videos Updated: 2 months ago Multan City Of Saints Up Next Autoplay Multan City Of Saints",
-        "dateLastCrawled": "2023-12-12T22:43:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4609664189150576&mkt=en-US&setlang=en-US&w=JiFDlG0csy8wO7nxuY_X1GQd-zw1b8kz",
-        "language": "en",
-        "isNavigational": false
-      },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.5",
-        "name": "Multan Pakistan Videos, Download The BEST Free 4k Stock Video ... - Pexels",
-        "url": "https://www.pexels.com/search/videos/multan%20pakistan/",
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.pexels.com/search/videos/multan pakistan",
-        "snippet": "Download and use 270+ Multan pakistan stock videos for free. Thousands of new 4k videos every day Completely Free to Use High-quality HD videos and clips from Pexels. Videos. Explore. License. Upload. Upload Join. Free Multan Pakistan Videos. Photos 792 Videos 270 Users 8K. Filters.",
-        "dateLastCrawled": "2023-12-19T16:22:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4712567304696358&mkt=en-US&setlang=en-US&w=plz8A8AyUalfBzLPnHL4hJJW7cBCaJsq",
-        "language": "en",
-        "isNavigational": false
-      },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.6",
-        "name": "Pakistan arrests 21 members of outlawed Pakistani Taliban militant ...",
-        "url": "https://apnews.com/article/pakistan-arrests-militants-multiple-raids-taliban-ttp-ab79cd63b00dff7e903b1a5eaf58f005",
-        "datePublished": "2024-01-01T12:27:00.0000000",
-        "datePublishedFreshnessText": "1 day ago",
-        "isFamilyFriendly": true,
-        "displayUrl": "https://apnews.com/article/pakistan-arrests-militants-multiple-raids-taliban-ttp-ab79...",
-        "snippet": "MULTAN, Pakistan (AP) — Pakistan’s counterterrorism police said Monday they arrested 21 members of outlawed militant group the Pakistani Taliban, which has been behind several deadly attacks across the country.",
-        "dateLastCrawled": "2024-01-02T11:20:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=1852354029429&mkt=en-US&setlang=en-US&w=ih0kuoYX-qb_3UEtcJH_WUDY0oMyvSFu",
-        "language": "en",
-        "isNavigational": false
-      },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.7",
-        "name": "#Multan in Video - Facebook",
-        "url": "https://www.facebook.com/watch/hashtag/multan/?/",
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.facebook.com/watch/hashtag/multan/?",
-        "snippet": "#Multan | 200K people are posting about this | Watch popular videos about #Multan in Video",
-        "dateLastCrawled": "2023-12-08T22:15:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4646192881093456&mkt=en-US&setlang=en-US&w=rFRkNnTFoARA2FJJOz_oV5jg5MbtQp8b",
-        "language": "en",
-        "isNavigational": false
-      },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.8",
-        "name": "Multan | Pakistan, Map, Population, & Facts | Britannica",
-        "url": "https://www.britannica.com/place/Multan",
-        "thumbnailUrl": "https://www.bing.com/th?id=OIP.rU4XVIf9JEZh_Ng1pm7-eQAAAA&w=80&h=80&c=1&pid=5.1",
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.britannica.com/place/Multan",
-        "snippet": "Last Updated: Article History Table of Contents Multan, city, south-central Punjab province, east-central Pakistan. It is built on a mound just east of the Chenab River.",
-        "dateLastCrawled": "2024-01-01T09:12:00.0000000Z",
-        "primaryImageOfPage": {
-          "thumbnailUrl": "https://www.bing.com/th?id=OIP.rU4XVIf9JEZh_Ng1pm7-eQAAAA&w=80&h=80&c=1&pid=5.1",
-          "width": 80,
-          "height": 80,
-          "imageId": "OIP.rU4XVIf9JEZh_Ng1pm7-eQAAAA"
-        },
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4769690376627646&mkt=en-US&setlang=en-US&w=xVMgz5TA_4x5AWxyT-h_MIrFwEzMuDga",
-        "language": "en",
-        "isNavigational": false
-      },
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.9",
-        "name": "Multan : Latest News, Multan Videos and Photos - Times Now",
-        "url": "https://www.timesnownews.com/topic/multan",
-        "isFamilyFriendly": true,
-        "displayUrl": "https://www.timesnownews.com/topic/multan",
-        "snippet": "01:59 Karnataka Shocker: Teacher's 'Romantic' Photoshoot With Student Sparks Outrage 03:26 Days Ahead Of Ram Mandir Consecration, What Ayodhya Looks Like… Get latest Multan news and updates. Explore Multan photos, videos and information on Times Now",
-        "dateLastCrawled": "2023-12-29T13:05:00.0000000Z",
-        "cachedPageUrl": "http://cc.bingj.com/cache.aspx?q=multan+videos&d=4816703088378502&mkt=en-US&setlang=en-US&w=U-bFhym_61SOYnHH2Ej23_HSmAk752wL",
-        "language": "en",
-        "isNavigational": false
-      }
-    ]
-  },
-  "entities": {
-    "value": [
-      {
-        "id": "https://api.bing.microsoft.com/api/v7/#Entities.0",
-        "contractualRules": [
-          {
-            "_type": "ContractualRules/LicenseAttribution",
-            "targetPropertyName": "description",
-            "mustBeCloseToContent": true,
-            "license": {
-              "name": "CC-BY-SA",
-              "url": "http://creativecommons.org/licenses/by-sa/3.0/"
-            },
-            "licenseNotice": "Text under CC-BY-SA license"
-          },
-          {
-            "_type": "ContractualRules/LinkAttribution",
-            "targetPropertyName": "description",
-            "mustBeCloseToContent": true,
-            "text": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Multan"
-          },
-          {
-            "_type": "ContractualRules/MediaAttribution",
-            "targetPropertyName": "image",
-            "mustBeCloseToContent": true,
-            "url": "https://en.wikipedia.org/wiki/Multan"
-          }
-        ],
-        "webSearchUrl": "https://www.bing.com/entityexplore?q=Multan&filters=sid:%229317a3f5-4253-3d96-feed-7f11923dbb61%22&elv=AXXfrEiqqD9r3GuelwApulpwZ1dOFuakDFGC2TyF9HP!S1W7bgk5a7lhr1!MI5jt3porphVi1ig8k!iv*xnKj2GxaMoFX6EOcSX1kZxHvb3o",
-        "name": "Multan",
-        "url": "https://mda.punjab.gov.pk/",
-        "image": {
-          "name": "Multan",
-          "thumbnailUrl": "http://www.bing.com/th?id=OSK.u3PHovL7LN0KxfaPSIHNw8ejSZju5cQlABdDCSZv9Ps&w=110&h=75&c=7",
-          "provider": [
-            {
-              "_type": "Organization",
-              "url": "https://en.wikipedia.org/wiki/Multan"
-            }
-          ],
-          "hostPageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Eid_gah_mosque_multanrr.jpg",
-          "width": 110,
-          "height": 75,
-          "sourceWidth": 1000,
-          "sourceHeight": 667
-        },
-        "description": "Multan is a city in Punjab, Pakistan, located on the bank of Chenab River. Multan is one of the five largest urban centres of Pakistan in 2023 and is the major cultural, religious and economic centre of Southern Punjab. Multan is known for its rich ancient heritage and historic landmarks. The city is one of the oldest and continuously inhabited cities of Asia, with a history stretching deep into antiquity. A historic capital, cultural centre of Punjab and a significant cultural centre of Indus Valley civilization. Multan region was centre of many civilizations in its 5 millenia old history.",
-        "entityPresentationInfo": {
-          "entityScenario": "DominantEntity",
-          "entityTypeHints": [
-            "City",
-            "Place"
-          ],
-          "entityTypeDisplayHint": "City in Punjab, Pakistan"
-        },
-        "bingId": "9317a3f5-4253-3d96-feed-7f11923dbb61"
-      }
-    ]
-  },
-  "videos": {
-    "id": "https://api.bing.microsoft.com/api/v7/#Videos",
-    "readLink": "https://api.bing.microsoft.com/api/v7/videos/search?q=multan+videos",
-    "webSearchUrl": "https://www.bing.com/videos/search?q=multan+videos",
-    "isFamilyFriendly": true,
-    "value": [
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=0E4C95381656BC52F8280E4C95381656BC52F828",
-        "name": "Best Documentary On Multan City | Discover Pakistan TV - 4K Ultra HD",
-        "description": "اس ویڈیو میں Discover Pakistan Tv آپ کو ملتان کے بارے میں حیرت انگیز حقائق دکھاتا ہے۔ ملتان ایشیا کے سب سے قدیم مسلسل آباد شہروں میں سے ایک ہے، جس کی تاریخ قدیم دور تک پھیلی ہوئی ہے۔ قدیم شہر مشہور ملتان ...",
-        "thumbnailUrl": "https://tse1.mm.bing.net/th?id=OVP.-0TEbNmCYATren9-v5KU_gEsDh&pid=Api",
-        "datePublished": "2022-12-12T17:00:45.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Discover Pakistan"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=tXwloL2Skco",
-        "hostPageUrl": "https://www.youtube.com/watch?v=tXwloL2Skco",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=tXwloL2Skco",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT13M22S",
-        "motionThumbnailUrl": "https://tse1.mm.bing.net/th?id=OM1.KPhSvFYWOJVMDg_1677548703&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/tXwloL2Skco?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 132404,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=7B9A2EF55CFE57F1FC767B9A2EF55CFE57F1FC76",
-        "name": "MULTAN (Official Video) Mannat Noor | Nadhoo Khan | Harish Verma | Wamiqa Gabbi | White Hill Music",
-        "description": "White Hill Music presents new Punjabi song MULTAN from movie Nadhoo Khan starring Harish Verma Directed by Imran Sheikh produced Harpreet Singh Devgun. Achint Goel, Rakesh Dahiya. its Loud Road Films & Music Tym Production presentation. Music on White Hill Music. Song Credits Song : Multan Singer : Mannat Noor Music : Gurmeet Singh Music ...",
-        "thumbnailUrl": "https://tse4.mm.bing.net/th?id=OVP.AZAV4sj-vVE4UOZWTmq3xAHgFo&pid=Api",
-        "datePublished": "2019-03-29T06:30:11.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Ishtar Punjabi"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=LRIVptgUfV4",
-        "hostPageUrl": "https://www.youtube.com/watch?v=LRIVptgUfV4",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=LRIVptgUfV4",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT3M12S",
-        "motionThumbnailUrl": "https://tse4.mm.bing.net/th?id=OM1.dvzxV_5c9S6aew_1694540782&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/LRIVptgUfV4?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 19697321,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=55081325F5FACEE9FD1655081325F5FACEE9FD16",
-        "name": "Multan City Pakistan 🇵🇰 || Multan City Local Markets and Street food || Ranbir Tiwary Vlogs",
-        "description": "Namaskar Dosto kaise ho Aap…To Dosto Aajki video mai Hm Pakistan k Multan City ko Explore krne waly hain udhr k Street food udhr ki Beauty or Local markets Sabkuch. to Dosto vlogs ko last tak dekhna or Agar ye Vlog ap logo ko acha lage to plzz Isko like or Share krna naa bhole Or agar Aap logo ko Aisy New Videos or dekhni hai to Channel ko ...",
-        "thumbnailUrl": "https://tse3.mm.bing.net/th?id=OVP.WrUbGMbVaLLZrrOkHhifEgEsDh&pid=Api",
-        "datePublished": "2022-10-05T03:53:39.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Ranbir Tiwary Vlogs"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=_TLpQZVa83o",
-        "hostPageUrl": "https://www.youtube.com/watch?v=_TLpQZVa83o",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=_TLpQZVa83o",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT20M26S",
-        "motionThumbnailUrl": "https://tse3.mm.bing.net/th?id=OM1.Fv3pzvr1JRMIVQ&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/_TLpQZVa83o?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 498707,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=0F732040FF5D60026EE30F732040FF5D60026EE3",
-        "name": "Manpreet Toor | \"Multan\" Mannat Noor (Nadhoo Khan | Harish Verma | Wamiqa Gabbi)",
-        "description": "Join my ONLINE DANCE WORKSHOPS NOW at http://www.DanceWithManpreet.com !!! Manpreet Toor's newest video Multan, by Mannat Noor starring Nadhoo Khan, Harish Verma, Wamiqa Gabbi by White Hill Music. This is a follow up to her latest hit videos Laung Laachi, Dilbar, Lahore, Tu Cheez, Wonderland, Yeah Baby and more! BUSINESS INQUIRIES: Email: info ...",
-        "thumbnailUrl": "https://tse2.mm.bing.net/th?id=OVP.MMAzPmSgxvzzgnHdZIDUNQHgFo&pid=Api",
-        "datePublished": "2019-04-20T01:44:42.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Manpreet Toor"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=LrL92ovT39I",
-        "hostPageUrl": "https://www.youtube.com/watch?v=LrL92ovT39I",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=LrL92ovT39I",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT1M29S",
-        "motionThumbnailUrl": "https://tse2.mm.bing.net/th?id=OM2.424CYF3_QCBzDw_1641630343&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/LrL92ovT39I?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 4464006,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=5561C2C362E5239044C15561C2C362E5239044C1",
-        "name": "Short Highlights | Multan Sultans vs Lahore Qalandars | Match 34 Final | HBL PSL 8 | MI2",
-        "description": "Short Highlights | Multan Sultans vs Lahore Qalandars | Match 34 Final | HBL PSL 8 | MI2 #HBLPSL8 | #SabSitarayHumaray | #MSvLQ Pakistan Super League is a franchise T20 cricket tournament organized by the Pakistan Cricket Board. Top international and local cricketers represent six cities of Pakistan. All content is copyright protected & managed ...",
-        "thumbnailUrl": "https://tse3.mm.bing.net/th?id=OVP.E0Ck5UqPDgPe0StyLDJn6gHgFo&pid=Api",
-        "datePublished": "2023-03-18T20:29:22.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Pakistan Super League"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=POWEUK_ELTM",
-        "hostPageUrl": "https://www.youtube.com/watch?v=POWEUK_ELTM",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=POWEUK_ELTM",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT9M36S",
-        "motionThumbnailUrl": "https://tse3.mm.bing.net/th?id=OM.wUSQI-Viw8JhVQ&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/POWEUK_ELTM?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 2183203,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=3849DC36D819ABE1C0C73849DC36D819ABE1C0C7",
-        "name": "Full Highlights | Karachi Whites vs Multan | Match 29 | 2nd Semi Final | Pakistan Cup 2023/24 | PCB",
-        "description": "Full Highlights | Karachi Whites vs Multan | Match 29 | 2nd Semi Final | Pakistan Cup 2023/24 | PCB #PakistanCup | #KHIWvMUL Buy official Pakistan Cricket merchandise: https://shop.pcb.com.pk/ Welcome to the official page of Pakistan Cricket Board. Get all your Pakistan Cricket updates here! You can access exclusive player interviews, match ...",
-        "thumbnailUrl": "https://tse1.mm.bing.net/th?id=OVP.b9cOps15mHgy8EDps5kdZwHgFo&pid=Api",
-        "datePublished": "2023-11-17T13:04:30.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Pakistan Cricket"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=0aKY3QyJUcA",
-        "hostPageUrl": "https://www.youtube.com/watch?v=0aKY3QyJUcA",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=0aKY3QyJUcA",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT23M57S",
-        "motionThumbnailUrl": "https://tse1.mm.bing.net/th?id=OM.x8DhqxnYNtxJOA&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/0aKY3QyJUcA?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 485557,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=00EAB292AEF6B57D8AA200EAB292AEF6B57D8AA2",
-        "name": "Heavy Fight | Kieron Pollard vs Shaheen Afridi | Lahore vs Multan | Match 31 | HBL PSL 8 | MI2A",
-        "description": "Heavy Fight | Kieron Pollard vs Shaheen Afridi | Lahore Qalandars vs Multan Sultans | Match 31 | HBL PSL 8 | MI2A #LQvMS | #HBLPSL8 | #SabSitarayHumaray | #SportsCentral For Latest Updates Follow Us On Facebook & Instagram NOW https://www.facebook.com/Sports-Central-100403292093264/ https://instagram.com/sportscentral_drm Welcome to Sports ...",
-        "thumbnailUrl": "https://tse2.mm.bing.net/th?id=OVP.cl33LzMWK1mbzT-YLBtGcAEsDh&pid=Api",
-        "datePublished": "2023-03-15T16:09:28.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Sports Central"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=gYH3-SKlzw8",
-        "hostPageUrl": "https://www.youtube.com/watch?v=gYH3-SKlzw8",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=gYH3-SKlzw8",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT1M58S",
-        "motionThumbnailUrl": "https://tse2.mm.bing.net/th?id=OM.oop9tfaukrLqAA_1684186726&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/gYH3-SKlzw8?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 4332671,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=FF97A745782218104D1FFF97A745782218104D1F",
-        "name": "Final Match PSL8 Multan Sultan Vs Lahore Qalander || Full Comedy || Umar920",
-        "description": "#PSL8Final #multanvslahore Assalam O Alaikom Aj Ki Video Men Ap Dekhen ge PSL Final match Orignal Tu dekh liya match ye bhi dekhen maza na ay To Paise Wapas 🤣🤣 See in video #final #pslfinal #multanvslahore #MsVsLQFinal #finalhighlights #LahoreVsMultanHighlight #highlights #cricket #cricketlover #cricketcomedy #cricketfunnyvideo # ...",
-        "thumbnailUrl": "https://tse1.mm.bing.net/th?id=OVP.fVs6Uc6TFoSEp_WfVo93VgEsDh&pid=Api",
-        "datePublished": "2023-03-19T05:26:52.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Umar_ 920"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=qSSSaW5NsKw",
-        "hostPageUrl": "https://www.youtube.com/watch?v=qSSSaW5NsKw",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=qSSSaW5NsKw",
-        "width": 1080,
-        "height": 1920,
-        "duration": "PT3M58S",
-        "motionThumbnailUrl": "https://tse1.mm.bing.net/th?id=OM2.H00QGCJ4RaeX_w_1684230299&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/qSSSaW5NsKw?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 585110,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=23684FC8FCFC7BB4CFC423684FC8FCFC7BB4CFC4",
-        "name": "2nd Innings Highlights | Peshawar Zalmi vs Multan Sultans | Match 27 | HBL PSL 8 | MI2T #HBLPSL8 | #SabSitarayHumaray | #PZvMS",
-        "description": "2nd Innings Highlights | Peshawar Zalmi vs Multan Sultans | Match 27 | HBL PSL 8 | MI2T #HBLPSL8 | #SabSitarayHumaray | #PZvMS",
-        "thumbnailUrl": "https://tse3.mm.bing.net/th?id=OVP.2YTwB6py3LYbJJwKSAMWVQEsCo&pid=Api",
-        "datePublished": "2023-03-10T18:56:53.0000000",
-        "publisher": [
-          {
-            "name": "Facebook"
-          }
-        ],
-        "creator": {
-          "name": "Pakistan Super League"
-        },
-        "contentUrl": "https://www.facebook.com/thePSL/videos/2nd-innings-highlights-peshawar-zalmi-vs-multan-sultans-match-27-hbl-psl-8-mi2t-/157133810548365/",
-        "hostPageUrl": "https://www.facebook.com/thePSL/videos/2nd-innings-highlights-peshawar-zalmi-vs-multan-sultans-match-27-hbl-psl-8-mi2t-/157133810548365/",
-        "encodingFormat": "",
-        "hostPageDisplayUrl": "https://www.facebook.com/thePSL/videos/2nd-innings-highlights-peshawar-zalmi-vs-multan-sultans-match-27-hbl-psl-8-mi2t-/157133810548365/",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT8M28S",
-        "embedHtml": "<iframe src=\"https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/thePSL/videos/2nd-innings-highlights-peshawar-zalmi-vs-multan-sultans-match-27-hbl-psl-8-mi2t-/157133810548365/&show_text=0&width=410&height=238\" width=\"410\" height=\"238\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allowFullScreen=\"true\"></iframe>",
-        "viewCount": 4439696,
-        "thumbnail": {
-          "width": 160,
-          "height": 89
-        },
-        "isSuperfresh": false
-      },
-      {
-        "webSearchUrl": "https://www.bing.com/videos/search?q=multan%20videos&view=detail&mid=5D5FF091B66BEA701FA65D5FF091B66BEA701FA6",
-        "name": "Aima Baig's Live Performance at Super 11 Asia Cup 2023 curtain-raiser | PCB | MA2L",
-        "description": "Aima Baig's live performance of the Pakistan national song at Super 11 Asia Cup 2023 curtain-raiser at Multan Cricket Stadium. #AsiaCup2023 Buy official Pakistan Cricket merchandise: https://shop.pcb.com.pk/ Welcome to the official page of Pakistan Cricket Board. Get all your Pakistan Cricket updates here! You can access exclusive player ...",
-        "thumbnailUrl": "https://tse2.mm.bing.net/th?id=OVP.9jxcsKzVV3WXnrWRUJGEPQHgFo&pid=Api",
-        "datePublished": "2023-08-30T14:29:34.0000000",
-        "publisher": [
-          {
-            "name": "YouTube"
-          }
-        ],
-        "creator": {
-          "name": "Pakistan Cricket"
-        },
-        "isAccessibleForFree": true,
-        "contentUrl": "https://www.youtube.com/watch?v=hzHYti9wPmU",
-        "hostPageUrl": "https://www.youtube.com/watch?v=hzHYti9wPmU",
-        "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https://www.youtube.com/watch?v=hzHYti9wPmU",
-        "width": 1920,
-        "height": 1080,
-        "duration": "PT2M17S",
-        "motionThumbnailUrl": "https://tse2.mm.bing.net/th?id=OM.ph9w6mu2kfBfXQ&pid=Api",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/hzHYti9wPmU?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-        "allowHttpsEmbed": true,
-        "viewCount": 2351560,
-        "thumbnail": {
-          "width": 160,
-          "height": 120
-        },
-        "allowMobileEmbed": true,
-        "isSuperfresh": false
-      }
-    ],
-    "scenario": "List"
-  },
-  "rankingResponse": {
-    "mainline": {
-      "items": [
-        {
-          "answerType": "WebPages",
-          "resultIndex": 0,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.0"
-          }
-        },
-        {
-          "answerType": "Videos",
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#Videos"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 1,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.1"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 2,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.2"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 3,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.3"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 4,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.4"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 5,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.5"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 6,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.6"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 7,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.7"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 8,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.8"
-          }
-        },
-        {
-          "answerType": "WebPages",
-          "resultIndex": 9,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#WebPages.9"
-          }
-        }
-      ]
+      "imageId": "2289ECF858E4FD549D5CAFCDC54D477B5F31DF2A",
+      "accentColor": "B73A14"
     },
-    "sidebar": {
-      "items": [
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=FC1AAC9289FDE1BFD843A8BEA554F4B9A60D9EAE&simid=608055365580973498",
+      "name": "Gol Gappay \/ Pani Puri",
+      "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OIP.NL3PUazrNuhxkVzNkn1dlgHaLH&pid=Api",
+      "datePublished": "2021-06-25T17:05:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/chaiandchurros.com\/wp-content\/uploads\/2021\/06\/GolGappayPic-1024x1536.jpeg",
+      "hostPageUrl": "https:\/\/chaiandchurros.com\/gol-gappay\/",
+      "contentSize": "341728 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/chaiandchurros.com\/gol-gappay",
+      "width": 1024,
+      "height": 1536,
+      "hostPageDiscoveredDate": "2021-06-25T17:05:18.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 711
+      },
+      "imageInsightsToken": "ccid_NL3PUazr*cp_25F2375C0FDE9AAF050E8E9C3602A0D5*mid_FC1AAC9289FDE1BFD843A8BEA554F4B9A60D9EAE*simid_608055365580973498*thid_OIP.NL3PUazrNuhxkVzNkn1dlgHaLH",
+      "insightsMetadata": {
+        "pagesIncludingCount": 6,
+        "availableSizesCount": 4
+      },
+      "imageId": "FC1AAC9289FDE1BFD843A8BEA554F4B9A60D9EAE",
+      "accentColor": "B23608"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=F61250F820D284C85C00D519A3B74770756D3713&simid=607986384147018858",
+      "name": "Pakistani, Indian : Gol Gappay ~ Food Recipes",
+      "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OIP.CkCnWIDZmwzosMR72dvr0gHaFj&pid=Api",
+      "datePublished": "2022-01-15T13:44:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/4.bp.blogspot.com\/-pGNwaRmjlxA\/UsWzRHRMQiI\/AAAAAAAAAFg\/LVC67xCBBdw\/s1600\/dsc01915n.jpg",
+      "hostPageUrl": "https:\/\/writerecipes.blogspot.com\/2014\/01\/pakistani-indian-gol-gappay.html",
+      "contentSize": "226231 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/writerecipes.blogspot.com\/2014\/01\/pakistani-indian-gol-gappay.html",
+      "width": 1600,
+      "height": 1200,
+      "hostPageFavIconUrl": "https:\/\/www.bing.com\/th?id=ODF.kCKFU1-d0l3Elu2Vvbpmew&pid=Api",
+      "hostPageDomainFriendlyName": "blogspot.com",
+      "hostPageDiscoveredDate": "2017-06-16T00:00:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 355
+      },
+      "imageInsightsToken": "ccid_CkCnWIDZ*cp_5E06D44A716EEE215AA20F4898D53B53*mid_F61250F820D284C85C00D519A3B74770756D3713*simid_607986384147018858*thid_OIP.CkCnWIDZmwzosMR72dvr0gHaFj",
+      "insightsMetadata": {
+        "pagesIncludingCount": 3,
+        "availableSizesCount": 3
+      },
+      "imageId": "F61250F820D284C85C00D519A3B74770756D3713",
+      "accentColor": "763E18"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=3109F20D4F7A2C815C0E254C124D30E1E987E082&simid=608003594051086107",
+      "name": "Delicious Gol Gappay ( Pani puri )",
+      "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OIP.zHZoHiCHgtPD2ezSaeKY5AHaEK&pid=Api",
+      "datePublished": "2021-07-12T14:19:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/1.bp.blogspot.com\/-VUocDGRoT8w\/YBPcuoLa2oI\/AAAAAAAAABk\/tt5lkxHafqI-lJEN_PebtY_QP1IIelQ6wCLcBGAsYHQ\/s1920\/2%2B%25281%2529.jpg",
+      "hostPageUrl": "https:\/\/foodofpakistanblogs.blogspot.com\/2021\/01\/delicious-gol-gappay-pani-puri.html",
+      "contentSize": "1268381 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/foodofpakistanblogs.blogspot.com\/2021\/01\/delicious-gol-gappay-pani-puri.html",
+      "width": 1920,
+      "height": 1080,
+      "hostPageDiscoveredDate": "2021-06-02T00:00:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 266
+      },
+      "imageInsightsToken": "ccid_zHZoHiCH*cp_CA00493E0770A6075C04D40E15ED850E*mid_3109F20D4F7A2C815C0E254C124D30E1E987E082*simid_608003594051086107*thid_OIP.zHZoHiCHgtPD2ezSaeKY5AHaEK",
+      "insightsMetadata": {
+        "pagesIncludingCount": 1,
+        "availableSizesCount": 1
+      },
+      "imageId": "3109F20D4F7A2C815C0E254C124D30E1E987E082",
+      "accentColor": "B34A01"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=0172157EC29B9A77339B6790981602113081CE75&simid=608014400163092652",
+      "name": "How to Make Golgappa at Home? (Easy & Quick)",
+      "thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?id=OIP.0_uP_Xml3mfB6vkbyKAv-gHaF-&pid=Api",
+      "datePublished": "2020-08-01T16:28:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/foodiewish.com\/wp-content\/uploads\/2020\/04\/easy-golgappa-recipe-768x620.jpg",
+      "hostPageUrl": "https:\/\/foodiewish.com\/recipes\/how-to-make-golgappa\/",
+      "contentSize": "88306 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/foodiewish.com\/recipes\/how-to-make-golgappa",
+      "width": 768,
+      "height": 620,
+      "hostPageDiscoveredDate": "2020-08-01T16:28:10.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 382
+      },
+      "imageInsightsToken": "ccid_0\/uP\/Xml*cp_069E7DB57813311FF3E192D38B33D27D*mid_0172157EC29B9A77339B6790981602113081CE75*simid_608014400163092652*thid_OIP.0!_uP!_Xml3mfB6vkbyKAv-gHaF-",
+      "insightsMetadata": {
+        "pagesIncludingCount": 6,
+        "availableSizesCount": 7
+      },
+      "imageId": "0172157EC29B9A77339B6790981602113081CE75",
+      "accentColor": "704818"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=3A50C7E7E1796581AC4B497F57E0E60A99D79C25&simid=608031558560723477",
+      "name": "Homemade Gol Gappay Recipe | Step by Step Recipe",
+      "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OIP.JMkoG2SuN8nz7EXZ1t8idgHaEn&pid=Api",
+      "datePublished": "2015-06-21T12:00:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/www.therecipespk.com\/wp-content\/uploads\/2014\/07\/Gol-Gappay-Recipe.jpg",
+      "hostPageUrl": "https:\/\/www.therecipespk.com\/gol-gappay\/",
+      "contentSize": "35958 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/www.therecipespk.com\/gol-gappay",
+      "width": 634,
+      "height": 395,
+      "hostPageDiscoveredDate": "2015-06-21T12:00:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 295
+      },
+      "imageInsightsToken": "ccid_JMkoG2Su*cp_B19776F6C0986AAA48B3149C0C6AB9FF*mid_3A50C7E7E1796581AC4B497F57E0E60A99D79C25*simid_608031558560723477*thid_OIP.JMkoG2SuN8nz7EXZ1t8idgHaEn",
+      "insightsMetadata": {
+        "pagesIncludingCount": 56,
+        "availableSizesCount": 46
+      },
+      "imageId": "3A50C7E7E1796581AC4B497F57E0E60A99D79C25",
+      "accentColor": "3A2407"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=38B18C0337F016077CC4A1595E171E8800A2C890&simid=608010272720619170",
+      "name": "5 best places that sells Golgappas in K-Town",
+      "thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?id=OIP.Fp0TM0NrDfUWVLD4IKIybgAAAA&pid=Api",
+      "datePublished": "2017-03-20T10:33:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "http:\/\/www.arydigital.tv\/wp-content\/uploads\/2017\/03\/gol-gappe-3-1024x697.jpg",
+      "hostPageUrl": "http:\/\/www.arydigital.tv\/5-best-places-sells-golgappas-k-town\/",
+      "contentSize": "153709 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "www.arydigital.tv\/5-best-places-sells-golgappas-k-town",
+      "width": 474,
+      "height": 322,
+      "hostPageDiscoveredDate": "2017-03-20T10:33:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 322
+      },
+      "imageInsightsToken": "ccid_Fp0TM0Nr*cp_FD619DFE12EFC9E0E7CF0837E59CA187*mid_38B18C0337F016077CC4A1595E171E8800A2C890*simid_608010272720619170*thid_OIP.Fp0TM0NrDfUWVLD4IKIybgAAAA",
+      "insightsMetadata": {
+        "recipeSourcesCount": 0,
+        "pagesIncludingCount": 12,
+        "availableSizesCount": 8
+      },
+      "imageId": "38B18C0337F016077CC4A1595E171E8800A2C890",
+      "accentColor": "722E03"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=6B0FEE1DE05BB914C444967541AD045E424E4152&simid=607988037667072099",
+      "name": "Street Style Gol Gappay – Food Fusion",
+      "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OIP.fhCUaj9Y50YVaX6dOZ06DwHaFj&pid=Api",
+      "datePublished": "2020-04-28T14:11:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/mail.foodfusion.com\/wp-content\/uploads\/2020\/03\/Gol-gappay-Recipe-by-Food-fusion-4.jpg",
+      "hostPageUrl": "https:\/\/mail.foodfusion.com\/recipe\/street-style-gol-gappay\/",
+      "contentSize": "309024 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/mail.foodfusion.com\/recipe\/street-style-gol-gappay",
+      "width": 1024,
+      "height": 768,
+      "hostPageDiscoveredDate": "2020-04-28T14:11:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 355
+      },
+      "imageInsightsToken": "ccid_fhCUaj9Y*cp_601E644FCEFBCAAADDFF48B0CB57F28E*mid_6B0FEE1DE05BB914C444967541AD045E424E4152*simid_607988037667072099*thid_OIP.fhCUaj9Y50YVaX6dOZ06DwHaFj",
+      "insightsMetadata": {
+        "pagesIncludingCount": 2,
+        "availableSizesCount": 1
+      },
+      "imageId": "6B0FEE1DE05BB914C444967541AD045E424E4152",
+      "accentColor": "4F5B0A"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=B30316B282BC17F2D1A904FB4859C9E43BCD54FB&simid=608029342378308140",
+      "name": "Gol Gappay Recipe - Pani Puri recipe - Naush Kitchen Routine",
+      "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OIP.i9biL7vNRZi71h-Riw6VYAHaEK&pid=Api",
+      "datePublished": "2020-07-09T12:00:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/www.naushkitchenroutine.com\/wp-content\/uploads\/2020\/07\/gol-gappay.png",
+      "hostPageUrl": "https:\/\/www.naushkitchenroutine.com\/gol-gappay-recipe-pani-puri-recipe\/",
+      "contentSize": "1503953 B",
+      "encodingFormat": "png",
+      "hostPageDisplayUrl": "https:\/\/www.naushkitchenroutine.com\/gol-gappay-recipe-pani-puri-recipe",
+      "width": 1280,
+      "height": 720,
+      "hostPageDiscoveredDate": "2020-07-09T12:00:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 266
+      },
+      "imageInsightsToken": "ccid_i9biL7vN*cp_7177765EDE6CFEC7B30224226C982EED*mid_B30316B282BC17F2D1A904FB4859C9E43BCD54FB*simid_608029342378308140*thid_OIP.i9biL7vNRZi71h-Riw6VYAHaEK",
+      "insightsMetadata": {
+        "pagesIncludingCount": 3,
+        "availableSizesCount": 2
+      },
+      "imageId": "B30316B282BC17F2D1A904FB4859C9E43BCD54FB",
+      "accentColor": "BF7E0C"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=9EF71E5EEB645197265155DAD02B79E8DBCD4BA1&simid=608015817514421665",
+      "name": "Gol Gappa: The Most-Loved Pakistani Street Food – Recette Magazine",
+      "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.O8_em0l_d6CiOnVW4x1Q3wHaFj&pid=Api",
+      "datePublished": "2021-11-29T17:33:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/blog.suvie.com\/wp-content\/uploads\/2021\/11\/Pani_puri_Gol_Gappa_Foods_of_India-1024x768.jpg",
+      "hostPageUrl": "https:\/\/blog.suvie.com\/gol-gappa-the-most-loved-pakistani-street-food\/",
+      "contentSize": "482418 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/blog.suvie.com\/gol-gappa-the-most-loved-pakistani-street-food",
+      "width": 1024,
+      "height": 768,
+      "hostPageDiscoveredDate": "2021-11-29T17:33:12.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 355
+      },
+      "imageInsightsToken": "ccid_O8\/em0l\/*cp_ACB28D538B60CD9DFF6665CBC1CAD4C8*mid_9EF71E5EEB645197265155DAD02B79E8DBCD4BA1*simid_608015817514421665*thid_OIP.O8!_em0l!_d6CiOnVW4x1Q3wHaFj",
+      "insightsMetadata": {
+        "pagesIncludingCount": 1,
+        "availableSizesCount": 1
+      },
+      "imageId": "9EF71E5EEB645197265155DAD02B79E8DBCD4BA1",
+      "accentColor": "783D0C"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=80CE252F020EA9ECAF12F5E4535D3C4ECEEA8A95&simid=608055017686761615",
+      "name": "GOL GAPPAY (Panipuri) - 6 ks - Indian Food Restaurant & Bar Kosice, Taj ...",
+      "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.2NO9n3Icsf0zlDhmWLv6WwHaFq&pid=Api",
+      "datePublished": "2021-03-16T21:49:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/www.tajmahal.sk\/wp-content\/uploads\/2020\/08\/Pani_Puri_Gol_gappay-1024x783.jpg",
+      "hostPageUrl": "https:\/\/www.tajmahal.sk\/menucard\/gol-gappay\/",
+      "contentSize": "120870 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/www.tajmahal.sk\/menucard\/gol-gappay",
+      "width": 1024,
+      "height": 783,
+      "hostPageDiscoveredDate": "2021-03-16T21:49:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 362
+      },
+      "imageInsightsToken": "ccid_2NO9n3Ic*cp_1FEDE32431CA51DBB576EF6F8B1C8EA9*mid_80CE252F020EA9ECAF12F5E4535D3C4ECEEA8A95*simid_608055017686761615*thid_OIP.2NO9n3Icsf0zlDhmWLv6WwHaFq",
+      "insightsMetadata": {
+        "pagesIncludingCount": 17,
+        "availableSizesCount": 10
+      },
+      "imageId": "80CE252F020EA9ECAF12F5E4535D3C4ECEEA8A95",
+      "accentColor": "B87A13"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=3191B6FB205305435CD20CAC66D42426C3A70317&simid=608017428154314758",
+      "name": "Hot n tasty Gol Gappay N Chaat menu in Karachi | Food Delivery Karachi ...",
+      "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OIP._gINqtoTvb5DBNsN01AqrgHaFa&pid=Api",
+      "datePublished": "2021-04-09T00:53:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/images.deliveryhero.io\/image\/fd-pk\/LH\/sb8d-hero.jpg",
+      "hostPageUrl": "https:\/\/www.foodpanda.pk\/restaurant\/sb8d\/hot-n-tasty-gol-gappay-n-chaat",
+      "contentSize": "819940 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/www.foodpanda.pk\/restaurant\/sb8d\/hot-n-tasty-gol-gappay-n-chaat",
+      "width": 4000,
+      "height": 2925,
+      "hostPageDiscoveredDate": "2021-04-09T00:53:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 346
+      },
+      "imageInsightsToken": "ccid_\/gINqtoT*cp_11CACDA6EE30DB99397F456E2C1C8966*mid_3191B6FB205305435CD20CAC66D42426C3A70317*simid_608017428154314758*thid_OIP.!_gINqtoTvb5DBNsN01AqrgHaFa",
+      "insightsMetadata": {
+        "pagesIncludingCount": 1,
+        "availableSizesCount": 1
+      },
+      "imageId": "3191B6FB205305435CD20CAC66D42426C3A70317",
+      "accentColor": "7D420B"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=22C377CA99322D9CB72FA2D9A420120D58D2F87D&simid=608055047750628422",
+      "name": "Pani Puri \/ Gol Gappay – Food Fusion",
+      "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OIP.8fji6DMzra3JEUNKAP9zzAHaFj&pid=Api",
+      "datePublished": "2020-01-09T22:56:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/www.foodfusion.com\/wp-content\/uploads\/2017\/05\/ID-R00205.jpg",
+      "hostPageUrl": "https:\/\/www.foodfusion.com\/recipe\/pani-puri-gol-gappay\/",
+      "contentSize": "312474 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/www.foodfusion.com\/recipe\/pani-puri-gol-gappay",
+      "width": 2048,
+      "height": 1536,
+      "hostPageDiscoveredDate": "2017-08-24T00:00:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 355
+      },
+      "imageInsightsToken": "ccid_8fji6DMz*cp_81ED8BC4D5302BA04D169B832697DED8*mid_22C377CA99322D9CB72FA2D9A420120D58D2F87D*simid_608055047750628422*thid_OIP.8fji6DMzra3JEUNKAP9zzAHaFj",
+      "insightsMetadata": {
+        "pagesIncludingCount": 6,
+        "availableSizesCount": 2
+      },
+      "imageId": "22C377CA99322D9CB72FA2D9A420120D58D2F87D",
+      "accentColor": "4D5B1C"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=A73D4DA205B6A85A9EE791A50FB9A7AB1C9C631B&simid=608050765612929238",
+      "name": "Gol Gappe: What is the origin?",
+      "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.Bpp_HE60Av4y_hE8Kw10MwHaFj&pid=Api",
+      "datePublished": "2021-07-17T21:45:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/assets.shortpedia.com\/Voices\/wp-content\/uploads\/2021\/01\/1-Gol-Gappe-Pani-Puri.jpg",
+      "hostPageUrl": "https:\/\/voices.shortpedia.com\/karan-kapoor\/the-origin-story-of-gol-gappe\/",
+      "contentSize": "207165 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/voices.shortpedia.com\/karan-kapoor\/the-origin-story-of-gol-gappe",
+      "width": 1200,
+      "height": 900,
+      "hostPageDiscoveredDate": "2021-03-05T00:00:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 355
+      },
+      "imageInsightsToken": "ccid_Bpp\/HE60*cp_35AF1FD3C04075B9E1BF19B4D9D51091*mid_A73D4DA205B6A85A9EE791A50FB9A7AB1C9C631B*simid_608050765612929238*thid_OIP.Bpp!_HE60Av4y!_hE8Kw10MwHaFj",
+      "insightsMetadata": {
+        "pagesIncludingCount": 78,
+        "availableSizesCount": 31
+      },
+      "imageId": "A73D4DA205B6A85A9EE791A50FB9A7AB1C9C631B",
+      "accentColor": "B45002"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=35055719D5D39825FC64C7134B9D4A6F0474FC6E&simid=608026924308058277",
+      "name": "Gol Gappay or Pani Puri | Pakistan Atlas",
+      "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.798gSpw4C5HEDPEyUcmaiQHaHa&pid=Api",
+      "datePublished": "2021-01-17T18:29:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/pakistanatlas.com\/wp-content\/uploads\/2020\/09\/Pakistani-Food_0103_104-Gol-gapy-pani-puri.png",
+      "hostPageUrl": "https:\/\/pakistanatlas.com\/food\/gol-gappay-or-pani-puri\/",
+      "contentSize": "424172 B",
+      "encodingFormat": "png",
+      "hostPageDisplayUrl": "https:\/\/pakistanatlas.com\/food\/gol-gappay-or-pani-puri",
+      "width": 600,
+      "height": 600,
+      "hostPageDiscoveredDate": "2020-10-29T00:00:00.0000000Z",
+      "isTransparent": true,
+      "thumbnail": {
+        "width": 474,
+        "height": 474
+      },
+      "imageInsightsToken": "ccid_798gSpw4*cp_4A542A88914246DC32189DAB3CAFD077*mid_35055719D5D39825FC64C7134B9D4A6F0474FC6E*simid_608026924308058277*thid_OIP.798gSpw4C5HEDPEyUcmaiQHaHa",
+      "insightsMetadata": {
+        "pagesIncludingCount": 3,
+        "availableSizesCount": 2
+      },
+      "imageId": "35055719D5D39825FC64C7134B9D4A6F0474FC6E",
+      "accentColor": "4D6305"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=B9BB79B3D9258AF095D0D92939CD9E5823D89F16&simid=608036416176276353",
+      "name": "Gol gappay at chatkharay | Yummy Pakistani food | Pinterest",
+      "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.aT0WfFbwZZdsagEBlAsMwAHaGF&pid=Api",
+      "datePublished": "2013-08-22T13:17:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "http:\/\/media-cache-ec0.pinimg.com\/736x\/21\/8c\/04\/218c048276fd32c9d4f2e4a1a8f3299e.jpg",
+      "hostPageUrl": "http:\/\/pinterest.com\/pin\/58617232623138401\/",
+      "contentSize": "70531 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "pinterest.com\/pin\/58617232623138401",
+      "width": 720,
+      "height": 591,
+      "hostPageDiscoveredDate": "2013-08-22T13:17:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 389
+      },
+      "imageInsightsToken": "ccid_aT0WfFbw*cp_6BDEA612263020B2C3A5ACBD35234AC6*mid_B9BB79B3D9258AF095D0D92939CD9E5823D89F16*simid_608036416176276353*thid_OIP.aT0WfFbwZZdsagEBlAsMwAHaGF",
+      "insightsMetadata": {
+        "recipeSourcesCount": 0,
+        "pagesIncludingCount": 2,
+        "availableSizesCount": 1
+      },
+      "imageId": "B9BB79B3D9258AF095D0D92939CD9E5823D89F16",
+      "accentColor": "B48817"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=16988AD3E9BE9BFC64BD22ACD34178D509507EBA&simid=607996490190227690",
+      "name": "Akhtar Bhai k Gol Gappay menu in Lahore | Food Delivery Lahore | foodpanda",
+      "thumbnailUrl": "https:\/\/tse1.explicit.bing.net\/th?id=OIP.L-iRS5MI_9Mf2XvCO_a4jQHaFa&pid=Api",
+      "datePublished": "2021-01-14T14:10:00.0000000Z",
+      "isFamilyFriendly": false,
+      "contentUrl": "https:\/\/images.deliveryhero.io\/image\/fd-pk\/LH\/d6an-hero.jpg",
+      "hostPageUrl": "https:\/\/www.foodpanda.pk\/restaurant\/d6an\/akhtar-bhai-k-gol-gappay",
+      "contentSize": "844433 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/www.foodpanda.pk\/restaurant\/d6an\/akhtar-bhai-k-gol-gappay",
+      "width": 4000,
+      "height": 2925,
+      "hostPageDiscoveredDate": "2021-01-14T14:10:26.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 346
+      },
+      "imageInsightsToken": "ccid_L+iRS5MI*cp_6599D0C72E47697C698348CFF0397BA8*mid_16988AD3E9BE9BFC64BD22ACD34178D509507EBA*simid_607996490190227690*thid_OIP.L-iRS5MI!_9Mf2XvCO!_a4jQHaFa",
+      "insightsMetadata": {
+        "pagesIncludingCount": 1,
+        "availableSizesCount": 1
+      },
+      "imageId": "16988AD3E9BE9BFC64BD22ACD34178D509507EBA",
+      "accentColor": "B58B16"
+    },
+    {
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=gol+gappay&id=AA77AC36AAE76532023CDBC284F4507346954582&simid=608049618902278493",
+      "name": "Gol gappay. Lahore, Pakistan | Pakistani food, Food, Yummy",
+      "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OIP.MvfD8IvfPBq9drzSmqe6-wHaFj&pid=Api",
+      "datePublished": "2020-08-30T08:48:00.0000000Z",
+      "isFamilyFriendly": true,
+      "contentUrl": "https:\/\/i.pinimg.com\/originals\/f4\/a8\/85\/f4a885d293380c72a075c3db770a4687.jpg",
+      "hostPageUrl": "https:\/\/www.pinterest.com\/pin\/310889180507202037\/",
+      "contentSize": "592318 B",
+      "encodingFormat": "jpeg",
+      "hostPageDisplayUrl": "https:\/\/www.pinterest.com\/pin\/310889180507202037",
+      "width": 3264,
+      "height": 2448,
+      "hostPageFavIconUrl": "https:\/\/www.bing.com\/th?id=ODF.PmATFqOwm9_sUEmusAtcwA&pid=Api",
+      "hostPageDomainFriendlyName": "Pinterest",
+      "hostPageDiscoveredDate": "2018-05-29T00:00:00.0000000Z",
+      "isTransparent": false,
+      "thumbnail": {
+        "width": 474,
+        "height": 355
+      },
+      "imageInsightsToken": "ccid_MvfD8Ivf*cp_869E570CEB8B57CEEB246550CC0D3AD8*mid_AA77AC36AAE76532023CDBC284F4507346954582*simid_608049618902278493*thid_OIP.MvfD8IvfPBq9drzSmqe6-wHaFj",
+      "insightsMetadata": {
+        "recipeSourcesCount": 0,
+        "pagesIncludingCount": 1,
+        "availableSizesCount": 1
+      },
+      "imageId": "AA77AC36AAE76532023CDBC284F4507346954582",
+      "accentColor": "6D4218"
+    }
+  ],
+  "queryExpansions": [
+    {
+      "text": "Gol Gappay Recipe",
+      "displayText": "Recipe",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+Recipe&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Recipe%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+Recipe&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Recipe%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Gol+Gappay+Recipe&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay Pics",
+      "displayText": "Pics",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+Pics&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Pics%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+Pics&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Pics%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Gol+Gappay+Pics&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay in Multan Cantt",
+      "displayText": "Multan Cantt",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+in+Multan+Cantt&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Multan+Cantt%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+in+Multan+Cantt&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Multan+Cantt%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Gol+Gappay+in+Multan+Cantt&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay Wala",
+      "displayText": "Wala",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+Wala&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Wala%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+Wala&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Wala%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Gol+Gappay+Wala&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay in Karachi",
+      "displayText": "Karachi",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+in+Karachi&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Karachi%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+in+Karachi&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Karachi%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Gol+Gappay+in+Karachi&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay in Urdu",
+      "displayText": "Urdu",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+in+Urdu&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Urdu%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+in+Urdu&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Urdu%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Gol+Gappay+in+Urdu&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay PNG",
+      "displayText": "PNG",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+PNG&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22PNG%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+PNG&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22PNG%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Gol+Gappay+PNG&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay Plate",
+      "displayText": "Plate",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+Plate&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Plate%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+Plate&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Plate%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Gol+Gappay+Plate&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    }
+  ],
+  "pivotSuggestions": [
+    {
+      "pivot": "gol",
+      "suggestions": []
+    },
+    {
+      "pivot": "gappay",
+      "suggestions": [
         {
-          "answerType": "Entities",
-          "resultIndex": 0,
-          "value": {
-            "id": "https://api.bing.microsoft.com/api/v7/#Entities.0"
+          "text": "Gol Gappe",
+          "displayText": "Gappe",
+          "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappe&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Gappe%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRQBPS",
+          "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappe&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Gappe%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+          "thumbnail": {
+            "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Gol+Gappe&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+          }
+        },
+        {
+          "text": "Gol Gappy Pakistani Food",
+          "displayText": "Gappy Pakistani Food",
+          "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappy+Pakistani+Food&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Gappy+Pakistani+Food%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d&FORM=IRQBPS",
+          "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappy+Pakistani+Food&tq=%7b%22pq%22%3a%22gol+gappay%22%2c%22qs%22%3a%5b%7b%22cv%22%3a%22gol%22%2c%22pv%22%3a%22gol%22%2c%22hps%22%3afalse%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22gappay%22%2c%22pv%22%3a%22gappay%22%2c%22hps%22%3atrue%2c%22iqp%22%3afalse%7d%2c%7b%22cv%22%3a%22Gappy+Pakistani+Food%22%2c%22pv%22%3a%22%22%2c%22hps%22%3afalse%2c%22iqp%22%3atrue%7d%5d%7d",
+          "thumbnail": {
+            "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Gol+Gappy+Pakistani+Food&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
           }
         }
       ]
     }
-  }
+  ],
+  "relatedSearches": [
+    {
+      "text": "Gol Gappe Recipe",
+      "displayText": "Gol Gappe Recipe",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappe+Recipe&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappe+Recipe",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Gol+Gappe+Recipe&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Golgapy",
+      "displayText": "Golgapy",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Golgapy&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Golgapy",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Golgapy&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappa Recipe",
+      "displayText": "Gol Gappa Recipe",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappa+Recipe&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappa+Recipe",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Gol+Gappa+Recipe&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay Recipe",
+      "displayText": "Gol Gappay Recipe",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+Recipe&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+Recipe",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Gol+Gappay+Recipe&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Golgappy",
+      "displayText": "Golgappy",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Golgappy&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Golgappy",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Golgappy&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay Pics",
+      "displayText": "Gol Gappay Pics",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+Pics&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+Pics",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Gol+Gappay+Pics&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Pani Puri in English",
+      "displayText": "Pani Puri in English",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Pani+Puri+in+English&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Pani+Puri+in+English",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Pani+Puri+in+English&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Golgappa Pani",
+      "displayText": "Golgappa Pani",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Golgappa+Pani&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Golgappa+Pani",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Golgappa+Pani&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Pani Poori",
+      "displayText": "Pani Poori",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Pani+Poori&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Pani+Poori",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Pani+Poori&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Pani Puri Wala",
+      "displayText": "Pani Puri Wala",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Pani+Puri+Wala&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Pani+Puri+Wala",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Pani+Puri+Wala&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Dahi Gol Gappe",
+      "displayText": "Dahi Gol Gappe",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Dahi+Gol+Gappe&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Dahi+Gol+Gappe",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Dahi+Gol+Gappe&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappe",
+      "displayText": "Gol Gappe",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappe&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappe",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Gol+Gappe&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappe PNG",
+      "displayText": "Gol Gappe PNG",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappe+PNG&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappe+PNG",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Gol+Gappe+PNG&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Indian Pani Puri",
+      "displayText": "Indian Pani Puri",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Indian+Pani+Puri&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Indian+Pani+Puri",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Indian+Pani+Puri&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Bhel Puri",
+      "displayText": "Bhel Puri",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Bhel+Puri&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Bhel+Puri",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Bhel+Puri&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Golgappa Chaat",
+      "displayText": "Golgappa Chaat",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Golgappa+Chaat&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Golgappa+Chaat",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Golgappa+Chaat&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay in Multan Cantt",
+      "displayText": "Gol Gappay in Multan Cantt",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+in+Multan+Cantt&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+in+Multan+Cantt",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Gol+Gappay+in+Multan+Cantt&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Pani Puri Street Food",
+      "displayText": "Pani Puri Street Food",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Pani+Puri+Street+Food&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Pani+Puri+Street+Food",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Pani+Puri+Street+Food&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Papdi Chaat",
+      "displayText": "Papdi Chaat",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Papdi+Chaat&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Papdi+Chaat",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Papdi+Chaat&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Phuchka",
+      "displayText": "Phuchka",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Phuchka&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Phuchka",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Phuchka&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay in Karachi",
+      "displayText": "Gol Gappay in Karachi",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+in+Karachi&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+in+Karachi",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Gol+Gappay+in+Karachi&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Gol Gappay in Urdu",
+      "displayText": "Gol Gappay in Urdu",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Gol+Gappay+in+Urdu&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Gol+Gappay+in+Urdu",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Gol+Gappay+in+Urdu&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Pakistan Street Food",
+      "displayText": "Pakistan Street Food",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Pakistan+Street+Food&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Pakistan+Street+Food",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Pakistan+Street+Food&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    },
+    {
+      "text": "Pani Puri Masala",
+      "displayText": "Pani Puri Masala",
+      "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Pani+Puri+Masala&FORM=IRPATC",
+      "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Pani+Puri+Masala",
+      "thumbnail": {
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Pani+Puri+Masala&pid=Api&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1"
+      }
+    }
+  ]
 }
