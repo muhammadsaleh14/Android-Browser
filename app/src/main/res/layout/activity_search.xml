@@ -1,42 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <include layout="@layout/title_bar"/>
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
 
         <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/appIcon"
-        android:layout_width="60dp"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/app_logo"
-        android:src="@drawable/toys"
-        app:shapeAppearance="@style/RoundImageShape"
-        android:layout_gravity="left"
-            />
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_logo"
+            android:src="@drawable/toys"
+            app:shapeAppearance="@style/RoundImageShape" />
 
         <EditText
             android:id="@+id/searchTerm"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:inputType="text"
-            android:text="Name"
+            android:text="Name" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <Button
+            android:id="@+id/btnWebPages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Webpages"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            />
+        <Button
+            android:id="@+id/btnImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Images"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/btnVideos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Videos"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
             />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSearchResult"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+
 </LinearLayout>
