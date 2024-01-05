@@ -4,12 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.browserapp.R
 import com.example.browserapp.adapters.ImageSearchAdapter
-import com.example.browserapp.adapters.SearchAdapter
 import com.example.browserapp.viewmodels.ImagesViewModel
 
 class ImagesFragment : Fragment(R.layout.fragment_images) {

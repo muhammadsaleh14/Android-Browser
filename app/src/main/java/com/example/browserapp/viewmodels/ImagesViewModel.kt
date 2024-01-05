@@ -7,9 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.browserapp.dataClasses.bingSearch.BingSearch
 import com.example.browserapp.search.webSearchEndpoint
-import com.example.browserapp.search.getSearchWebResultAsync
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.search.subscriptionKey
 import kotlinx.coroutines.launch

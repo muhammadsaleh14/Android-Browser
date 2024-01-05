@@ -1,7 +1,7 @@
 package com.example.browserapp.search
 
 import android.util.Log
-import com.example.browserapp.dataClasses.bingSearch.WebpagesSearch
+import com.example.browserapp.dataClasses.bingSearch.VideosSearch
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
@@ -13,40 +13,42 @@ import java.net.URL
 import java.net.URLEncoder
 import javax.net.ssl.HttpsURLConnection
 
-const val webSearchEndpoint: String = "https://api.bing.microsoft.com/v7.0/search"
+const val videosSearchEndpoint: String = "https://api.bing.microsoft.com/v7.0/videos/search"
 fun main() {
-    runBlocking {
-        getSearchWebResultAsync(searchTerm, subscriptionKey, webSearchEndpoint)
-    }
+//    runBlocking {
+//        getSearchVideosResultAsync("gol gappay", subscriptionKey, videosSearchEndpoint)
+//    }
+    val results = searchVideos(searchTerm)
+    print(results.jsonResponse)
 }
 
-suspend fun getSearchWebResultAsync(
+suspend fun getSearchVideosResultAsync(
     searchText: String,
     subscriptionKey : String?,
     endpoint: String
-): WebpagesSearch? = withContext(Dispatchers.IO) {
+): VideosSearch? = withContext(Dispatchers.IO) {
     try {
 
         Log.d("TAGINN","Fetching results")
-        val results = searchWeb(searchText)
+        val results = searchVideos(searchText)
 //        print(results.jsonResponse)
-        return@withContext parseAndPrettifyBingApiResponse(results.jsonResponse)
+        return@withContext parseVideosResponse(results.jsonResponse)
     } catch (e: Exception) {
-        Log.e("TAGINN", "catch getSearchWebResult ${e.message ?: ""}")
+        Log.e("TAGINN", "catch getSearchVideosResult ${e.message ?: ""}")
         return@withContext null
     }
 }
 
-fun searchWeb(searchQuery: String): SearchResults {
+fun searchVideos(searchQuery: String): SearchResults {
     try {
 
         val safeSearchValue = URLEncoder.encode("Moderate", "UTF-8")
-        val count = 10
+        val count = 20
         val offset = 1
 //        val answerCount = 1
 //        val responseFilter = URLEncoder.encode("webpages", "UTF-8")
 
-        val urlString = "$webSearchEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
+        val urlString = "$videosSearchEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
                 "&safeSearch=${safeSearchValue}" +
                 "&count=$count" +
                 "&offset=$offset"
@@ -67,19 +69,19 @@ fun searchWeb(searchQuery: String): SearchResults {
         return results
     } catch (e: Exception) {
         print(e.printStackTrace())
-        Log.e("TAGINN", "catch searchWeb ${e.stackTraceToString() ?: ""}")
+        Log.e("TAGINN", "catch searchVideos ${e.stackTraceToString() ?: ""}")
         return SearchResults(HashMap(), "")
     }
 }
 
-fun parseAndPrettifyBingApiResponse(jsonText: String): WebpagesSearch {
+fun parseVideosResponse(jsonText: String): VideosSearch {
     try {
         val parser = JsonParser()
         val json = parser.parse(jsonText) as JsonObject
         print(json)
         val gson = GsonBuilder().setPrettyPrinting().create()
         val prettyJson = gson.toJson(json)
-        return gson.fromJson(prettyJson, WebpagesSearch::class.java)
+        return gson.fromJson(prettyJson, VideosSearch::class.java)
     } catch (e: Exception) {
         throw e
     }

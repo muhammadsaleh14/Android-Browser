@@ -1,6 +1,6 @@
 package com.example.browserapp.dataClasses.bingSearch
 
-data class BingSearch(
+data class WebpagesSearch(
     val _type: String?,
     val errors: List<Error?>?,
     val queryContext: QueryContext?,

@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.browserapp.R
-import com.example.browserapp.dataClasses.bingSearch.BingSearch
+import com.example.browserapp.dataClasses.bingSearch.WebpagesSearch
 
-class SearchAdapter(private val searchItems: List<BingSearch.WebPages.Value?>?) :
-    RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
+class WebpagesSearchAdapter(private val searchItems: List<WebpagesSearch.WebPages.Value?>?) :
+    RecyclerView.Adapter<WebpagesSearchAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflate the item layout dynamically
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_websearch, parent, false)
@@ -19,7 +19,7 @@ class SearchAdapter(private val searchItems: List<BingSearch.WebPages.Value?>?) 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentItem:BingSearch.WebPages.Value? = searchItems?.get(position)
+        val currentItem:WebpagesSearch.WebPages.Value? = searchItems?.get(position)
         // Bind data to the views in the item layout
         if (currentItem?.thumbnailUrl != null) {
             holder.bindImage(currentItem.thumbnailUrl)

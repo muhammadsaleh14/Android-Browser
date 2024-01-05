@@ -7,7 +7,7 @@
     android:gravity="center_horizontal">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSearchResult"
+        android:id="@+id/rvWebpagesSearchResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
