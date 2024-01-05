@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="RoundImageShape" parent="">
         <item name="cornerFamily">rounded
         </item>
         <item name="cornerSize">50%
         </item>
     </style>
+
     <style name="semiRoundedImageShape" parent="">
         <item name="cornerFamily">rounded
         </item>
         <item name="cornerSize">50%
         </item>
     </style>
+
 </resources>

@@ -5,10 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.executor.GlideExecutor.UncaughtThrowableStrategy.LOG
 import com.example.browserapp.R
 import com.example.browserapp.dataClasses.bingSearch.ImagesSearch
 
@@ -16,7 +14,7 @@ class ImageSearchAdapter(private val searchItems: List<ImagesSearch.Value?>?) :
     RecyclerView.Adapter<ImageSearchAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflate the item layout dynamically
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_imagesearch, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_image_search, parent, false)
         return ViewHolder(view)
     }
 
