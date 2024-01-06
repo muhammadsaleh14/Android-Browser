@@ -1,72 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:id="@+id/videoCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    android:layout_margin="5dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/videoCardView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardElevation="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/videoThumbnailImageCard"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardCornerRadius="4dp">
 
-            <ImageView
-                android:id="@+id/videoThumbnailImageView"
-                style="@style/semiRoundedImageShape"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/videoDurationTextVeiw"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="duration"
-                app:layout_constraintBottom_toBottomOf="@+id/videoThumbnailImageView"
-                app:layout_constraintEnd_toEndOf="@+id/videoThumbnailImageView" />
+                <ImageView
+                    android:id="@+id/videoThumbnailImageView"
+                    style="@style/semiRoundedImageShape"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/toys"
 
-            <TextView
-                android:id="@+id/videoPublisherTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="publisher.name"
-                app:layout_constraintStart_toEndOf="@+id/videoThumbnailImageView"
-                app:layout_constraintTop_toTopOf="parent" />
+                    />
 
-            <TextView
-                android:id="@+id/videoCreatorNameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="creator.name"
-                app:layout_constraintStart_toEndOf="@+id/videoPublisherTextView"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/videoDurationTextVeiw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="duration"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:maxLength="12"
+                    android:layout_alignEnd="@id/videoThumbnailImageView"
+                    android:layout_alignBottom="@id/videoThumbnailImageView" />
 
-            <TextView
-                android:id="@+id/videoNameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="name"
-                app:layout_constraintStart_toStartOf="@+id/videoPublisherTextView"
-                app:layout_constraintTop_toBottomOf="@id/videoPublisherTextView" />
 
-            <TextView
-                android:id="@+id/videoDescriptionTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="description"
-                app:layout_constraintStart_toStartOf="@+id/videoNameTextView"
-                app:layout_constraintTop_toBottomOf="@+id/videoNameTextView" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/videoPublisherTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="publisher.nameeeeeeeeee"
+            android:maxLength="15"
+            app:layout_constraintStart_toEndOf="@+id/videoThumbnailImageCard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/videoCreatorNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="creator.nakkmeeeeeeeeeeeeeee"
+            android:maxLength="15"
+            app:layout_constraintStart_toEndOf="@+id/videoPublisherTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/videoNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:maxLength="30"
+            android:text="name"
+            app:layout_constraintStart_toStartOf="@+id/videoPublisherTextView"
+            app:layout_constraintTop_toBottomOf="@id/videoPublisherTextView" />
+
+        <TextView
+            android:id="@+id/videoDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="description"
+            app:layout_constraintStart_toStartOf="@+id/videoNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/videoNameTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+
+

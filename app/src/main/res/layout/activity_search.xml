@@ -12,20 +12,42 @@
         android:orientation="horizontal"
         android:gravity="center">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/app_logo"
-            android:src="@drawable/toys"
-            app:shapeAppearance="@style/RoundImageShape" />
-
-        <EditText
-            android:id="@+id/searchTerm"
-            android:layout_width="160dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageCard"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Name" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:id="@+id/thumbnailImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/toys"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchTerm"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:gravity="center"
+                android:text="Name"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
