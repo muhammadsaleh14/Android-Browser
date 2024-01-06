@@ -1,11 +1,13 @@
 package com.example.browserapp.adapters
 
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.browserapp.R
@@ -13,8 +15,9 @@ import com.example.browserapp.dataClasses.bingSearch.VideosSearch
 import org.threeten.bp.Duration
 import org.threeten.bp.format.DateTimeFormatter
 import com.example.browserapp.dataClasses.bingSearch.WebpagesSearch
+import com.example.browserapp.listeners.onVideoCardClick
 
-class VideosSearchAdapter(private val searchItems: List<VideosSearch.Value?>?) :
+class VideosSearchAdapter(private val context: Context, private val searchItems: List<VideosSearch.Value?>?) :
     RecyclerView.Adapter<VideosSearchAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflate the item layout dynamically
@@ -39,6 +42,7 @@ class VideosSearchAdapter(private val searchItems: List<VideosSearch.Value?>?) :
         holder.creatorNameTextView.text = currentItem?.creator?.name
         holder.nameTextView.text = currentItem?.name
         holder.descriptionTextView.text = currentItem?.description
+        onVideoCardClick(holder.videoClickableCard,context,currentItem?.hostPageUrl)
         // ... (bind other views as needed)
     }
     private fun formatDuration(duration: Duration): String {
@@ -53,6 +57,8 @@ class VideosSearchAdapter(private val searchItems: List<VideosSearch.Value?>?) :
         //        name, displayUrl,datePublished,snippet
         // ... (reference other views in the item layout)
         // Get references to the views using findViewById()
+
+        val videoClickableCard = view.findViewById<CardView>(R.id.videoCardView)
         val thumbnailImage: ImageView = view.findViewById(R.id.videoThumbnailImageView)
         val durationTextView: TextView = view.findViewById(R.id.videoDurationTextVeiw)
         val publisherTextView: TextView = view.findViewById(R.id.videoPublisherTextView)
