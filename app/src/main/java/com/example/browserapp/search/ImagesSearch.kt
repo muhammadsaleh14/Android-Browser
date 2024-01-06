@@ -30,7 +30,6 @@ suspend fun getImagesSearchResultAsync(
     try {
         Log.d("TAGINN","Fetching results")
         val results = searchImages(searchText)
-        print(results.jsonResponse)
         return@withContext apiResponseToImages(results.jsonResponse)
     } catch (e: Exception) {
         Log.e("TAGINN", "catch getSearchWebResult ${e.message ?: ""}")

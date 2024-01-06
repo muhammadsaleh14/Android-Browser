@@ -1,4 +1,4 @@
-package com.example.browserapp.searchfragments
+package com.example.browserapp.fragments
 
 import android.os.Bundle
 import android.view.View

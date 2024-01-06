@@ -7,9 +7,10 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.browserapp.R
 import com.example.browserapp.databinding.ActivitySearchBinding
-import com.example.browserapp.searchfragments.ImagesFragment
-import com.example.browserapp.searchfragments.VideosFragment
-import com.example.browserapp.searchfragments.WebPagesFragment
+import com.example.browserapp.fragments.ImageDetailFragment
+import com.example.browserapp.fragments.ImagesFragment
+import com.example.browserapp.fragments.VideosFragment
+import com.example.browserapp.fragments.WebPagesFragment
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySearchBinding
@@ -40,8 +41,9 @@ class SearchActivity : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragmentContainer, fragment)
         fragmentTransaction.commit()
-
     }
+
+
 }
 
 
