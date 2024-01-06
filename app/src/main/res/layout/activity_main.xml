@@ -5,15 +5,14 @@
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C8C7C7"
     android:padding="5dp"
     tools:context=".activities.MainActivity">
 
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,39 +20,52 @@
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center_horizontal">
         <include layout="@layout/title_bar" />
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:contentDescription="@string/app_logo"
-            android:src="@drawable/toys" />
 
-        <EditText
-            android:id="@+id/editTextText"
-            android:layout_width="321dp"
-            android:layout_height="89dp"
-            android:autofillHints=""
-            android:backgroundTint="#152D32"
-            android:ems="10"
-            android:hint="@string/hint_search"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="#8300CDFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:scaleType="center"
+                android:contentDescription="@string/app_logo"
+                android:src="@drawable/toys" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/hint_search"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="Bookmarks"
             android:textAllCaps="true"
-            android:textSize="17sp"
-            android:textStyle="italic" />
+            android:textSize="20dp"
+            android:textStyle="italic"
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
