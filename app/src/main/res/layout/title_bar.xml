@@ -8,20 +8,28 @@
 
     <ImageButton
         android:id="@+id/appIcon"
-        android:layout_width="40dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:src="@android:drawable/btn_star"
+        android:src="@drawable/star_1_svgrepo_com"
         android:background="@android:color/transparent"/>
 
-    <EditText
-        android:id="@+id/searchUrl"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="10dp"
         android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:ems="10"
-        android:inputType="text"
-        android:gravity="center"
-        android:text="URL" />
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:gravity="center"
+            android:text="tingle.com"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <ImageButton
         android:id="@+id/showOptionsBtn"
