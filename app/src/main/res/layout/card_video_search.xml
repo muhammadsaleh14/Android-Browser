@@ -45,6 +45,7 @@
                     android:layout_height="wrap_content"
                     android:text="duration"
                     android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:maxLength="12"
                     android:layout_alignEnd="@id/videoThumbnailImageView"
                     android:layout_alignBottom="@id/videoThumbnailImageView" />
