@@ -15,16 +15,23 @@ fun handleIntent(context: Context, url: String?) {
         Log.d("TAGINN1","uri: $uri host: $host")
 
         // Check for known apps (e.g., YouTube)
-        val knownAppIntent = getLaunchIntentForPackage(context, host) // Pass context for packageManager
-        Log.d("TAGINN1","known app intent $knownAppIntent  context = $context" )
-        if (knownAppIntent != null) {
-            ContextCompat.startActivity(
-                context,
-                knownAppIntent,
-                null
-            ) // Pass context for startActivity
+//        val knownAppIntent = getLaunchIntentForPackage(context, host) // Pass context for packageManager
+//        Log.d("TAGINN1","known app intent $knownAppIntent  context = $context" )
+//        if (knownAppIntent != null) {
+//            ContextCompat.startActivity(
+//                context,
+//                knownAppIntent,
+//                null
+//            ) // Pass context for startActivity
+//            return
+//        }
+        val webIntent = Intent(Intent.ACTION_VIEW, uri)
+        Log.d("TAGINN1","web intent $webIntent")
+        if (context.packageManager.resolveActivity(webIntent, 0) != null) {
+            ContextCompat.startActivity(context, webIntent, null) // Pass context for startActivity
             return
         }
+
 
         //if app is not found then go to webView
         val webViewIntent: Intent = Intent(context, WebViewActivity::class.java)
