@@ -4,11 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.browserapp.R
 import com.example.browserapp.dataClasses.bingSearch.WebpagesSearch
+import com.example.browserapp.listeners.webpagesListener
 
 class WebpagesSearchAdapter(private val searchItems: List<WebpagesSearch.WebPages.Value?>?) :
     RecyclerView.Adapter<WebpagesSearchAdapter.ViewHolder>() {
@@ -31,6 +33,7 @@ class WebpagesSearchAdapter(private val searchItems: List<WebpagesSearch.WebPage
         holder.displayUrl.text = currentItem?.displayUrl
         holder.datePublished.text = currentItem?.datePublished
         holder.snippet.text = currentItem?.snippet
+        webpagesListener(holder.webpageLinearLayout,holder.itemView.context,currentItem?.url)
         // ... (bind other views as needed)
     }
 
@@ -43,6 +46,7 @@ class WebpagesSearchAdapter(private val searchItems: List<WebpagesSearch.WebPage
         val displayUrl: TextView = view.findViewById(R.id.displayUrl)
         val datePublished:TextView= view.findViewById(R.id.datePublished)
         val snippet: TextView = view.findViewById(R.id.snippet)
+        val webpageLinearLayout: LinearLayout = view.findViewById(R.id.webpageLinearLayout)
 
         fun bindImage(imageUrl: String?) {
             Glide.with(itemView.context)

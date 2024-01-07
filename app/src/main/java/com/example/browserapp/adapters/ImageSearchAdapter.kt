@@ -29,14 +29,18 @@ class ImageSearchAdapter(
         Log.d("TAGINN1", holder.toString())
         val currentItem: ImagesSearch.Value? = searchItems?.get(position)
         // Bind data to the views in the item layout
-        if (currentItem?.thumbnailUrl != null) {
+        if (currentItem?.hostPageDisplayUrl != null) {
             holder.bindImage(currentItem.thumbnailUrl)
             holder.thumbnailImage.visibility = View.VISIBLE // Show image view
+
             holder.thumbnailImage.setOnClickListener {
                 try {
                     if (!ImageDetails.isImageDetailFragmentOpen) {
+//                        holder.itemView.setOnClickListener{
+//                                ImageDetails.signalClose()
+//                        }
                         ImageDetails.name = currentItem?.name
-                        ImageDetails.contentUrl = currentItem?.contentUrl
+                        ImageDetails.hostPageDisplayUrl = currentItem?.hostPageDisplayUrl
                         ImageDetails.thumbnailUrl = currentItem?.thumbnailUrl
                         imagesFragment.addImageDetailFragment()
                         ImageDetails.isImageDetailFragmentOpen = true
@@ -45,6 +49,8 @@ class ImageSearchAdapter(
                     Log.e("TAGINN1", e.stackTraceToString())
                 }
             }
+
+
         } else {
             holder.thumbnailImage.visibility = View.GONE // Hide image view
         }

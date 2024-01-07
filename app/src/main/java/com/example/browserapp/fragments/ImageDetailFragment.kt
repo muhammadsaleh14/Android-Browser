@@ -8,31 +8,41 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.example.browserapp.R
+import com.example.browserapp.listeners.onImageCardClick
 import com.example.browserapp.viewmodels.ImageDetails
 
 class ImageDetailFragment : Fragment(R.layout.fragment_images_detail) {
     private lateinit var imageName: TextView
-    private lateinit var imageContentUrl: TextView
+    private lateinit var hostPageDisplayUrl: TextView
     private lateinit var thumbnailImage: ImageView
     private lateinit var closeImageDetail: Button
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
             super.onViewCreated(view, savedInstanceState)
             imageName = view.findViewById(R.id.imageNameTextView)
-            imageContentUrl = view.findViewById(R.id.imageContentUrlTextView)
+            hostPageDisplayUrl = view.findViewById(R.id.hostPageDisplayUrlTextView)
             thumbnailImage = view.findViewById(R.id.imageViewDetails)
             closeImageDetail = view.findViewById(R.id.closeImageDetail)
             imageName.text = ImageDetails.name
-            imageContentUrl.text = ImageDetails.contentUrl
+            hostPageDisplayUrl.text = ImageDetails.hostPageDisplayUrl
             bindImage(view.context, ImageDetails.thumbnailUrl)
+
+            onImageCardClick(hostPageDisplayUrl, view.context, ImageDetails.hostPageDisplayUrl)
             val fragmentManager = requireActivity().supportFragmentManager
+
             fragmentManager.addOnBackStackChangedListener {
                 if (fragmentManager.backStackEntryCount == 0) {
                     ImageDetails.isImageDetailFragmentOpen = false
                 }
             }
+//            ImageDetails.closeDetailFragment.observe(viewLifecycleOwner, Observer {
+//                if (fragmentManager.backStackEntryCount > 0) {
+//                    fragmentManager.popBackStack()
+//                }
+//            })
             closeImageDetail.setOnClickListener {
                 fragmentManager.popBackStack()
             }
