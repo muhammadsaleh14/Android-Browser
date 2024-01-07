@@ -2,6 +2,10 @@ package com.example.browserapp.activities
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.ViewStub
+import android.view.animation.AnimationUtils
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
@@ -33,6 +37,28 @@ class SearchActivity : AppCompatActivity() {
             }
         }catch (e:Exception){
             Log.e("TAGINN",e.stackTraceToString())
+        }
+
+        val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
+        val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
+        val optionsList: View? = optionsListStub.inflate()
+        if (optionsList != null) {
+            optionsList.visibility = View.GONE
+        }
+        showOptionsButton.setOnClickListener {
+            if (optionsList?.visibility == View.GONE) {
+                // Slide in the options list
+                optionsList.visibility = View.VISIBLE
+                val slideInAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_in_from_left)
+                optionsList.startAnimation(slideInAnimation)
+                showOptionsButton.setImageResource(R.drawable.arrow_right)
+            } else {
+                // Slide out the options list
+                val slideOutAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_out_to_left)
+                optionsList?.startAnimation(slideOutAnimation)
+                optionsList?.visibility = View.GONE
+                showOptionsButton.setImageResource(R.drawable.arrow_left)
+            }
         }
     }
 
