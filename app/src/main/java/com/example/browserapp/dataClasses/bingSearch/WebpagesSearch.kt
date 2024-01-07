@@ -140,8 +140,10 @@ data class WebpagesSearch(
                 val aggregateRating: AggregateRating?
             ) {
                 data class AggregateRating(
-                    val ratingValue: Int?,
-                    val reviewCount: Int?
+                    val ratingValue: Float?,
+                    val reviewCount: Int?,
+                    val bestRating:Float?,
+                    val contentRating:String?,
                 )
             }
 

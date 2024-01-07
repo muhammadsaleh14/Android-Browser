@@ -15,7 +15,7 @@ import com.example.browserapp.activities.WebViewActivity
 fun onVideoCardClick(view: View, context: Context,url: String?) {
     view.setOnClickListener {
         changeColor(view)
-        handleIntent(view.context, url) // Replace with actual URL
+        handleIntent(context, url) // Replace with actual URL
     }
 }
 

@@ -16,40 +16,38 @@ import javax.net.ssl.HttpsURLConnection
 const val webSearchEndpoint: String = "https://api.bing.microsoft.com/v7.0/search"
 fun main() {
     runBlocking {
-        getSearchWebResultAsync(searchTerm, subscriptionKey, webSearchEndpoint)
+        getSearchWebResultAsync(searchTerm, 1)
     }
 }
 
 suspend fun getSearchWebResultAsync(
     searchText: String,
-    subscriptionKey : String?,
-    endpoint: String
+    nextPageNumber: Int
 ): WebpagesSearch? = withContext(Dispatchers.IO) {
     try {
 
         Log.d("TAGINN","Fetching results")
-        val results = searchWeb(searchText)
+        val results = searchWeb(searchText,nextPageNumber)
 //        print(results.jsonResponse)
+        Log.d("TAGINN","${results.jsonResponse}")
         return@withContext parseAndPrettifyBingApiResponse(results.jsonResponse)
     } catch (e: Exception) {
-        Log.e("TAGINN", "catch getSearchWebResult ${e.message ?: ""}")
+        Log.e("TAGINN", "catch getSearchWebResult ${e.message ?: ""} \n $")
         return@withContext null
     }
 }
 
-fun searchWeb(searchQuery: String): SearchResults {
+fun searchWeb(searchQuery: String, nextPageNumber: Int): SearchResults {
     try {
 
         val safeSearchValue = URLEncoder.encode("Moderate", "UTF-8")
-        val count = 10
-        val offset = 1
-//        val answerCount = 1
+        //        val answerCount = 1
 //        val responseFilter = URLEncoder.encode("webpages", "UTF-8")
 
         val urlString = "$webSearchEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
                 "&safeSearch=${safeSearchValue}" +
-                "&count=$count" +
-                "&offset=$offset"
+                "&count=$webpagesCount" +
+                "&offset=$nextPageNumber"
 //                "&answerCount=$answerCount"+
 //                "&responseFilter=$responseFilter"
         val url = URL(urlString)

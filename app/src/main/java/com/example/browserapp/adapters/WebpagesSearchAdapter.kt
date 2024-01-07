@@ -6,14 +6,16 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.paging.PagingDataAdapter
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.browserapp.R
 import com.example.browserapp.dataClasses.bingSearch.WebpagesSearch
 import com.example.browserapp.listeners.webpagesListener
 
-class WebpagesSearchAdapter(private val searchItems: List<WebpagesSearch.WebPages.Value?>?) :
-    RecyclerView.Adapter<WebpagesSearchAdapter.ViewHolder>() {
+class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.WebPages.Value>) :
+    PagingDataAdapter<WebpagesSearch.WebPages.Value, WebpagesSearchAdapter.ViewHolder>(diffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflate the item layout dynamically
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_websearch, parent, false)
@@ -21,7 +23,8 @@ class WebpagesSearchAdapter(private val searchItems: List<WebpagesSearch.WebPage
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentItem:WebpagesSearch.WebPages.Value? = searchItems?.get(position)
+
+        val currentItem:WebpagesSearch.WebPages.Value? = getItem(position)
         // Bind data to the views in the item layout
         if (currentItem?.thumbnailUrl != null) {
             holder.bindImage(currentItem.thumbnailUrl)
@@ -37,7 +40,6 @@ class WebpagesSearchAdapter(private val searchItems: List<WebpagesSearch.WebPage
         // ... (bind other views as needed)
     }
 
-    override fun getItemCount(): Int = searchItems?.size ?: 0
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         //        name, displayUrl,datePublished,snippet
         // ... (reference other views in the item layout)
@@ -54,5 +56,24 @@ class WebpagesSearchAdapter(private val searchItems: List<WebpagesSearch.WebPage
                 .into(thumbnailImage)
         }
 
+    }
+    companion object {
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<WebpagesSearch.WebPages.Value>() {
+            override fun areItemsTheSame(
+                oldItem: WebpagesSearch.WebPages.Value,
+                newItem: WebpagesSearch.WebPages.Value
+            ): Boolean {
+                // Return true if items represent the same web page
+                return oldItem.url == newItem.url
+            }
+
+            override fun areContentsTheSame(
+                oldItem: WebpagesSearch.WebPages.Value,
+                newItem: WebpagesSearch.WebPages.Value
+            ): Boolean {
+                // Return true if items have the same content (name, url, etc.)
+                return oldItem == newItem
+            }
+        }
     }
 }

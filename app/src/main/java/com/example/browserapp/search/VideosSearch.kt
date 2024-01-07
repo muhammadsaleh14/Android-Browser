@@ -43,14 +43,13 @@ fun searchVideos(searchQuery: String): SearchResults {
     try {
 
         val safeSearchValue = URLEncoder.encode("Moderate", "UTF-8")
-        val count = 20
         val offset = 1
 //        val answerCount = 1
 //        val responseFilter = URLEncoder.encode("webpages", "UTF-8")
 
         val urlString = "$videosSearchEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
                 "&safeSearch=${safeSearchValue}" +
-                "&count=$count" +
+                "&count=$videosCount" +
                 "&offset=$offset"
 //                "&answerCount=$answerCount"+
 //                "&responseFilter=$responseFilter"

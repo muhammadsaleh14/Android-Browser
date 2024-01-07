@@ -40,14 +40,13 @@ suspend fun getImagesSearchResultAsync(
 fun searchImages(searchQuery: String): SearchResults {
     try {
         val safeSearchValue = URLEncoder.encode("Moderate", "UTF-8")
-        val count = 18
         val offset = 1
 //        val answerCount = 1
 //        val responseFilter = URLEncoder.encode("webpages", "UTF-8")
 
         val urlString = "$imagesEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
                 "&safeSearch=${safeSearchValue}" +
-                "&count=$count" +
+                "&count=$imagesCount" +
                 "&offset=$offset"
 //                "&answerCount=$answerCount"+
 //                "&responseFilter=$responseFilter"

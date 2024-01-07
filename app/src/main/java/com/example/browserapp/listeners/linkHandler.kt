@@ -16,7 +16,7 @@ fun handleIntent(context: Context, url: String?) {
 
         // Check for known apps (e.g., YouTube)
         val knownAppIntent = getLaunchIntentForPackage(context, host) // Pass context for packageManager
-        Log.d("TAGINN1","known app intent $knownAppIntent")
+        Log.d("TAGINN1","known app intent $knownAppIntent  context = $context" )
         if (knownAppIntent != null) {
             ContextCompat.startActivity(
                 context,
