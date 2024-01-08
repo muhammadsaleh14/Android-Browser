@@ -29,7 +29,7 @@ suspend fun getSearchWebResultAsync(
         Log.d("TAGINN","Fetching results")
         val results = searchWeb(searchText,nextPageNumber)
 //        print(results.jsonResponse)
-        Log.d("TAGINN","${results.jsonResponse}")
+        Log.d("TAGINN2", results.jsonResponse)
         return@withContext parseAndPrettifyBingApiResponse(results.jsonResponse)
     } catch (e: Exception) {
         Log.e("TAGINN", "catch getSearchWebResult ${e.message ?: ""} \n $")

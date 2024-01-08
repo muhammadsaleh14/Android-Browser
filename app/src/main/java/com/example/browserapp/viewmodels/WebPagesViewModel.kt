@@ -13,6 +13,7 @@ import com.example.browserapp.search.webSearchEndpoint
 import com.example.browserapp.search.getSearchWebResultAsync
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.search.subscriptionKey
+import com.example.browserapp.search.webpagesCount
 import kotlinx.coroutines.launch
 
 class WebPagesViewModel : ViewModel() {
@@ -22,21 +23,21 @@ class WebPagesViewModel : ViewModel() {
     private var isDataFetched = false
     val flow = Pager(
         // Configure Paging behavior
-        PagingConfig(pageSize = 20, prefetchDistance = 5) // Example configuration
+        PagingConfig(pageSize = webpagesCount, prefetchDistance = 5 ) // Example configuration
     ) {
         // Create PagingSource instance when needed
         WebpagesPagingSource(query)
     }.flow
         .cachedIn(viewModelScope)
-    fun fetchWebSearchResults(query:String) {
-        if (!isDataFetched){
-            viewModelScope.launch {
-                val result = getSearchWebResultAsync(query,0)
-                _webSearchValues.postValue(result) // Use postValue for main thread safety
-                if(result !== null){
-                    isDataFetched = true
-                }
-            }
-        }
-    }
+//    fun fetchWebSearchResults(query:String) {
+//        if (!isDataFetched){
+//            viewModelScope.launch {
+//                val result = getSearchWebResultAsync(query,0)
+//                _webSearchValues.postValue(result) // Use postValue for main thread safety
+//                if(result !== null){
+//                    isDataFetched = true
+//                }
+//            }
+//        }
+//    }
 }

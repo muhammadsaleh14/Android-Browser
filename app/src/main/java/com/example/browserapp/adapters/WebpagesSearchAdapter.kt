@@ -1,5 +1,6 @@
 package com.example.browserapp.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,27 +18,32 @@ import com.example.browserapp.listeners.webpagesListener
 class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.WebPages.Value>) :
     PagingDataAdapter<WebpagesSearch.WebPages.Value, WebpagesSearchAdapter.ViewHolder>(diffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // Inflate the item layout dynamically
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_websearch, parent, false)
-        return ViewHolder(view)
+            // Inflate the item layout dynamically
+            val view =
+                LayoutInflater.from(parent.context).inflate(R.layout.card_websearch, parent, false)
+            return ViewHolder(view)
+
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        val currentItem:WebpagesSearch.WebPages.Value? = getItem(position)
-        // Bind data to the views in the item layout
-        if (currentItem?.thumbnailUrl != null) {
-            holder.bindImage(currentItem.thumbnailUrl)
-            holder.thumbnailImage.visibility = View.VISIBLE // Show image view
-        } else {
-            holder.thumbnailImage.visibility = View.GONE // Hide image view
+        try {
+            val currentItem: WebpagesSearch.WebPages.Value? = getItem(position)
+            // Bind data to the views in the item layout
+            if (currentItem?.thumbnailUrl != null) {
+                holder.bindImage(currentItem.thumbnailUrl)
+                holder.thumbnailImage.visibility = View.VISIBLE // Show image view
+            } else {
+                holder.thumbnailImage.visibility = View.GONE // Hide image view
+            }
+            holder.name.text = currentItem?.name
+            holder.displayUrl.text = currentItem?.displayUrl
+            holder.datePublished.text = currentItem?.datePublished
+            holder.snippet.text = currentItem?.snippet
+            webpagesListener(holder.webpageLinearLayout, holder.itemView.context, currentItem?.url)
+            // ... (bind other views as needed)
+        } catch (e: Exception) {
+            Log.e("TAGINN2", e.stackTraceToString())
         }
-        holder.name.text = currentItem?.name
-        holder.displayUrl.text = currentItem?.displayUrl
-        holder.datePublished.text = currentItem?.datePublished
-        holder.snippet.text = currentItem?.snippet
-        webpagesListener(holder.webpageLinearLayout,holder.itemView.context,currentItem?.url)
-        // ... (bind other views as needed)
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -46,10 +52,9 @@ class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.W
         val thumbnailImage: ImageView = view.findViewById(R.id.thumbnailImage)
         val name: TextView = view.findViewById(R.id.name)
         val displayUrl: TextView = view.findViewById(R.id.displayUrl)
-        val datePublished:TextView= view.findViewById(R.id.datePublished)
+        val datePublished: TextView = view.findViewById(R.id.datePublished)
         val snippet: TextView = view.findViewById(R.id.snippet)
         val webpageLinearLayout: LinearLayout = view.findViewById(R.id.webpageLinearLayout)
-
         fun bindImage(imageUrl: String?) {
             Glide.with(itemView.context)
                 .load(imageUrl)
@@ -57,7 +62,9 @@ class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.W
         }
 
     }
+
     companion object {
+
         val DIFF_CALLBACK = object : DiffUtil.ItemCallback<WebpagesSearch.WebPages.Value>() {
             override fun areItemsTheSame(
                 oldItem: WebpagesSearch.WebPages.Value,

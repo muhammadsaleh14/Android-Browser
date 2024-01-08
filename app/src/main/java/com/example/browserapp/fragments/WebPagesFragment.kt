@@ -1,6 +1,7 @@
 package com.example.browserapp.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -19,32 +20,31 @@ class WebPagesFragment : Fragment(R.layout.fragment_web_pages) {
     private lateinit var rvSearchResult: RecyclerView
     private val viewModel: WebPagesViewModel by activityViewModels()
     private lateinit var adapter: WebpagesSearchAdapter
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        viewModel.query = searchTerm
-        rvSearchResult = view.findViewById(R.id.rvWebpagesSearchResult)
-        rvSearchResult.layoutManager = LinearLayoutManager(context)
-        rvSearchResult.setHasFixedSize(true)
+        try {
+            super.onViewCreated(view, savedInstanceState)
+            viewModel.query = searchTerm
+            rvSearchResult = view.findViewById(R.id.rvWebpagesSearchResult)
+            rvSearchResult.layoutManager = LinearLayoutManager(context)
+            rvSearchResult.setHasFixedSize(true)
 
-        adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK) // Use DiffUtil callback
-        rvSearchResult.adapter = adapter
-
-        observePagingData()
-
-        viewModel.fetchWebSearchResults(searchTerm) // Trigger initial loading
+            adapter =
+                WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK) // Use DiffUtil callback
+            rvSearchResult.adapter = adapter
+//        adapter.refresh()
+            observePagingData()
+//        viewModel.fetchWebSearchResults(searchTerm) // Trigger initial loading
+        } catch (e: Exception) {
+            Log.e("TAGINN2", e.stackTraceToString())
+        }
     }
 
     private fun observePagingData() {
-        viewLifecycleOwner.lifecycleScope.launch{
-            viewModel.flow.collectLatest { pagingData ->
-                adapter.submitData(pagingData)
-            }
-        }
-
         adapter.addLoadStateListener { loadState ->
             // Handle loading and error states
+            Log.d("TAGINN2", "observe")
             if (loadState.refresh is LoadState.Loading) {
+                Log.d("TAGINN2", "loading")
                 // Show loading indicator
             } else {
                 // Hide loading indicator
@@ -55,8 +55,14 @@ class WebPagesFragment : Fragment(R.layout.fragment_web_pages) {
                     else -> null
                 }
                 error?.let {
+                    Log.e("TAGINN2", "error occurred $error")
                     // Handle error
                 }
+            }
+        }
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.flow.collectLatest { pagingData ->
+                Log.d("TAGINN2", "submitting data to adapter $pagingData")
             }
         }
     }
