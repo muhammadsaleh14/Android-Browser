@@ -30,6 +30,7 @@ class WebPagesViewModel : ViewModel() {
     }.flow
         .cachedIn(viewModelScope)
 //    fun fetchWebSearchResults(query:String) {
+//
 //        if (!isDataFetched){
 //            viewModelScope.launch {
 //                val result = getSearchWebResultAsync(query,0)

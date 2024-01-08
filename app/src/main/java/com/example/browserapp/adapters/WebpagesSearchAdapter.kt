@@ -18,10 +18,10 @@ import com.example.browserapp.listeners.webpagesListener
 class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.WebPages.Value>) :
     PagingDataAdapter<WebpagesSearch.WebPages.Value, WebpagesSearchAdapter.ViewHolder>(diffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            // Inflate the item layout dynamically
-            val view =
-                LayoutInflater.from(parent.context).inflate(R.layout.card_websearch, parent, false)
-            return ViewHolder(view)
+        // Inflate the item layout dynamically
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.card_websearch, parent, false)
+        return ViewHolder(view)
 
     }
 
@@ -64,14 +64,15 @@ class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.W
     }
 
     companion object {
-
         val DIFF_CALLBACK = object : DiffUtil.ItemCallback<WebpagesSearch.WebPages.Value>() {
             override fun areItemsTheSame(
                 oldItem: WebpagesSearch.WebPages.Value,
                 newItem: WebpagesSearch.WebPages.Value
             ): Boolean {
                 // Return true if items represent the same web page
-                return oldItem.url == newItem.url
+                val bool = oldItem.url == newItem.url
+                Log.d("TAGINN2", "are items the same:$bool")
+                return bool
             }
 
             override fun areContentsTheSame(
@@ -79,7 +80,9 @@ class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.W
                 newItem: WebpagesSearch.WebPages.Value
             ): Boolean {
                 // Return true if items have the same content (name, url, etc.)
-                return oldItem == newItem
+                val bool = oldItem == newItem
+                Log.d("TAGINN2", "are contents the same:$bool")
+                return bool
             }
         }
     }

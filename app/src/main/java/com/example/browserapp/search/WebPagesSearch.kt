@@ -25,7 +25,6 @@ suspend fun getSearchWebResultAsync(
     nextPageNumber: Int
 ): WebpagesSearch? = withContext(Dispatchers.IO) {
     try {
-
         Log.d("TAGINN","Fetching results")
         val results = searchWeb(searchText,nextPageNumber)
 //        print(results.jsonResponse)

@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.browserapp.R
 import com.example.browserapp.databinding.ActivitySearchBinding
-import com.example.browserapp.fragments.ImageDetailFragment
 import com.example.browserapp.fragments.ImagesFragment
 import com.example.browserapp.fragments.VideosFragment
 import com.example.browserapp.fragments.WebPagesFragment
@@ -23,10 +22,9 @@ class SearchActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             binding = ActivitySearchBinding.inflate(layoutInflater)
-
             setContentView(binding.root)
             binding.btnWebPages.setOnClickListener {
-                replaceFragment(WebPagesFragment())
+                replaceFragment(WebPagesFragment(binding.btnWebPages))
             }
             binding.btnImages.setOnClickListener {
                 replaceFragment(ImagesFragment())

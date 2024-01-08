@@ -1,6 +1,7 @@
 package com.example.browserapp.paging
 
 import android.util.Log
+import androidx.paging.LoadStates
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.bumptech.glide.load.HttpException
@@ -19,7 +20,11 @@ class WebpagesPagingSource(
             // Start refresh at page 1 if undefined.
             val nextPageNumber = params.key ?: 1
             Log.d("TAGINN2", "next page number $nextPageNumber")
+
             val response = getSearchWebResultAsync(query ?: "", nextPageNumber)
+            val response1 = getSearchWebResultAsync(query ?: "", nextPageNumber)
+
+
             val data = response?.webPages?.value?.filterNotNull() ?: emptyList()
             val nextKey = if ((response?.webPages?.totalEstimatedMatches != null) &&
                 ((response.webPages.totalEstimatedMatches - webpagesCount) > nextPageNumber)
@@ -28,7 +33,7 @@ class WebpagesPagingSource(
             } else {
                 null
             }
-
+            Log.d("TAGINN2", "data is $data")
             return LoadResult.Page(
                 data = data,
                 prevKey = null, // Only paging forward.
@@ -46,17 +51,18 @@ class WebpagesPagingSource(
     }
 
     override fun getRefreshKey(state: PagingState<Int, WebpagesSearch.WebPages.Value>): Int? {
-            // Try to find the page key of the closest page to anchorPosition from
-            // either the prevKey or the nextKey; you need to handle nullability
-            // here.
-            //  * prevKey == null -> anchorPage is the first page.
-            //  * nextKey == null -> anchorPage is the last page.
-            //  * both prevKey and nextKey are null -> anchorPage is the
-            //    initial page, so return null.
-            return state.anchorPosition?.let { anchorPosition ->
-                val anchorPage = state.closestPageToPosition(anchorPosition)
-                anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)
-            }
+
+        // Try to find the page key of the closest page to anchorPosition from
+        // either the prevKey or the nextKey; you need to handle nullability
+        // here.
+        //  * prevKey == null -> anchorPage is the first page.
+        //  * nextKey == null -> anchorPage is the last page.
+        //  * both prevKey and nextKey are null -> anchorPage is the
+        //    initial page, so return null.
+        return state.anchorPosition?.let { anchorPosition ->
+            val anchorPage = state.closestPageToPosition(anchorPosition)
+            anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)
+        }
 
     }
 }
