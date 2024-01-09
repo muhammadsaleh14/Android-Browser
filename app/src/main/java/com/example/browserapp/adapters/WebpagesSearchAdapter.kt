@@ -37,7 +37,12 @@ class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.W
             }
             holder.name.text = currentItem?.name
             holder.displayUrl.text = currentItem?.displayUrl
-            holder.datePublished.text = currentItem?.datePublished
+            if (currentItem?.datePublished != null) {
+                holder.datePublished.text = currentItem?.datePublished
+                holder.datePublished.visibility = View.VISIBLE // Show image view
+            } else {
+                holder.datePublished.visibility = View.GONE // Hide image view
+            }
             holder.snippet.text = currentItem?.snippet
             webpagesListener(holder.webpageLinearLayout, holder.itemView.context, currentItem?.url)
             // ... (bind other views as needed)
