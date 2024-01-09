@@ -17,26 +17,45 @@ import com.example.browserapp.fragments.WebPagesFragment
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySearchBinding
+    private val supportFragmentManager = getSupportFragmentManager()
+    private var currentFragment: Fragment? = null
+
+    //    companion object:{
+//
+//    }
     override fun onCreate(savedInstanceState: Bundle?) {
         try {
             super.onCreate(savedInstanceState)
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
+//            supportFragmentManager.beginTransaction()
+//                .add(R.id.fragmentContainer,WebPagesFragment())
+//                .add(R.id.fragmentContainer,ImagesFragment())
+//                .add(R.id.fragmentContainer,VideosFragment())
+//                .commit()
+//            val webPagesFragment = WebPagesFragment()
+//            val imagesFragment = ImagesFragment()
+//            val videosFragment = VideosFragment()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, WebPagesFragment())
+                .commit()
             binding.btnWebPages.setOnClickListener {
                 replaceFragment(WebPagesFragment())
+//                replaceFragment(WebPagesFragment())
             }
             binding.btnImages.setOnClickListener {
                 replaceFragment(ImagesFragment())
+//                replaceFragment(ImagesFragment())
             }
 //
             binding.btnVideos.setOnClickListener {
                 replaceFragment(VideosFragment())
+//                replaceFragment(VideosFragment())
             }
-        }catch (e:Exception){
-            Log.e("TAGINN",e.stackTraceToString())
+        } catch (e: Exception) {
+            Log.e("TAGINN", e.stackTraceToString())
         }
-
         val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
         val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
         val optionsList: View? = optionsListStub.inflate()
@@ -61,12 +80,22 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragmentContainer, fragment)
-        fragmentTransaction.commit()
+        try {
+            val fragmentManager = supportFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragmentContainer, fragment)
+            fragmentTransaction.commit()
+        } catch (e: Exception) {
+            Log.e("TAGINN4", e.stackTraceToString())
+        }
     }
 
+    private fun showFragment(newFragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, newFragment)
+            .addToBackStack(null)
+            .commit()
+    }
 
 }
 

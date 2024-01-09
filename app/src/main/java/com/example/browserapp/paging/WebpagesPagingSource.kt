@@ -9,21 +9,19 @@ import com.example.browserapp.search.getSearchWebResultAsync
 import com.example.browserapp.search.webpagesCount
 import java.io.IOException
 
-class WebpagesPagingSource(
-    val query: String?
-) : PagingSource<Int, WebpagesSearch.WebPages.Value>() {
+class WebpagesPagingSource(private val query: String) : PagingSource<Int, WebpagesSearch.WebPages.Value>() {
     override suspend fun load(params: LoadParams<Int>):
             LoadResult<Int, WebpagesSearch.WebPages.Value> {
         try {
             // Start refresh at page 1 if undefined.
-            val nextPageNumber = params.key ?: 1
+            val nextPageNumber = params.key ?: 0
             Log.d("TAGINN2", "next page number $nextPageNumber")
             val response = getSearchWebResultAsync(query ?: "", nextPageNumber)
             val data = response?.webPages?.value?.filterNotNull() ?: emptyList()
             val nextKey = if ((response?.webPages?.totalEstimatedMatches != null) &&
                 ((response.webPages.totalEstimatedMatches - webpagesCount) > nextPageNumber)
             ) {
-                nextPageNumber + 1
+                nextPageNumber + webpagesCount
             } else {
                 null
             }

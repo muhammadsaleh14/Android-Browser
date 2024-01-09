@@ -4,26 +4,24 @@ import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.bumptech.glide.load.HttpException
-import com.example.browserapp.dataClasses.bingSearch.VideosSearch
-import com.example.browserapp.dataClasses.bingSearch.WebpagesSearch
-import com.example.browserapp.search.getSearchVideosResultAsync
-import com.example.browserapp.search.getSearchWebResultAsync
-import com.example.browserapp.search.videosCount
+import com.example.browserapp.dataClasses.bingSearch.ImagesSearch
+import com.example.browserapp.search.getImagesSearchResultAsync
+import com.example.browserapp.search.imagesCount
 import java.io.IOException
 
-class VideosPagingSource(private val query: String) : PagingSource<Int, VideosSearch.Value>() {
+class ImagesPagingSource(private val query: String) : PagingSource<Int, ImagesSearch.Value>() {
     override suspend fun load(params: LoadParams<Int>):
-            LoadResult<Int, VideosSearch.Value> {
+            LoadResult<Int, ImagesSearch.Value> {
         try {
             // Start refresh at page 1 if undefined.
             val nextPageNumber = params.key ?: 0
-            Log.d("TAGINN3", "next page number $nextPageNumber")
-            val response = getSearchVideosResultAsync(query ?: "", nextPageNumber)
+//            Log.d("TAGINN3", "next page number $nextPageNumber")
+            val response = getImagesSearchResultAsync(query ?: "", nextPageNumber)
             val data = response?.value?.filterNotNull() ?: emptyList()
 
-            Log.d("TAGINN3", "${response?.value}")
+//            Log.d("TAGINN3", "${response?.value}")
             val nextKey = if ((response?.totalEstimatedMatches != null) &&
-                ((response.totalEstimatedMatches - videosCount) > nextPageNumber)
+                ((response.totalEstimatedMatches - imagesCount) > nextPageNumber)
             ) {
                 response.nextOffset
             } else {
@@ -47,7 +45,7 @@ class VideosPagingSource(private val query: String) : PagingSource<Int, VideosSe
         }
     }
 
-    override fun getRefreshKey(state: PagingState<Int, VideosSearch.Value>): Int? {
+    override fun getRefreshKey(state: PagingState<Int, ImagesSearch.Value>): Int? {
 //         Try to find the page key of the closest page to anchorPosition from
 //         either the prevKey or the nextKey; you need to handle nullability
 //         here.

@@ -1,47 +1,101 @@
 package com.example.browserapp.fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.lifecycle.lifecycleScope
+import androidx.paging.LoadState
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.browserapp.R
 import com.example.browserapp.adapters.ImageSearchAdapter
+import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.ImagesViewModel
-
+import kotlinx.coroutines.launch
 
 class ImagesFragment : Fragment(R.layout.fragment_images) {
     private lateinit var rvImageSearchResult: RecyclerView
-    private val viewModel: ImagesViewModel by activityViewModels()
+    private val imagesViewModel: ImagesViewModel by activityViewModels()
+    private lateinit var adapter: ImageSearchAdapter
+    private var setAdapter = false
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout and bind views
+        val view = inflater.inflate(R.layout.fragment_images, container, false)
+        rvImageSearchResult = view.findViewById(R.id.rvImageSearchResult)
+        // ... (other view bindings)
+        return view
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
             super.onViewCreated(view, savedInstanceState)
-
-            rvImageSearchResult = view.findViewById(R.id.rvImageSearchResult)
-            val imagesLayoutManager =  StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+            imagesViewModel.query = searchTerm
+            val imagesLayoutManager =
+                StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
             rvImageSearchResult.layoutManager = imagesLayoutManager
-
-            observeSearchResults(view.context)
-            viewModel.fetchImagesSearchResult()
+            adapter = ImageSearchAdapter(ImageSearchAdapter.DIFF_CALLBACK, this)
+            observePagingData()
+            submitDataToAdapter()
         } catch (e: Exception) {
             Log.e("TAGINN1", e.stackTraceToString())
         }
     }
 
-    private fun observeSearchResults(context: Context) {
-        viewModel.imagesSearchValues.observe(viewLifecycleOwner) { imageSearchValues ->
-            if (imageSearchValues != null) {
-                rvImageSearchResult.adapter = ImageSearchAdapter(this, imageSearchValues.value)
-            } else {
-                // Handle error cases
+    private fun observePagingData() {
+        try {
+            adapter.addLoadStateListener { loadState ->
+                if (loadState.refresh is LoadState.Loading) {
+                    // Show loading indicator
+                } else {
+                    if (!setAdapter) {
+                        rvImageSearchResult.adapter = adapter
+                        setAdapter = true
+                    }
+                    // Hide loading indicator
+                    val error = when {
+                        loadState.prepend is LoadState.Error -> loadState.prepend as LoadState.Error
+                        loadState.append is LoadState.Error -> loadState.append as LoadState.Error
+                        loadState.refresh is LoadState.Error -> loadState.refresh as LoadState.Error
+                        else -> null
+                    }
+
+                    error?.let {
+                        Log.e("TAGINN3", "error occurred $error")
+                        // Handle error
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            Log.d("TAGINN3", e.stackTraceToString())
+        }
+    }
+
+    private fun submitDataToAdapter() {
+        Log.d("TAGINN3", "submitting data to adapter")
+        viewLifecycleOwner.lifecycleScope.launch {
+            try {
+                imagesViewModel.flow.collect { pagingData ->
+                    try {
+                        Log.e("TAGINN3", "submitting data to adapter ${pagingData.toString()}")
+                        adapter.submitData(pagingData)
+                    } catch (e: Exception) {
+                        Log.e("TAGINN3", e.stackTraceToString())
+                    }
+                }
+            } catch (e: Exception) {
+                Log.e("TAGINN3", e.stackTraceToString())
             }
         }
     }
-    fun addImageDetailFragment(){
+
+    fun addImageDetailFragment() {
         val fragmentManager = requireActivity().supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.setCustomAnimations(

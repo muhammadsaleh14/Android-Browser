@@ -14,22 +14,14 @@ import javax.net.ssl.HttpsURLConnection
 
 const val imagesEndpoint: String = "https://api.bing.microsoft.com/v7.0/images/search"
 
-//fun main() {
-////    runBlocking {
-////        getSearchWebResultAsync("multan videos", subscriptionKey, imagesEndpoint)
-////    }
-//    val results = searchImages("gol gappay")
-//    print(results.jsonResponse)
-//}
 
 suspend fun getImagesSearchResultAsync(
     searchText: String,
-    subscriptionKey : String?,
-    imagesEndpoint: String
+    nextPageNumber: Int
 ): ImagesSearch? = withContext(Dispatchers.IO) {
     try {
         Log.d("TAGINN","Fetching results")
-        val results = searchImages(searchText)
+        val results = searchImages(searchText,nextPageNumber)
         return@withContext apiResponseToImages(results.jsonResponse)
     } catch (e: Exception) {
         Log.e("TAGINN", "catch getSearchWebResult ${e.message ?: ""}")
@@ -37,17 +29,16 @@ suspend fun getImagesSearchResultAsync(
     }
 }
 
-fun searchImages(searchQuery: String): SearchResults {
+fun searchImages(searchQuery: String, nextPageNumber: Int): SearchResults {
     try {
         val safeSearchValue = URLEncoder.encode("Moderate", "UTF-8")
-        val offset = 1
-//        val answerCount = 1
+        //        val answerCount = 1
 //        val responseFilter = URLEncoder.encode("webpages", "UTF-8")
 
         val urlString = "$imagesEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
                 "&safeSearch=${safeSearchValue}" +
                 "&count=$imagesCount" +
-                "&offset=$offset"
+                "&offset=$nextPageNumber"
 //                "&answerCount=$answerCount"+
 //                "&responseFilter=$responseFilter"
         val url = URL(urlString)

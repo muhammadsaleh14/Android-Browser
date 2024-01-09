@@ -19,6 +19,7 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
     private lateinit var rvVideosSearchResult: RecyclerView
     private val viewModel: VideosViewModel by activityViewModels()
     private lateinit var adapter: VideosSearchAdapter
+    private var setAdapter = false
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
             super.onViewCreated(view, savedInstanceState)
@@ -40,7 +41,10 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
                 if (loadState.refresh is LoadState.Loading) {
                     // Show loading indicator
                 } else {
-                    rvVideosSearchResult.adapter = adapter
+                    if (!setAdapter) {
+                        rvVideosSearchResult.adapter = adapter
+                        setAdapter = true
+                    }
                     // Hide loading indicator
                     val error = when {
                         loadState.prepend is LoadState.Error -> loadState.prepend as LoadState.Error

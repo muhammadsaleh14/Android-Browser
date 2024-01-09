@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.paging.PagingDataAdapter
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.browserapp.R
@@ -13,10 +15,10 @@ import com.example.browserapp.fragments.ImagesFragment
 import com.example.browserapp.viewmodels.ImageDetails
 
 class ImageSearchAdapter(
-    private val imagesFragment: ImagesFragment,
-    private val searchItems: List<ImagesSearch.Value?>?
+    diffCallback: DiffUtil.ItemCallback<ImagesSearch.Value>,
+    val imagesFragment: ImagesFragment
 ) :
-    RecyclerView.Adapter<ImageSearchAdapter.ViewHolder>() {
+    PagingDataAdapter<ImagesSearch.Value, ImageSearchAdapter.ViewHolder>(diffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflate the item layout dynamically
         val view =
@@ -27,12 +29,11 @@ class ImageSearchAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Log.d("TAGINN1", holder.toString())
-        val currentItem: ImagesSearch.Value? = searchItems?.get(position)
+        val currentItem: ImagesSearch.Value? = getItem(position)
         // Bind data to the views in the item layout
         if (currentItem?.hostPageDisplayUrl != null) {
             holder.bindImage(currentItem.thumbnailUrl)
             holder.thumbnailImage.visibility = View.VISIBLE // Show image view
-
             holder.thumbnailImage.setOnClickListener {
                 try {
                     if (!ImageDetails.isImageDetailFragmentOpen) {
@@ -50,14 +51,12 @@ class ImageSearchAdapter(
                 }
             }
 
-
         } else {
             holder.thumbnailImage.visibility = View.GONE // Hide image view
         }
         //        holder.name.text = currentItem?.name
     }
 
-    override fun getItemCount(): Int = searchItems?.size ?: 0
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         //        name, displayUrl,datePublished,snippet
         // ... (reference other views in the item layout)
@@ -70,6 +69,40 @@ class ImageSearchAdapter(
                 .into(thumbnailImage)
         }
 
+    }
+
+    companion object {
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ImagesSearch.Value>() {
+            override fun areItemsTheSame(
+                oldItem: ImagesSearch.Value,
+                newItem: ImagesSearch.Value
+            ): Boolean {
+                try {
+                    // Return true if items represent the same web page
+                    val bool = oldItem.imageId == newItem.imageId
+                    Log.d("TAGINN2", "are items the same:$bool")
+                    return bool
+                } catch (e: Exception) {
+                    Log.e("TAGINN3", e.stackTraceToString())
+                    throw e
+                }
+            }
+
+            override fun areContentsTheSame(
+                oldItem: ImagesSearch.Value,
+                newItem: ImagesSearch.Value
+            ): Boolean {
+                try {
+                    // Return true if items have the same content (name, url, etc.)
+                    val bool = oldItem == newItem
+                    Log.d("TAGINN2", "are contents the same:$bool")
+                    return bool
+                } catch (e: Exception) {
+                    Log.e("TAGINN3", e.stackTraceToString())
+                    throw e
+                }
+            }
+        }
     }
 
 }

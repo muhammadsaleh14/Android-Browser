@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class WebPagesViewModel : ViewModel() {
-    var query:String? = null
+    var query:String = "error"
     private val _webSearchValues = MutableLiveData<WebpagesSearch?>()
 //    val webSearchValues: LiveData<WebpagesSearch?> = _webSearchValues
 //    private var isDataFetched = false

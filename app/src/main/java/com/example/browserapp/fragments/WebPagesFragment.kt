@@ -5,10 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,15 +15,13 @@ import com.example.browserapp.R
 import com.example.browserapp.adapters.WebpagesSearchAdapter
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.WebPagesViewModel
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.FlowCollector
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 class WebPagesFragment : Fragment(R.layout.fragment_web_pages) {
     private lateinit var rvSearchResult: RecyclerView
     private val viewModel: WebPagesViewModel by activityViewModels()
     private lateinit var adapter: WebpagesSearchAdapter
+    private var setAdapter = false
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -61,7 +57,11 @@ class WebPagesFragment : Fragment(R.layout.fragment_web_pages) {
                 Log.d("TAGINN2", "loading")
                 // Show loading indicator
             } else {
-                rvSearchResult.adapter = adapter
+                if (!setAdapter) {
+                    Log.d("TAGINN4", "setting adapter to true")
+                    rvSearchResult.adapter = adapter
+                    setAdapter = true
+                }
 //                viewLifecycleOwner.lifecycleScope.launch {
 //                    viewModel.flow.collect{ pagingData ->
 //                        Log.d("TAGINN2", "submitting data to adapter ${pagingData.toString()}")
@@ -87,7 +87,7 @@ class WebPagesFragment : Fragment(R.layout.fragment_web_pages) {
 
     private fun submitDataToAdapter() {
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.flow.collect{ pagingData ->
+            viewModel.flow.collect { pagingData ->
                 Log.d("TAGINN2", "submitting data to adapter ${pagingData.toString()}")
 
                 adapter.submitData(pagingData)

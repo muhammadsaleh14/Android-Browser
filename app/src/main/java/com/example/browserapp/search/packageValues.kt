@@ -8,7 +8,7 @@ data class SearchResults(val relevantHeaders: HashMap<String, String>, val jsonR
 
 const val webpagesCount = 20
 const val videosCount =  20
-const val imagesCount = 20
+const val imagesCount = 40
 
 //IDK what this ftn does below
 //fun prettify(jsonText: String): String {
