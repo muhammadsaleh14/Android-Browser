@@ -2,7 +2,9 @@ package com.example.browserapp.fragments
 
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -20,35 +22,38 @@ import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class WebPagesFragment(private val btnBinding: Button) : Fragment(R.layout.fragment_web_pages) {
+class WebPagesFragment : Fragment(R.layout.fragment_web_pages) {
     private lateinit var rvSearchResult: RecyclerView
     private val viewModel: WebPagesViewModel by activityViewModels()
     private lateinit var adapter: WebpagesSearchAdapter
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout and bind views
+        val view = inflater.inflate(R.layout.fragment_web_pages, container, false)
+        rvSearchResult = view.findViewById(R.id.rvWebpagesSearchResult)
+        // ... (other view bindings)
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.query = searchTerm
-        rvSearchResult = view.findViewById(R.id.rvWebpagesSearchResult)
+
         rvSearchResult.layoutManager = LinearLayoutManager(context)
         rvSearchResult.setHasFixedSize(true)
 
-        adapter =
-            WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK) // Use DiffUtil callback
+        adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
         observePagingData()
-        rvSearchResult.adapter = adapter
-//        adapter.refresh()
-//        viewModel.fetchWebSearchResults(searchTerm) // Trigger initial loading
-        Log.d("TAGINN2","calling onViewCreated")
+        submitDataToAdapter()
 
+        Log.d("TAGINN2", "calling onViewCreated")
     }
-
 
     private fun observePagingData() {
         Log.d("TAGINN2", "observe PAGING DATA ftn")
+
         adapter.addLoadStateListener { loadState ->
             // Handle loading and error states
             Log.d("TAGINN2", "observe")
@@ -56,7 +61,13 @@ class WebPagesFragment(private val btnBinding: Button) : Fragment(R.layout.fragm
                 Log.d("TAGINN2", "loading")
                 // Show loading indicator
             } else {
-
+                rvSearchResult.adapter = adapter
+//                viewLifecycleOwner.lifecycleScope.launch {
+//                    viewModel.flow.collect{ pagingData ->
+//                        Log.d("TAGINN2", "submitting data to adapter ${pagingData.toString()}")
+//                        adapter.submitData(pagingData)
+//                    }
+//                }
                 Log.d("TAGINN2", "not Loading")
                 // Hide loading indicator
                 val error = when {
@@ -72,14 +83,13 @@ class WebPagesFragment(private val btnBinding: Button) : Fragment(R.layout.fragm
                 }
             }
         }
-        submitDataToAdapter()
     }
 
     private fun submitDataToAdapter() {
         viewLifecycleOwner.lifecycleScope.launch {
-
-            viewModel.flow.collectLatest { pagingData ->
+            viewModel.flow.collect{ pagingData ->
                 Log.d("TAGINN2", "submitting data to adapter ${pagingData.toString()}")
+
                 adapter.submitData(pagingData)
             }
         }

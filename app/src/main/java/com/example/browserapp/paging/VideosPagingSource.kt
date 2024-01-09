@@ -4,30 +4,35 @@ import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.bumptech.glide.load.HttpException
+import com.example.browserapp.dataClasses.bingSearch.VideosSearch
 import com.example.browserapp.dataClasses.bingSearch.WebpagesSearch
+import com.example.browserapp.search.getSearchVideosResultAsync
 import com.example.browserapp.search.getSearchWebResultAsync
-import com.example.browserapp.search.webpagesCount
+import com.example.browserapp.search.videosCount
 import java.io.IOException
 
-class WebpagesPagingSource(
-    val query: String?
-) : PagingSource<Int, WebpagesSearch.WebPages.Value>() {
+class VideosPagingSource(
+    val query: String? = ""
+) : PagingSource<Int, VideosSearch.Value>() {
     override suspend fun load(params: LoadParams<Int>):
-            LoadResult<Int, WebpagesSearch.WebPages.Value> {
+            LoadResult<Int, VideosSearch.Value> {
         try {
             // Start refresh at page 1 if undefined.
-            val nextPageNumber = params.key ?: 1
-            Log.d("TAGINN2", "next page number $nextPageNumber")
-            val response = getSearchWebResultAsync(query ?: "", nextPageNumber)
-            val data = response?.webPages?.value?.filterNotNull() ?: emptyList()
-            val nextKey = if ((response?.webPages?.totalEstimatedMatches != null) &&
-                ((response.webPages.totalEstimatedMatches - webpagesCount) > nextPageNumber)
+            val nextPageNumber = params.key ?: 0
+            Log.d("TAGINN3", "next page number $nextPageNumber")
+            val response = getSearchVideosResultAsync(query ?: "", nextPageNumber)
+            val data = response?.value?.filterNotNull() ?: emptyList()
+
+            Log.d("TAGINN3", "${response?.value}")
+            val nextKey = if ((response?.totalEstimatedMatches != null) &&
+                ((response.totalEstimatedMatches - videosCount) > nextPageNumber)
             ) {
-                nextPageNumber + 1
+                response.nextOffset
             } else {
                 null
             }
-            Log.d("TAGINN2", "data is $data")
+            Log.d("TAGINN3", "nextKey is $nextKey")
+
             return LoadResult.Page(
                 data = data,
                 prevKey = null, // Only paging forward.
@@ -35,16 +40,16 @@ class WebpagesPagingSource(
             )
         } catch (e: IOException) {
             // IOException for network failures.
-            Log.e("TAGINN2", e.stackTraceToString())
+            Log.e("TAGINN3", e.stackTraceToString())
             return LoadResult.Error(e)
         } catch (e: HttpException) {
-            Log.e("TAGINN2", e.stackTraceToString())
+            Log.e("TAGINN3", e.stackTraceToString())
             // HttpException for any non-2xx HTTP status codes.
             return LoadResult.Error(e)
         }
     }
 
-    override fun getRefreshKey(state: PagingState<Int, WebpagesSearch.WebPages.Value>): Int? {
+    override fun getRefreshKey(state: PagingState<Int, VideosSearch.Value>): Int? {
 //         Try to find the page key of the closest page to anchorPosition from
 //         either the prevKey or the nextKey; you need to handle nullability
 //         here.

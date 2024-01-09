@@ -6,7 +6,6 @@ import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import java.net.InetAddress
 import java.net.URL
@@ -18,42 +17,41 @@ fun main() {
 //    runBlocking {
 //        getSearchVideosResultAsync("gol gappay", subscriptionKey, videosSearchEndpoint)
 //    }
-    val results = searchVideos(searchTerm)
-    print(results.jsonResponse)
+//    val results = searchVideos(searchTerm, nextPageNumber)
+//    print(results.jsonResponse)
 }
 
 suspend fun getSearchVideosResultAsync(
     searchText: String,
-    subscriptionKey : String?,
-    endpoint: String
+    nextPageNumber: Int
 ): VideosSearch? = withContext(Dispatchers.IO) {
     try {
 
-        Log.d("TAGINN","Fetching results")
-        val results = searchVideos(searchText)
-//        print(results.jsonResponse)
+//        Log.d("TAGINN3","Fetching results")
+        val results = searchVideos(searchText,nextPageNumber)
+//        Log.d("TAGINN3","response in ftn $results.jsonResponse")
         return@withContext parseVideosResponse(results.jsonResponse)
     } catch (e: Exception) {
-        Log.e("TAGINN", "catch getSearchVideosResult ${e.message ?: ""}")
+        Log.e("TAGINN3", "catch getSearchVideosResult ${e.stackTraceToString() ?: ""}")
         return@withContext null
     }
 }
 
-fun searchVideos(searchQuery: String): SearchResults {
+fun searchVideos(searchQuery: String, nextPageNumber: Int): SearchResults {
     try {
 
         val safeSearchValue = URLEncoder.encode("Moderate", "UTF-8")
-        val offset = 1
-//        val answerCount = 1
+        //        val answerCount = 1
 //        val responseFilter = URLEncoder.encode("webpages", "UTF-8")
 
         val urlString = "$videosSearchEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
                 "&safeSearch=${safeSearchValue}" +
                 "&count=$videosCount" +
-                "&offset=$offset"
+                "&offset=$nextPageNumber"
 //                "&answerCount=$answerCount"+
 //                "&responseFilter=$responseFilter"
         val url = URL(urlString)
+//        Log.d("TAGINN3","url $urlString")
         val connection = url.openConnection() as HttpsURLConnection
         connection.setRequestProperty("Ocp-Apim-Subscription-Key", subscriptionKey )
         val clientIP = InetAddress.getLocalHost().hostAddress

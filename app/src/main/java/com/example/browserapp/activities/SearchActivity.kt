@@ -24,7 +24,7 @@ class SearchActivity : AppCompatActivity() {
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
             binding.btnWebPages.setOnClickListener {
-                replaceFragment(WebPagesFragment(binding.btnWebPages))
+                replaceFragment(WebPagesFragment())
             }
             binding.btnImages.setOnClickListener {
                 replaceFragment(ImagesFragment())
