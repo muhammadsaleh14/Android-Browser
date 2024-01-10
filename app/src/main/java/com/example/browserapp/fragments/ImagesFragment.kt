@@ -14,9 +14,12 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.browserapp.R
 import com.example.browserapp.adapters.ImageSearchAdapter
+import com.example.browserapp.networkManagement.ConnectivityObserver
+import com.example.browserapp.networkManagement.NetworkConnectivityObserver
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.ImagesViewModel
 import com.example.browserapp.viewmodels.SearchViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class ImagesFragment : Fragment(R.layout.fragment_images) {
@@ -46,6 +49,18 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
                 StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
             rvImageSearchResult.layoutManager = imagesLayoutManager
             adapter = ImageSearchAdapter(ImageSearchAdapter.DIFF_CALLBACK, this)
+            var connectivityObserver = NetworkConnectivityObserver(requireContext())
+            lifecycleScope.launch {
+                connectivityObserver.observe()
+                    .collect { status ->
+                        Log.d("qqq", "status: $status")
+                        if (status == ConnectivityObserver.Status.Available) {
+                            Log.d("qqq", "adapter refresh")
+                            delay(2000)
+                            adapter.refresh()
+                        }
+                    }
+            }
             observePagingData()
             submitDataToAdapter()
         } catch (e: Exception) {
@@ -59,6 +74,7 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
                 if (loadState.refresh is LoadState.Loading) {
                     // Show loading indicator
                     searchViewModel.isLoading.value = true
+                    setAdapter = false
                 } else {
                     searchViewModel.isLoading.value = false
                     if (!setAdapter) {

@@ -57,27 +57,6 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
         //handling connectivity
         var connectivityObserver = NetworkConnectivityObserver(requireContext())
-//        lifecycleScope.launch {
-//            try {
-//                ensureActive() // Check for cancellation
-//                connectivityObserver.observe()
-//                    .collect { status ->
-//                        Log.d("qqq","status: $status")
-//                        if (status == ConnectivityObserver.Status.Available) {
-//                            if (isRefreshAdapter) {
-//                                Log.d("qqq", "adapter refresh")
-//                                delay(2000)
-//                                adapter.refresh()
-//                                isRefreshAdapter = false
-//                            }
-//                        } else {
-//                            isRefreshAdapter = true
-//                        }
-//                    }
-//            } catch (e: CancellationException) {
-//                isRefreshAdapter = true // Call function on cancellation
-//            }
-//        }
         lifecycleScope.launch {
             connectivityObserver.observe()
                 .collect { status ->
@@ -89,9 +68,6 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
                     }
                 }
         }
-//        val networkStatus = connectivityObserver.getCurrentStatus()
-//        if (networkStatus == ConnectivityObserver.Status.Available) {
-//        }
         observePagingData()
         submitDataToAdapter()
     }

@@ -12,9 +12,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.browserapp.R
 import com.example.browserapp.adapters.VideosSearchAdapter
+import com.example.browserapp.networkManagement.ConnectivityObserver
+import com.example.browserapp.networkManagement.NetworkConnectivityObserver
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.VideosViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class VideosFragment : Fragment(R.layout.fragment_videos) {
@@ -33,6 +36,18 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
             rvVideosSearchResult.layoutManager = LinearLayoutManager(context)
             rvVideosSearchResult.setHasFixedSize(true)
             adapter = VideosSearchAdapter(VideosSearchAdapter.DIFF_CALLBACK)
+            var connectivityObserver = NetworkConnectivityObserver(requireContext())
+            lifecycleScope.launch {
+                connectivityObserver.observe()
+                    .collect { status ->
+                        Log.d("qqq", "status: $status")
+                        if (status == ConnectivityObserver.Status.Available) {
+                            Log.d("qqq", "adapter refresh")
+                            delay(2000)
+                            adapter.refresh()
+                        }
+                    }
+            }
             observePagingData()
             submitDataToAdapter()
         } catch (e: Exception) {
@@ -46,6 +61,7 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
                 if (loadState.refresh is LoadState.Loading) {
                     // Show loading indicator
                     searchViewModel.isLoading.value = true
+                    setAdapter = false
                 } else {
                     searchViewModel.isLoading.value = false
                     if (!setAdapter) {
