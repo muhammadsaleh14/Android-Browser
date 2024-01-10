@@ -20,6 +20,7 @@ import com.example.browserapp.networkManagement.NetworkConnectivityObserver
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.WebPagesViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
@@ -29,6 +30,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
     private var setAdapter = false
     private lateinit var searchViewModel: SearchViewModel
     private lateinit var fragmentManager: FragmentManager
+    private var isRefreshAdapter = false
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,25 +55,45 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         rvSearchResult.setHasFixedSize(true)
         //recycler view adapter
         adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
-
         //handling connectivity
         var connectivityObserver = NetworkConnectivityObserver(requireContext())
+//        lifecycleScope.launch {
+//            try {
+//                ensureActive() // Check for cancellation
+//                connectivityObserver.observe()
+//                    .collect { status ->
+//                        Log.d("qqq","status: $status")
+//                        if (status == ConnectivityObserver.Status.Available) {
+//                            if (isRefreshAdapter) {
+//                                Log.d("qqq", "adapter refresh")
+//                                delay(2000)
+//                                adapter.refresh()
+//                                isRefreshAdapter = false
+//                            }
+//                        } else {
+//                            isRefreshAdapter = true
+//                        }
+//                    }
+//            } catch (e: CancellationException) {
+//                isRefreshAdapter = true // Call function on cancellation
+//            }
+//        }
         lifecycleScope.launch {
             connectivityObserver.observe()
                 .collect { status ->
+                    Log.d("qqq", "status: $status")
                     if (status == ConnectivityObserver.Status.Available) {
+                        Log.d("qqq", "adapter refresh")
+                        delay(2000)
                         adapter.refresh()
-                        observePagingData()
-                        submitDataToAdapter()
                     }
                 }
         }
 //        val networkStatus = connectivityObserver.getCurrentStatus()
 //        if (networkStatus == ConnectivityObserver.Status.Available) {
 //        }
-            observePagingData()
-            submitDataToAdapter()
-
+        observePagingData()
+        submitDataToAdapter()
     }
 
     private fun observePagingData() {
