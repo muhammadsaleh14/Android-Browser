@@ -5,4 +5,5 @@ import androidx.lifecycle.ViewModel
 
 class SearchViewModel:ViewModel() {
     val isLoading = MutableLiveData(false)
+    val isOnline = MutableLiveData(false)
 }

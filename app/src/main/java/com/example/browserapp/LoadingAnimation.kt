@@ -2,7 +2,6 @@ package com.example.browserapp
 
 import android.view.View
 import com.airbnb.lottie.LottieAnimationView
-import com.example.browserapp.fragments.LoadingDialogFragment
 
 class LoadingAnimation(private val loadingAnimation: LottieAnimationView) {
 

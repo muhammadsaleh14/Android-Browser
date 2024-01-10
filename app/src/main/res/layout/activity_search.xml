@@ -95,17 +95,17 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-<!--            <com.airbnb.lottie.LottieAnimationView-->
-<!--                android:id="@+id/loading_animation"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:lottie_loop="true"-->
-<!--                android:visibility="gone"-->
-<!--                app:lottie_rawRes="@raw/loading" />-->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:lottie_loop="true"
+                android:visibility="gone"
+                app:lottie_rawRes="@raw/loading" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 

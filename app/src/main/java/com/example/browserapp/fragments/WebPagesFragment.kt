@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.browserapp.LoadingAnimation
 import com.example.browserapp.R
 import com.example.browserapp.adapters.WebpagesSearchAdapter
+import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.WebPagesViewModel
@@ -26,6 +28,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
     private lateinit var adapter: WebpagesSearchAdapter
     private var setAdapter = false
     private lateinit var searchViewModel: SearchViewModel
+    private lateinit var fragmentManager:FragmentManager
 
 
     override fun onCreateView(
@@ -33,49 +36,50 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         savedInstanceState: Bundle?
     ): View? {
         searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
-        searchViewModel.isLoading.value = true
         // Inflate the layout and bind views
         val view = inflater.inflate(R.layout.fragment_web_pages, container, false)
         rvSearchResult = view.findViewById(R.id.rvWebpagesSearchResult)
+        fragmentManager = requireActivity().supportFragmentManager
         // ... (other view bindings)
 
         return view
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //setting search value
         viewModel.query = searchTerm
-
+        //setting loading icon
+        searchViewModel.isLoading.value = true
+        //setting recycler view
         rvSearchResult.layoutManager = LinearLayoutManager(context)
         rvSearchResult.setHasFixedSize(true)
-
+        //recycler view adapter
         adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
+//        Log.d("qqq","refershing adapter and $rvSearchResult")
         observePagingData()
         submitDataToAdapter()
-
-        Log.d("TAGINN2", "calling onViewCreated")
+        Log.d("qqq", "calling onViewCreated" +
+                "\n set adapter: $setAdapter" +
+                "\n isloading:${searchViewModel.isLoading.value}")
     }
+
 
     private fun observePagingData() {
         Log.d("TAGINN2", "observe PAGING DATA ftn")
 
         adapter.addLoadStateListener { loadState ->
             if (loadState.refresh is LoadState.Loading) {
+                Log.d("qqq", "loading")
                 searchViewModel.isLoading.value = true
             } else {
+                Log.d("qqq", "not loading")
                 searchViewModel.isLoading.value = false
 //                loadingAnimation.stopLoading()
                 if (!setAdapter) {
-                    Log.d("TAGINN4", "setting adapter to true")
+                    Log.d("TAGINN5", "setting adapter to true")
                     rvSearchResult.adapter = adapter
                     setAdapter = true
                 }
-//                viewLifecycleOwner.lifecycleScope.launch {
-//                    viewModel.flow.collect{ pagingData ->
-//                        Log.d("TAGINN2", "submitting data to adapter ${pagingData.toString()}")
-//                        adapter.submitData(pagingData)
-//                    }
-//                }
                 Log.d("TAGINN2", "not Loading")
                 // Hide loading indicator
                 val error = when {
@@ -100,5 +104,11 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
                 adapter.submitData(pagingData)
             }
         }
+    }
+    private fun reattachFragment(){
+        fragmentManager.beginTransaction()
+            .detach(this)
+            .attach(this)
+            .commit()
     }
 }

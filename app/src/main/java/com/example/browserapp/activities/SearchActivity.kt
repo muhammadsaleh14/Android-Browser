@@ -10,18 +10,24 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.example.browserapp.LoadingAnimation
 import com.example.browserapp.R
 import com.example.browserapp.databinding.ActivitySearchBinding
 import com.example.browserapp.fragments.ImagesFragment
 import com.example.browserapp.fragments.VideosFragment
 import com.example.browserapp.fragments.WebPagesFragment
+import com.example.browserapp.networkManagement.ConnectivityObserver
+import com.example.browserapp.networkManagement.NetworkConnectivityObserver
 import com.example.browserapp.viewmodels.SearchViewModel
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.launch
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySearchBinding
     private val supportFragmentManager = getSupportFragmentManager()
     private var currentFragment: Fragment? = null
+    private lateinit var connectivityObserver: ConnectivityObserver
 
     //    companion object:{
 //
@@ -32,13 +38,33 @@ class SearchActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
-
+            //setting view model
+            val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
+            val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
+            val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
+            //Check Connectivity
+            connectivityObserver = NetworkConnectivityObserver(applicationContext)
+            lifecycleScope.launch {
+                connectivityObserver.observe()
+                    .collect { status ->
+                        viewModel.isOnline.value = status == ConnectivityObserver.Status.Available
+                        showAlert(status)
+                    }
+            }
+            val initialStatus = connectivityObserver.getCurrentStatus()
+            if (initialStatus != ConnectivityObserver.Status.Available) {
+                showAlert(initialStatus)
+            }
             //control loading
             val loadingAnimation = LoadingAnimation(binding.loadingAnimation)
-            val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
             viewModel.isLoading.observe(this) { isLoading ->
-                if(isLoading) loadingAnimation.startLoading()
-                else loadingAnimation.stopLoading()
+                if (isLoading) {
+                    Log.d("qqq", "starting animation")
+                    loadingAnimation.startLoading()
+                } else {
+                    Log.d("qqq", "stopping animation")
+                    loadingAnimation.stopLoading()
+                }
             }
 //            supportFragmentManager.beginTransaction()
 //                .add(R.id.fragmentContainer,WebPagesFragment())
@@ -64,29 +90,29 @@ class SearchActivity : AppCompatActivity() {
                 replaceFragment(VideosFragment())
 //                replaceFragment(VideosFragment())
             }
+            val optionsList: View? = optionsListStub.inflate()
+            if (optionsList != null) {
+                optionsList.visibility = View.GONE
+            }
+            showOptionsButton.setOnClickListener {
+                if (optionsList?.visibility == View.GONE) {
+                    // Slide in the options list
+                    optionsList.visibility = View.VISIBLE
+                    val slideInAnimation =
+                        AnimationUtils.loadAnimation(this, R.anim.slide_in_from_left)
+                    optionsList.startAnimation(slideInAnimation)
+                    showOptionsButton.setImageResource(R.drawable.arrow_right)
+                } else {
+                    // Slide out the options list
+                    val slideOutAnimation =
+                        AnimationUtils.loadAnimation(this, R.anim.slide_out_to_left)
+                    optionsList?.startAnimation(slideOutAnimation)
+                    optionsList?.visibility = View.GONE
+                    showOptionsButton.setImageResource(R.drawable.arrow_left)
+                }
+            }
         } catch (e: Exception) {
             Log.e("TAGINN", e.stackTraceToString())
-        }
-        val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
-        val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
-        val optionsList: View? = optionsListStub.inflate()
-        if (optionsList != null) {
-            optionsList.visibility = View.GONE
-        }
-        showOptionsButton.setOnClickListener {
-            if (optionsList?.visibility == View.GONE) {
-                // Slide in the options list
-                optionsList.visibility = View.VISIBLE
-                val slideInAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_in_from_left)
-                optionsList.startAnimation(slideInAnimation)
-                showOptionsButton.setImageResource(R.drawable.arrow_right)
-            } else {
-                // Slide out the options list
-                val slideOutAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_out_to_left)
-                optionsList?.startAnimation(slideOutAnimation)
-                optionsList?.visibility = View.GONE
-                showOptionsButton.setImageResource(R.drawable.arrow_left)
-            }
         }
     }
 
@@ -106,6 +132,16 @@ class SearchActivity : AppCompatActivity() {
             .replace(R.id.fragmentContainer, newFragment)
             .addToBackStack(null)
             .commit()
+    }
+
+    //alert for network
+    private fun showAlert(status: ConnectivityObserver.Status) {
+        val message = when (status) {
+            ConnectivityObserver.Status.Available -> "Network is available"
+            ConnectivityObserver.Status.Unavailable -> "Network is unavailable"
+            else -> "Unknown network status"
+        }
+        Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_SHORT).show()
     }
 
 }
