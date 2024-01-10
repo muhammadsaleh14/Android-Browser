@@ -17,6 +17,7 @@ class ImagesPagingSource(private val query: String) : PagingSource<Int, ImagesSe
             val nextPageNumber = params.key ?: 0
 //            Log.d("TAGINN3", "next page number $nextPageNumber")
             val response = getImagesSearchResultAsync(query ?: "", nextPageNumber)
+
             val data = response?.value?.filterNotNull() ?: emptyList()
 
 //            Log.d("TAGINN3", "${response?.value}")

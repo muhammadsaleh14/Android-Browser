@@ -7,29 +7,38 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.browserapp.LoadingAnimation
 import com.example.browserapp.R
 import com.example.browserapp.adapters.WebpagesSearchAdapter
 import com.example.browserapp.search.searchTerm
+import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.WebPagesViewModel
 import kotlinx.coroutines.launch
 
-class WebPagesFragment : Fragment(R.layout.fragment_web_pages) {
+class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
     private lateinit var rvSearchResult: RecyclerView
     private val viewModel: WebPagesViewModel by activityViewModels()
     private lateinit var adapter: WebpagesSearchAdapter
     private var setAdapter = false
+    private lateinit var searchViewModel: SearchViewModel
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
+        searchViewModel.isLoading.value = true
         // Inflate the layout and bind views
         val view = inflater.inflate(R.layout.fragment_web_pages, container, false)
         rvSearchResult = view.findViewById(R.id.rvWebpagesSearchResult)
         // ... (other view bindings)
+
         return view
     }
 
@@ -51,12 +60,11 @@ class WebPagesFragment : Fragment(R.layout.fragment_web_pages) {
         Log.d("TAGINN2", "observe PAGING DATA ftn")
 
         adapter.addLoadStateListener { loadState ->
-            // Handle loading and error states
-            Log.d("TAGINN2", "observe")
             if (loadState.refresh is LoadState.Loading) {
-                Log.d("TAGINN2", "loading")
-                // Show loading indicator
+                searchViewModel.isLoading.value = true
             } else {
+                searchViewModel.isLoading.value = false
+//                loadingAnimation.stopLoading()
                 if (!setAdapter) {
                     Log.d("TAGINN4", "setting adapter to true")
                     rvSearchResult.adapter = adapter

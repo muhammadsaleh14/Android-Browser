@@ -44,6 +44,7 @@ android {
 }
 
 dependencies {
+    implementation ("com.airbnb.android:lottie:6.3.0")
     implementation ("org.threeten:threetenbp:1.6.0")
     implementation ("androidx.fragment:fragment-ktx:1.4.1")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")

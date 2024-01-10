@@ -15,4 +15,8 @@
         </item>
     </style>
 
+<!--    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--        <item name="android:background">@drawable/_28391_turquoise_and_white_abstract_random_lines_background</item>-->
+<!--        <item name="shapeAppearanceSmallComponent">@style/RoundImageShape</item>-->
+<!--    </style>-->
 </resources>

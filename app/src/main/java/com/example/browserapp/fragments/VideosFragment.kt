@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.browserapp.R
 import com.example.browserapp.adapters.VideosSearchAdapter
 import com.example.browserapp.search.searchTerm
+import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.VideosViewModel
 import kotlinx.coroutines.launch
 
@@ -20,8 +22,11 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
     private val viewModel: VideosViewModel by activityViewModels()
     private lateinit var adapter: VideosSearchAdapter
     private var setAdapter = false
+    private lateinit var searchViewModel: SearchViewModel
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
+            searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
+            searchViewModel.isLoading.value = true
             super.onViewCreated(view, savedInstanceState)
             viewModel.query = searchTerm
             rvVideosSearchResult = view.findViewById(R.id.rvVideosSearchResult)
@@ -40,7 +45,9 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
             adapter.addLoadStateListener { loadState ->
                 if (loadState.refresh is LoadState.Loading) {
                     // Show loading indicator
+                    searchViewModel.isLoading.value = true
                 } else {
+                    searchViewModel.isLoading.value = false
                     if (!setAdapter) {
                         rvVideosSearchResult.adapter = adapter
                         setAdapter = true

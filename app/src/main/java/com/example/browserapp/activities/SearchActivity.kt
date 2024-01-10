@@ -9,11 +9,14 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.example.browserapp.LoadingAnimation
 import com.example.browserapp.R
 import com.example.browserapp.databinding.ActivitySearchBinding
 import com.example.browserapp.fragments.ImagesFragment
 import com.example.browserapp.fragments.VideosFragment
 import com.example.browserapp.fragments.WebPagesFragment
+import com.example.browserapp.viewmodels.SearchViewModel
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySearchBinding
@@ -29,6 +32,14 @@ class SearchActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
+
+            //control loading
+            val loadingAnimation = LoadingAnimation(binding.loadingAnimation)
+            val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
+            viewModel.isLoading.observe(this) { isLoading ->
+                if(isLoading) loadingAnimation.startLoading()
+                else loadingAnimation.stopLoading()
+            }
 //            supportFragmentManager.beginTransaction()
 //                .add(R.id.fragmentContainer,WebPagesFragment())
 //                .add(R.id.fragmentContainer,ImagesFragment())

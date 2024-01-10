@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,7 @@ import com.example.browserapp.R
 import com.example.browserapp.adapters.ImageSearchAdapter
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.ImagesViewModel
+import com.example.browserapp.viewmodels.SearchViewModel
 import kotlinx.coroutines.launch
 
 class ImagesFragment : Fragment(R.layout.fragment_images) {
@@ -22,10 +24,13 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
     private val imagesViewModel: ImagesViewModel by activityViewModels()
     private lateinit var adapter: ImageSearchAdapter
     private var setAdapter = false
+    private lateinit var searchViewModel: SearchViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
+        searchViewModel.isLoading.value = true
         // Inflate the layout and bind views
         val view = inflater.inflate(R.layout.fragment_images, container, false)
         rvImageSearchResult = view.findViewById(R.id.rvImageSearchResult)
@@ -53,7 +58,9 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
             adapter.addLoadStateListener { loadState ->
                 if (loadState.refresh is LoadState.Loading) {
                     // Show loading indicator
+                    searchViewModel.isLoading.value = true
                 } else {
+                    searchViewModel.isLoading.value = false
                     if (!setAdapter) {
                         rvImageSearchResult.adapter = adapter
                         setAdapter = true
@@ -67,7 +74,7 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
                     }
 
                     error?.let {
-                        Log.e("TAGINN3", "error occurred $error")
+                        Log.e("TAGINN5", "error occurred $error")
                         // Handle error
                     }
                 }
