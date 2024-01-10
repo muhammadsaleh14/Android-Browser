@@ -59,10 +59,10 @@ class SearchActivity : AppCompatActivity() {
             val loadingAnimation = LoadingAnimation(binding.loadingAnimation)
             viewModel.isLoading.observe(this) { isLoading ->
                 if (isLoading) {
-                    Log.d("qqq", "starting animation")
+//                    Log.d("qqq", "starting animation")
                     loadingAnimation.startLoading()
                 } else {
-                    Log.d("qqq", "stopping animation")
+//                    Log.d("qqq", "stopping animation")
                     loadingAnimation.stopLoading()
                 }
             }

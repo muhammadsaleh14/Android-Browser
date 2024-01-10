@@ -49,12 +49,16 @@ fun searchWeb(searchQuery: String, nextPageNumber: Int): SearchResults {
                 "&offset=$nextPageNumber"
 //                "&answerCount=$answerCount"+
 //                "&responseFilter=$responseFilter"
+        Log.d("qqq","url=$urlString ")
+
         val url = URL(urlString)
         val connection = url.openConnection() as HttpsURLConnection
         connection.setRequestProperty("Ocp-Apim-Subscription-Key", subscriptionKey )
         val clientIP = InetAddress.getLocalHost().hostAddress
         connection.setRequestProperty("X-MSEdge-ClientIP", clientIP)
         val response = connection.inputStream.bufferedReader().use { it.readText() }
+        Log.d("qqq","$response")
+
         val results = SearchResults(HashMap(), response)
         connection.headerFields.forEach { (header, values) ->
             if (header != null && (header.startsWith("BingAPIs-") || header.startsWith("X-MSEdge-"))) {

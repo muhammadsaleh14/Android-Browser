@@ -13,10 +13,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.browserapp.LoadingAnimation
 import com.example.browserapp.R
 import com.example.browserapp.adapters.WebpagesSearchAdapter
 import com.example.browserapp.networkManagement.ConnectivityObserver
+import com.example.browserapp.networkManagement.NetworkConnectivityObserver
 import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.WebPagesViewModel
@@ -28,9 +28,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
     private lateinit var adapter: WebpagesSearchAdapter
     private var setAdapter = false
     private lateinit var searchViewModel: SearchViewModel
-    private lateinit var fragmentManager:FragmentManager
-
-
+    private lateinit var fragmentManager: FragmentManager
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,9 +39,9 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         rvSearchResult = view.findViewById(R.id.rvWebpagesSearchResult)
         fragmentManager = requireActivity().supportFragmentManager
         // ... (other view bindings)
-
         return view
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //setting search value
@@ -55,14 +53,26 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         rvSearchResult.setHasFixedSize(true)
         //recycler view adapter
         adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
-//        Log.d("qqq","refershing adapter and $rvSearchResult")
-        observePagingData()
-        submitDataToAdapter()
-        Log.d("qqq", "calling onViewCreated" +
-                "\n set adapter: $setAdapter" +
-                "\n isloading:${searchViewModel.isLoading.value}")
-    }
 
+        //handling connectivity
+        var connectivityObserver = NetworkConnectivityObserver(requireContext())
+        lifecycleScope.launch {
+            connectivityObserver.observe()
+                .collect { status ->
+                    if (status == ConnectivityObserver.Status.Available) {
+                        adapter.refresh()
+                        observePagingData()
+                        submitDataToAdapter()
+                    }
+                }
+        }
+//        val networkStatus = connectivityObserver.getCurrentStatus()
+//        if (networkStatus == ConnectivityObserver.Status.Available) {
+//        }
+            observePagingData()
+            submitDataToAdapter()
+
+    }
 
     private fun observePagingData() {
         Log.d("TAGINN2", "observe PAGING DATA ftn")
@@ -71,10 +81,10 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
             if (loadState.refresh is LoadState.Loading) {
                 Log.d("qqq", "loading")
                 searchViewModel.isLoading.value = true
+                setAdapter = false
             } else {
                 Log.d("qqq", "not loading")
                 searchViewModel.isLoading.value = false
-//                loadingAnimation.stopLoading()
                 if (!setAdapter) {
                     Log.d("TAGINN5", "setting adapter to true")
                     rvSearchResult.adapter = adapter
@@ -105,7 +115,8 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
             }
         }
     }
-    private fun reattachFragment(){
+
+    private fun reattachFragment() {
         fragmentManager.beginTransaction()
             .detach(this)
             .attach(this)
