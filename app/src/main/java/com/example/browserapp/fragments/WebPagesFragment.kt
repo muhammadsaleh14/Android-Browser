@@ -97,7 +97,6 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.flow.collect { pagingData ->
                 Log.d("TAGINN2", "submitting data to adapter ${pagingData.toString()}")
-
                 adapter.submitData(pagingData)
             }
         }
