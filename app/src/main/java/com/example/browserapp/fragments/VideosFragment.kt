@@ -31,7 +31,7 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
             searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
             searchViewModel.isLoading.value = true
             super.onViewCreated(view, savedInstanceState)
-            viewModel.query = searchTerm
+            viewModel.query = searchViewModel.searchTerm.value?:"error"
             rvVideosSearchResult = view.findViewById(R.id.rvVideosSearchResult)
             rvVideosSearchResult.layoutManager = LinearLayoutManager(context)
             rvVideosSearchResult.setHasFixedSize(true)

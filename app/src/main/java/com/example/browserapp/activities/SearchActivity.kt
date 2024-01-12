@@ -35,19 +35,25 @@ class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         try {
             super.onCreate(savedInstanceState)
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
-            //setting view model
-            val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
+            //disabling night mode
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            //get values from search
+            val searchTerm = intent.getStringExtra ("searchTerm")
+            //assigning ids
             val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
             val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
+            //setting view model
+            val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
+            viewModel.searchTerm.value = searchTerm
+            Log.d("qqq","search term is $searchTerm")
+
             //Check Connectivity
             connectivityObserver = NetworkConnectivityObserver(applicationContext)
             lifecycleScope.launch {
                 connectivityObserver.observe()
                     .collect { status ->
-                        viewModel.isOnline.value = status == ConnectivityObserver.Status.Available
                         showAlert(status)
                     }
             }

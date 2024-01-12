@@ -1,6 +1,6 @@
 package com.example.browserapp.activities
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,14 +10,13 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.EditText
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 import com.example.browserapp.R
-import android.graphics.Bitmap
 import java.util.Stack
 
 class WebViewActivity : AppCompatActivity() {
     private val urlStack = Stack<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webpage)
 
@@ -25,9 +24,9 @@ class WebViewActivity : AppCompatActivity() {
         class MyWebViewClient : WebViewClient() {
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
-
                 // Update the EditText with the new URL
-                val editText = findViewById<EditText>(R.id.searchUrl) // Replace with your EditText's ID
+                val editText =
+                    findViewById<EditText>(R.id.searchUrl) // Replace with your EditText's ID
                 editText.setText(url)
                 if (!urlStack.contains(url)) {
                     urlStack.push(url)
@@ -35,22 +34,18 @@ class WebViewActivity : AppCompatActivity() {
             }
         }
 
-
-
         var urlEditEditText = findViewById<EditText>(R.id.searchUrl)
         val webView = findViewById<WebView>(R.id.webView) // Replace with your WebView's ID
         webView.webViewClient = MyWebViewClient()
 
-        try{
-
+        try {
             // Load a specific URL
             val receivedUrl = intent.getStringExtra("url")
             urlEditEditText.setText(receivedUrl)
-            webView.loadUrl(receivedUrl?:"")
-        }catch (e:Exception){
-            Log.e("TAGINN1",e.stackTraceToString())
+            webView.loadUrl(receivedUrl ?: "")
+        } catch (e: Exception) {
+            Log.e("TAGINN1", e.stackTraceToString())
         }
-
         val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
         val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
         val optionsList: View? = optionsListStub.inflate()
@@ -73,7 +68,6 @@ class WebViewActivity : AppCompatActivity() {
             }
         }
 
-
     }
 
     override fun onBackPressed() {
@@ -83,9 +77,8 @@ class WebViewActivity : AppCompatActivity() {
 //            // If WebView can go back, use its history
 //            webView.goBack()
 //        } else
-            if (urlStack.size>1) {
+        if (urlStack.size > 1) {
             // If WebView can't go back, but stack has URLs, pop and load
-
             urlStack.pop()
             val previousUrl = urlStack.pop()
             webView.loadUrl(previousUrl)

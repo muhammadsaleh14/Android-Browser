@@ -16,7 +16,6 @@ import com.example.browserapp.R
 import com.example.browserapp.adapters.ImageSearchAdapter
 import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.networkManagement.NetworkConnectivityObserver
-import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.ImagesViewModel
 import com.example.browserapp.viewmodels.SearchViewModel
 import kotlinx.coroutines.delay
@@ -44,7 +43,7 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
             super.onViewCreated(view, savedInstanceState)
-            imagesViewModel.query = searchTerm
+            imagesViewModel.query = searchViewModel.searchTerm.value?:"error"
             val imagesLayoutManager =
                 StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
             rvImageSearchResult.layoutManager = imagesLayoutManager

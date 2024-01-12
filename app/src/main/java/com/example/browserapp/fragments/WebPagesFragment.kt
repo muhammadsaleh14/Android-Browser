@@ -17,7 +17,6 @@ import com.example.browserapp.R
 import com.example.browserapp.adapters.WebpagesSearchAdapter
 import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.networkManagement.NetworkConnectivityObserver
-import com.example.browserapp.search.searchTerm
 import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.WebPagesViewModel
 import kotlinx.coroutines.delay
@@ -47,14 +46,13 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //setting search value
-        viewModel.query = searchTerm
+        viewModel.query = searchViewModel.searchTerm.value ?: "error"
         //setting loading icon
         searchViewModel.isLoading.value = true
         //setting recycler view
         rvSearchResult.layoutManager = LinearLayoutManager(context)
         rvSearchResult.setHasFixedSize(true)
         //recycler view adapter
-        adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
         //handling connectivity
         var connectivityObserver = NetworkConnectivityObserver(requireContext())
         lifecycleScope.launch {
@@ -64,10 +62,17 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
                     if (status == ConnectivityObserver.Status.Available) {
                         Log.d("qqq", "adapter refresh")
                         delay(2000)
-                        adapter.refresh()
+                        try {
+                            adapter.refresh()
+                        } catch (e: UninitializedPropertyAccessException) {
+                            Log.e("qqq", "adapter is no yet initialised")
+                        }
                     }
+                    Log.e("qqq", "setting first loaded to true")
                 }
         }
+        //initialising adapter after
+        adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
         observePagingData()
         submitDataToAdapter()
     }
