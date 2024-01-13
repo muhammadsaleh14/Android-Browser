@@ -73,29 +73,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun loginUser(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password)
+        auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // User registration successful
                     // You can handle additional steps here, such as sending a verification email.
-                    db.collection("users")
-                        .document(email)
-                        .get()
-                        .addOnSuccessListener { document ->
-                            if (document.exists()) {
-                                // Document found, you can access user data
-                                val user = document.toObject(User::class.java)
-                                val intent = Intent (this@LoginActivity , MainActivity::class.java)
-                                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                                startActivity(intent)
-                                // Handle user data here
-                            } else {
-                                // Document does not exist
-                            }
-                        }
-                        .addOnFailureListener { e ->
-                            // Handle errors here
-                        }
+                    val intent = Intent (this@LoginActivity , MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
                 } else {
                     // If registration fails, display a message to the user.
                     try {

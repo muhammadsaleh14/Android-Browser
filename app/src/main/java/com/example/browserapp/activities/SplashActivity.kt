@@ -15,7 +15,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_splash)
-
         Handler().postDelayed({
             // Start the next activity (e.g., MainActivity)
             if (isUserAuthenticated()) {

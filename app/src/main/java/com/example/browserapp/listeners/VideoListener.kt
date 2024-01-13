@@ -12,10 +12,10 @@ import androidx.core.content.ContextCompat.startActivity
 import com.bumptech.glide.load.engine.executor.GlideExecutor.UncaughtThrowableStrategy.LOG
 import com.example.browserapp.activities.WebViewActivity
 
-fun onVideoCardClick(view: View, context: Context,url: String?) {
+fun onVideoCardClick(view: View, context: Context,url: String? , name:String?) {
     view.setOnClickListener {
         changeColor(view)
-        handleIntent(context, url) // Replace with actual URL
+        handleIntent(context, url , name) // Replace with actual URL
     }
 }
 

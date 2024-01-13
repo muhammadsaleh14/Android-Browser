@@ -4,7 +4,6 @@ plugins {
 }
 
 
-
 android {
     namespace = "com.example.browserapp"
     compileSdk = 34
@@ -70,11 +69,12 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
-    implementation("com.google.firebase:firebase-analytics")
+
+
+    implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
     implementation ("com.google.firebase:firebase-auth:22.3.0") // Use the latest version
-//    implementation ("com.google.android.gms:play-services-auth:22.0.0")
-    implementation("com.android.tools.build:gradle:4.1.0")
-    implementation ("com.google.firebase:firebase-firestore:24.10.0") // Use the latest version
+    implementation ("com.google.android.gms:play-services-auth:22.0.0")
+    implementation ("com.google.firebase:firebase-firestore:24.7.1") // Use the latest version
 
 }

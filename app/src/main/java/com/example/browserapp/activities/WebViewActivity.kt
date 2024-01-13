@@ -14,9 +14,8 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.browserapp.R
-import com.example.browserapp.adapters.BookmarksAdapter
-import com.example.browserapp.models.Bookmark
-import com.example.browserapp.models.History
+import com.example.browserapp.models.UserBookmark
+import com.example.browserapp.models.UserHistory
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
@@ -46,6 +45,7 @@ class WebViewActivity : AppCompatActivity() {
         val bookmarkOption = findViewById<Button>(R.id.optionbookmarks)
         val historyOption = findViewById<Button>(R.id.optionHistory)
         val logoutOption = findViewById<Button>(R.id.optionLogout)
+        val newTabOption = findViewById<Button>(R.id.newTabOption)
         var urlEditEditText = findViewById<EditText>(R.id.searchUrl)
         val webView = findViewById<WebView>(R.id.webView) // Replace with your WebView's ID
         webView.webViewClient = MyWebViewClient()
@@ -58,7 +58,7 @@ class WebViewActivity : AppCompatActivity() {
 
         try {
 
-            val history = History(receivedUrl,receivedName, System.currentTimeMillis())
+            val history = UserHistory(receivedUrl,receivedName, System.currentTimeMillis())
             val historyDocument = db.collection("users").document(userEmail).collection("history").document()
 
             historyDocument.set(history.dictionary)
@@ -85,7 +85,7 @@ class WebViewActivity : AppCompatActivity() {
         bookmarkButton.setOnClickListener{
             // if not already bookmarked
             if(!bookmarked){
-                val bookmark = Bookmark(receivedUrl,receivedName,System.currentTimeMillis())
+                val bookmark = UserBookmark(receivedUrl,receivedName,System.currentTimeMillis())
                 val bookmarkDocument = db.collection("users").document(userEmail).collection("bookmarks").document(key)
                 bookmarkDocument.set(bookmark.dictionary)
                 bookmarked = true
@@ -134,6 +134,12 @@ class WebViewActivity : AppCompatActivity() {
             val auth = FirebaseAuth.getInstance()
             auth.signOut()
             val intent = Intent(this@WebViewActivity , LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+
+        newTabOption.setOnClickListener{
+            val intent = Intent(this@WebViewActivity , MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }

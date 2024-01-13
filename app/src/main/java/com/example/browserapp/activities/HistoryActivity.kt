@@ -2,11 +2,9 @@ package com.example.browserapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.browserapp.adapters.BookmarksAdapter
 import com.example.browserapp.databinding.ActivityHistoryBinding
 import com.example.browserapp.adapters.HistoryAdapter
-import com.example.browserapp.models.Bookmark
-import com.example.browserapp.models.History
+import com.example.browserapp.models.UserHistory
 import com.google.firebase.firestore.FirebaseFirestore
 
 class HistoryActivity : AppCompatActivity() {
@@ -27,7 +25,7 @@ class HistoryActivity : AppCompatActivity() {
         val email = intent.getStringExtra("email") ?: ""
         val historyCollection = db.collection("users").document(email).collection("history")
 
-        var historyList: MutableList<History>
+        var historyList: MutableList<UserHistory>
         var historyAdapter = HistoryAdapter(this, mutableListOf())
         historyCollection
             .addSnapshotListener { snapshot, e ->
@@ -44,7 +42,7 @@ class HistoryActivity : AppCompatActivity() {
                         val url = historyData?.get("url") as? String ?: ""
                         val name = historyData?.get("name") as? String ?: ""
                         val timestamp = document.get("timestamp") as? Long ?: 0
-                        val history = History(url,name, timestamp)
+                        val history = UserHistory(url,name, timestamp)
                         historyList.add(history)
                     }
                     val temp = historyList.sortedBy { it.timestamp }

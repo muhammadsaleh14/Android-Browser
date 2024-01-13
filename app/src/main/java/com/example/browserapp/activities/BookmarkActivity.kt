@@ -4,8 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.browserapp.databinding.ActivityBookmarkBinding
 import com.example.browserapp.adapters.BookmarksAdapter
-import com.example.browserapp.models.Bookmark
-import com.example.browserapp.models.History
+import com.example.browserapp.models.UserBookmark
 import com.google.firebase.firestore.FirebaseFirestore
 
 class BookmarkActivity : AppCompatActivity() {
@@ -24,7 +23,7 @@ class BookmarkActivity : AppCompatActivity() {
         val email = intent.getStringExtra("email") ?: ""
         val bookmarksCollection = db.collection("users").document(email).collection("bookmarks")
 
-        var bookmarks: MutableList<Bookmark>
+        var bookmarks: MutableList<UserBookmark>
         var bookmarksAdapter = BookmarksAdapter(this, mutableListOf())
         bookmarksCollection
             .addSnapshotListener { snapshot, e ->
@@ -41,7 +40,7 @@ class BookmarkActivity : AppCompatActivity() {
                         val url = bookmarkData?.get("url") as? String ?: ""
                         val name = bookmarkData?.get("name") as? String ?: ""
                         val timeStamp = document.get("timeStamp") as? Long ?: 0
-                        val bookmark = Bookmark(url,name, timeStamp)
+                        val bookmark = UserBookmark(url,name, timeStamp)
                         bookmarks.add(bookmark)
                     }
                     val temp = bookmarks.sortedBy { it.timestamp }

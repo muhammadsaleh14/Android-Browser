@@ -6,16 +6,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.browserapp.databinding.HistoryItemLayoutBinding
-import com.example.browserapp.models.History
+import com.example.browserapp.models.UserHistory
 
 class HistoryAdapter (
     private val context: Context,
-    private var dataList:MutableList<History>
+    private var dataList:MutableList<UserHistory>
 ) : Adapter<HistoryAdapter.itemViewHolder>() {
 
     inner class itemViewHolder(val binding:HistoryItemLayoutBinding) : RecyclerView.ViewHolder(binding.root){}
 
-    fun updateList(list:MutableList<History>){
+    fun updateList(list:MutableList<UserHistory>){
         dataList=list
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): itemViewHolder {

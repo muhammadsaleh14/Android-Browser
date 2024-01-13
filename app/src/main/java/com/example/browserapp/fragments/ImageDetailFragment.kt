@@ -30,7 +30,7 @@ class ImageDetailFragment : Fragment(R.layout.fragment_images_detail) {
             hostPageDisplayUrl.text = ImageDetails.hostPageDisplayUrl
             bindImage(view.context, ImageDetails.thumbnailUrl)
 
-            onImageCardClick(hostPageDisplayUrl, view.context, ImageDetails.hostPageDisplayUrl)
+            onImageCardClick(hostPageDisplayUrl, view.context, ImageDetails.hostPageDisplayUrl,ImageDetails.name)
             val fragmentManager = requireActivity().supportFragmentManager
 
             fragmentManager.addOnBackStackChangedListener {

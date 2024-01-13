@@ -6,17 +6,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.browserapp.databinding.BookmarkItemLayoutBinding
-import com.example.browserapp.models.Bookmark
+import com.example.browserapp.models.UserBookmark
 
 class BookmarksAdapter (
     private val context: Context,
-    private var dataList:MutableList<Bookmark>
+    private var dataList:MutableList<UserBookmark>
 ) : Adapter<BookmarksAdapter.itemViewHolder>() {
 
 
     inner class itemViewHolder(val binding:BookmarkItemLayoutBinding) : RecyclerView.ViewHolder(binding.root){}
 
-    fun updateList(list:MutableList<Bookmark>){
+    fun updateList(list:MutableList<UserBookmark>){
         dataList=list
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): itemViewHolder {

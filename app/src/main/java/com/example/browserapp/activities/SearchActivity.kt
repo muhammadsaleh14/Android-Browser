@@ -53,6 +53,8 @@ class SearchActivity : AppCompatActivity() {
             val bookmarkOption = findViewById<Button>(R.id.optionbookmarks)
             val historyOption = findViewById<Button>(R.id.optionHistory)
             val logoutOption = findViewById<Button>(R.id.optionLogout)
+            val newTabOption = findViewById<Button>(R.id.newTabOption)
+
             //setting view model
             val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
             viewModel.searchTerm.value = searchTerm
@@ -144,6 +146,13 @@ class SearchActivity : AppCompatActivity() {
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
             }
+
+            newTabOption.setOnClickListener{
+                val intent = Intent(this@SearchActivity , MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            }
+
         } catch (e: Exception) {
             Log.e("TAGINN", e.stackTraceToString())
         }

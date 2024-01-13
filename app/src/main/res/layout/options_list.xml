@@ -8,6 +8,13 @@
     android:layout_alignParentEnd="true"
     >
 
+    <Button
+        android:id="@+id/newTabOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Tab"
+        android:drawableLeft="@drawable/add_icon"
+        />
 
     <Button
         android:id="@+id/optionbookmarks"
@@ -23,6 +30,8 @@
         android:text="History"
         android:drawableLeft="@drawable/all_tabs"
         />
+
+
 
     <Button
         android:id="@+id/optionLogout"
