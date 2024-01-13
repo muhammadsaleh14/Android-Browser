@@ -8,10 +8,10 @@
 
 
     <ImageButton
-        android:id="@+id/appIcon"
+        android:id="@+id/bookmarksIcon"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:src="@drawable/star_1_svgrepo_com"
+        android:src="@drawable/star_empty"
         android:background="@android:color/transparent"/>
 
     <com.google.android.material.textfield.TextInputLayout

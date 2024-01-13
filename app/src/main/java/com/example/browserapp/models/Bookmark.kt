@@ -7,4 +7,11 @@ data class Bookmark (
 
 ){
 
+    val dictionary: Map<String, Any>
+        get() = mapOf(
+            "url" to String,
+            "name" to name,
+            "timeStamp" to Long
+        )
+
 }
