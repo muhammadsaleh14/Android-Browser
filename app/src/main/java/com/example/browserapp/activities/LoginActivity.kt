@@ -87,10 +87,6 @@ class LoginActivity : AppCompatActivity() {
                                 val user = document.toObject(User::class.java)
                                 val intent = Intent (this@LoginActivity , MainActivity::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                                if (user != null) {
-                                    intent.putExtra("email",user.email)
-                                    intent.putExtra("name",user.name)
-                                }
                                 startActivity(intent)
                                 // Handle user data here
                             } else {

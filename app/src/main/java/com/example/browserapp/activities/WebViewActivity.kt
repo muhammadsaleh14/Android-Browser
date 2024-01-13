@@ -1,5 +1,6 @@
 package com.example.browserapp.activities
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
@@ -42,6 +43,9 @@ class WebViewActivity : AppCompatActivity() {
             }
         }
 
+        val bookmarkOption = findViewById<Button>(R.id.optionbookmarks)
+        val historyOption = findViewById<Button>(R.id.optionHistory)
+        val logoutOption = findViewById<Button>(R.id.optionLogout)
         var urlEditEditText = findViewById<EditText>(R.id.searchUrl)
         val webView = findViewById<WebView>(R.id.webView) // Replace with your WebView's ID
         webView.webViewClient = MyWebViewClient()
@@ -114,6 +118,24 @@ class WebViewActivity : AppCompatActivity() {
                 optionsList?.visibility = View.GONE
                 showOptionsButton.setImageResource(R.drawable.arrow_left)
             }
+        }
+
+        bookmarkOption.setOnClickListener{
+            val intent = Intent(this@WebViewActivity , BookmarkActivity::class.java)
+            startActivity(intent)
+        }
+
+        historyOption.setOnClickListener{
+            val intent = Intent(this@WebViewActivity , HistoryActivity::class.java)
+            startActivity(intent)
+        }
+
+        logoutOption.setOnClickListener{
+            val auth = FirebaseAuth.getInstance()
+            auth.signOut()
+            val intent = Intent(this@WebViewActivity , LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         }
 
     }

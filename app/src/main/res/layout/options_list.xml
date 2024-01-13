@@ -10,39 +10,26 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/optionbookmarks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Settings"
-        android:drawableLeft="@drawable/settings"
-        />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="bookmarks"
+        android:text="Bookmarks"
         android:drawableLeft="@drawable/bookmark"/>
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="New Tab"
-        android:drawableLeft="@drawable/new_add"/>
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="All Tabs"
-        android:drawableLeft="@drawable/all_tabs"
-        />
-    <Button
-        android:id="@+id/button5"
+        android:id="@+id/optionHistory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="History"
         android:drawableLeft="@drawable/all_tabs"
         />
+
+    <Button
+        android:id="@+id/optionLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:drawableLeft="@drawable/logout"/>
+
+
 </LinearLayout>

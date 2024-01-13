@@ -85,7 +85,7 @@ class SignupActivity : AppCompatActivity() {
                 Toast.makeText(this, "Fill up all the fields", Toast.LENGTH_SHORT).show()
             }
             else if(_password!= _confirmPassword){
-                Toast.makeText(this, "Passwords doesn't match", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show()
             }
             else{
                 val user = User(_email,"hehe")
@@ -108,7 +108,6 @@ class SignupActivity : AppCompatActivity() {
                         // User data added to Firestore successfully
                         val intent = Intent (this@SignupActivity , MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        intent.putExtra("email",user.email)
                         startActivity(intent)
                     }
                     .addOnFailureListener { e ->
