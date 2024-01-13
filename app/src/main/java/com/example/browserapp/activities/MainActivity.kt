@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setContentView(R.layout.activity_main)
+
+        val bookmarksButton = findViewById<ImageButton>(R.id.bookmarksIcon)
+        bookmarksButton.visibility = View.GONE
         val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
         val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
         val searchEditText = findViewById<EditText>(R.id.searchMainEditText)

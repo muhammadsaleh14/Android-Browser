@@ -37,6 +37,9 @@ class SearchActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
+
+            val bookmarksButton = findViewById<ImageButton>(R.id.bookmarksIcon)
+            bookmarksButton.visibility = View.GONE
             //disabling night mode
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             //get values from search
