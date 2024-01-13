@@ -44,7 +44,7 @@ class WebpagesSearchAdapter(diffCallback: DiffUtil.ItemCallback<WebpagesSearch.W
                 holder.datePublished.visibility = View.GONE // Hide image view
             }
             holder.snippet.text = currentItem?.snippet
-            webpagesListener(holder.webpageLinearLayout, holder.itemView.context, currentItem?.url)
+            webpagesListener(holder.webpageLinearLayout, holder.itemView.context, currentItem?.url,currentItem?.name)
             // ... (bind other views as needed)
         } catch (e: Exception) {
             Log.e("TAGINN2", e.stackTraceToString())

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_screen_space">50dp</dimen>
+    <dimen name="default_intraSection_space">20dp</dimen>
+    <dimen name="desault_interSection_space">5dp</dimen>
+</resources>

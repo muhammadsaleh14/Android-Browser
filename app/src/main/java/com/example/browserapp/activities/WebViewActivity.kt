@@ -12,10 +12,14 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.browserapp.R
+import com.example.browserapp.models.History
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.Stack
 
 class WebViewActivity : AppCompatActivity() {
     private val urlStack = Stack<String>()
+    private val db = FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webpage)
@@ -40,7 +44,21 @@ class WebViewActivity : AppCompatActivity() {
 
         try {
             // Load a specific URL
-            val receivedUrl = intent.getStringExtra("url")
+            val receivedUrl = intent.getStringExtra("url") ?: ""
+            val receivedName = intent.getStringExtra("name") ?: ""
+
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            val userEmail = currentUser?.email?: ""
+            val history = History(receivedUrl,receivedName, System.currentTimeMillis())
+            val historyDocument = db.collection("users").document(userEmail).collection("history").document()
+
+            historyDocument.set(history.dictionary)
+                .addOnSuccessListener {
+
+                }
+                .addOnFailureListener { _ ->
+                }
+
             urlEditEditText.setText(receivedUrl)
             webView.loadUrl(receivedUrl ?: "")
         } catch (e: Exception) {
@@ -82,6 +100,7 @@ class WebViewActivity : AppCompatActivity() {
             urlStack.pop()
             val previousUrl = urlStack.pop()
             webView.loadUrl(previousUrl)
+
         } else {
             // If both WebView history and stack are empty, go to previous activity
             super.onBackPressed()

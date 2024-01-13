@@ -41,6 +41,7 @@ class SearchActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             //get values from search
             val searchTerm = intent.getStringExtra ("searchTerm")
+            val email = intent.getStringExtra("email")
             //assigning ids
             val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
             val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)

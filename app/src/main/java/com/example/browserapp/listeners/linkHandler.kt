@@ -7,7 +7,7 @@ import android.util.Log
 import androidx.core.content.ContextCompat
 import com.example.browserapp.activities.WebViewActivity
 
-fun handleIntent(context: Context, url: String?) {
+fun handleIntent(context: Context, url: String? , name:String?) {
     try {
         if(url==null) return
         val uri = Uri.parse(url)
@@ -37,6 +37,7 @@ fun handleIntent(context: Context, url: String?) {
         val webViewIntent: Intent = Intent(context, WebViewActivity::class.java)
         webViewIntent.type
         webViewIntent.putExtra("url", url)
+        webViewIntent.putExtra("name",name)
         context.startActivity(webViewIntent)
 
     }catch (e:Exception){

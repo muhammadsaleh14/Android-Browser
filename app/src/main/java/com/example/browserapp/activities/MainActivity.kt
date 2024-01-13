@@ -32,10 +32,12 @@ class MainActivity : AppCompatActivity() {
                 submitSearchBtn.isEnabled = !s.isNullOrBlank()
             }
         })
+        val email = intent.getStringExtra("email")
         submitSearchBtn.setOnClickListener{
             val intent = Intent(this, SearchActivity::class.java)
             // Put the arguments you want to pass into the Intent
             intent.putExtra("searchTerm", searchEditText.text.toString())
+            intent.putExtra("email",email)
             // Start the new Activity
             startActivity(intent)
         }
