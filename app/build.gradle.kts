@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-kapt")
+    id("com.google.gms.google-services")
 }
 
 
@@ -37,11 +39,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "18"
     }
 }
 
@@ -55,8 +57,8 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation ("dev.icerock.moko:resources:0.20.1") // Or a newer version
     implementation ("io.github.cdimascio:dotenv-kotlin:6.2.2") // Or a newer version
-    implementation ("com.google.code.gson:gson:2.8.5")
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation ("com.google.code.gson:gson:2.8.9")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -69,12 +71,13 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
+    implementation ("com.google.gms:google-services:4.4.0")
 
     implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
-    implementation("com.google.firebase:firebase-analytics-ktx")
-    implementation ("com.google.firebase:firebase-auth:22.3.0") // Use the latest version
-    implementation ("com.google.android.gms:play-services-auth:22.0.0")
-    implementation ("com.google.firebase:firebase-firestore:24.7.1") // Use the latest version
+    implementation("com.google.firebase:firebase-analytics")
+//    implementation ("com.google.protobuf:protobuf-java:3.19.3")
 
+    implementation ("com.google.firebase:firebase-auth") // Use the latest version
+    implementation ("com.google.firebase:firebase-firestore") // Use the latest version
+    implementation ("com.intuit.sdp:sdp-android:1.1.0")
 }
