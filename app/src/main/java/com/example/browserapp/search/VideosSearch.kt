@@ -41,21 +41,23 @@ fun searchVideos(searchQuery: String, nextPageNumber: Int): SearchResults {
     try {
 
         val safeSearchValue = URLEncoder.encode("Moderate", "UTF-8")
+        val setLang = URLEncoder.encode("en", "UTF-8")
         //        val answerCount = 1
 //        val responseFilter = URLEncoder.encode("webpages", "UTF-8")
 
         val urlString = "$videosSearchEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
                 "&safeSearch=${safeSearchValue}" +
                 "&count=$videosCount" +
-                "&offset=$nextPageNumber"
+                "&offset=$nextPageNumber"+
+                "&setLang=$setLang"
 //                "&answerCount=$answerCount"+
 //                "&responseFilter=$responseFilter"
         val url = URL(urlString)
 //        Log.d("TAGINN3","url $urlString")
         val connection = url.openConnection() as HttpsURLConnection
         connection.setRequestProperty("Ocp-Apim-Subscription-Key", subscriptionKey )
-        val clientIP = InetAddress.getLocalHost().hostAddress
-        connection.setRequestProperty("X-MSEdge-ClientIP", clientIP)
+//        val clientIP = InetAddress.getLocalHost().hostAddress
+//        connection.setRequestProperty("X-MSEdge-ClientIP", clientIP)
         val response = connection.inputStream.bufferedReader().use { it.readText() }
         val results = SearchResults(HashMap(), response)
         connection.headerFields.forEach { (header, values) ->
