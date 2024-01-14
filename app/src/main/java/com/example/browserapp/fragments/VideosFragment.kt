@@ -2,7 +2,9 @@ package com.example.browserapp.fragments
 
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
@@ -10,7 +12,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.browserapp.R
+import com.example.browserapp.activities.SearchActivity
 import com.example.browserapp.adapters.VideosSearchAdapter
 import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.networkManagement.NetworkConnectivityObserver
@@ -26,27 +30,28 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
     private lateinit var adapter: VideosSearchAdapter
     private var setAdapter = false
     private lateinit var searchViewModel: SearchViewModel
+    private lateinit var swipeRefreshVideos: SwipeRefreshLayout
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
-            searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
-            searchViewModel.isLoading.value = true
             super.onViewCreated(view, savedInstanceState)
+            //referencing search view model
+            searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
+            //setting loading state
+            searchViewModel.isLoading.value = true
+            //getting value to search
             viewModel.query = searchViewModel.searchTerm.value?:"error"
+            //getting ids
+            swipeRefreshVideos = view.findViewById(R.id.swipeRefreshVideos)
             rvVideosSearchResult = view.findViewById(R.id.rvVideosSearchResult)
+            //recycler view config
             rvVideosSearchResult.layoutManager = LinearLayoutManager(context)
             rvVideosSearchResult.setHasFixedSize(true)
+            //RV adapter initialization
             adapter = VideosSearchAdapter(VideosSearchAdapter.DIFF_CALLBACK)
-            var connectivityObserver = NetworkConnectivityObserver(requireContext())
-            lifecycleScope.launch {
-                connectivityObserver.observe()
-                    .collect { status ->
-                        Log.d("qqq", "status: $status")
-                        if (status == ConnectivityObserver.Status.Available) {
-                            Log.d("qqq", "adapter refresh")
-                            delay(2000)
-                            adapter.refresh()
-                        }
-                    }
+            swipeRefreshVideos.setOnRefreshListener {
+                // Perform your refresh actions here
+                adapter.refresh()
             }
             observePagingData()
             submitDataToAdapter()
@@ -57,12 +62,19 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
 
     private fun observePagingData() {
         try {
+
             adapter.addLoadStateListener { loadState ->
+                swipeRefreshVideos.isRefreshing = false
                 if (loadState.refresh is LoadState.Loading) {
                     // Show loading indicator
                     searchViewModel.isLoading.value = true
                     setAdapter = false
                 } else {
+                    val connectivityObserver = NetworkConnectivityObserver(requireContext())
+                    val status = connectivityObserver.getCurrentStatus()
+                    if (status != ConnectivityObserver.Status.Available) {
+                        SearchActivity.showAlert(status,requireView())
+                    }
                     searchViewModel.isLoading.value = false
                     if (!setAdapter) {
                         rvVideosSearchResult.adapter = adapter

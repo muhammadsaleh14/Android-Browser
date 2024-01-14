@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.browserapp.R
+import com.example.browserapp.activities.SearchActivity
 import com.example.browserapp.adapters.WebpagesSearchAdapter
 import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.networkManagement.NetworkConnectivityObserver
@@ -54,29 +55,12 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         //setting recycler view
         rvSearchResult.layoutManager = LinearLayoutManager(context)
         rvSearchResult.setHasFixedSize(true)
-        //recycler view adapter
-        //handling connectivity
+
         swipeRefreshWebpages.setOnRefreshListener {
             // Perform your refresh actions here
             adapter.refresh()
         }
-//        var connectivityObserver = NetworkConnectivityObserver(requireContext())
-//        lifecycleScope.launch {
-//            connectivityObserver.observe()
-//                .collect { status ->
-//                    Log.d("qqq", "status: $status")
-//                    if (status == ConnectivityObserver.Status.Available) {
-//                        Log.d("qqq", "adapter refresh")
-//                        delay(2000)
-//                        try {
-//                            adapter.refresh()
-//                        } catch (e: UninitializedPropertyAccessException) {
-//                            Log.e("qqq", "adapter is no yet initialised")
-//                        }
-//                    }
-//                    Log.e("qqq", "setting first loaded to true")
-//                }
-//        }
+
         //initialising adapter after
         adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
         observePagingData()
@@ -93,7 +77,11 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
                 searchViewModel.isLoading.value = true
                 setAdapter = false
             } else {
-
+                val connectivityObserver = NetworkConnectivityObserver(requireContext())
+                val status = connectivityObserver.getCurrentStatus()
+                if (status != ConnectivityObserver.Status.Available) {
+                    SearchActivity.showAlert(status,requireView())
+                }
                 Log.d("qqq", "not loading")
                 searchViewModel.isLoading.value = false
                 if (!setAdapter) {

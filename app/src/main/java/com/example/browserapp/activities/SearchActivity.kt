@@ -40,20 +40,25 @@ class SearchActivity : AppCompatActivity() {
             //disabling night mode
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             //get values from search
-            val searchTerm = intent.getStringExtra ("searchTerm")
+            val searchTerm = intent.getStringExtra("searchTerm")
             //assigning ids
             val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
             val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
             //setting view model
             val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
             viewModel.searchTerm.value = searchTerm
-            Log.d("qqq","search term is $searchTerm")
-
+            Log.d("qqq", "search term is $searchTerm")
             //Check Connectivity
-            showNetworkStatus()
+            connectivityObserver = NetworkConnectivityObserver(applicationContext)
+            lifecycleScope.launch {
+                connectivityObserver.observe()
+                    .collect { status ->
+                        showAlert(status,findViewById(android.R.id.content))
+                    }
+            }
             val initialStatus = connectivityObserver.getCurrentStatus()
             if (initialStatus != ConnectivityObserver.Status.Available) {
-                showAlert(initialStatus)
+                showAlert(initialStatus,findViewById(android.R.id.content))
             }
             //control loading
             val loadingAnimation = LoadingAnimation(binding.loadingAnimation)
@@ -115,15 +120,6 @@ class SearchActivity : AppCompatActivity() {
             Log.e("TAGINN", e.stackTraceToString())
         }
     }
-     fun showNetworkStatus() {
-        connectivityObserver = NetworkConnectivityObserver(applicationContext)
-        lifecycleScope.launch {
-            connectivityObserver.observe()
-                .collect { status ->
-                    showAlert(status)
-                }
-        }
-    }
 
     private fun replaceFragment(fragment: Fragment) {
         try {
@@ -142,15 +138,17 @@ class SearchActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
-
     //alert for network
-    private fun showAlert(status: ConnectivityObserver.Status) {
-        val message = when (status) {
-            ConnectivityObserver.Status.Available -> "Network is available"
-            ConnectivityObserver.Status.Unavailable -> "Network is unavailable"
-            else -> "Unknown network status"
+    companion object {
+        fun showAlert(status: ConnectivityObserver.Status,view:View) {
+            val message = when (status) {
+                ConnectivityObserver.Status.Available -> "Network is available"
+                ConnectivityObserver.Status.Unavailable -> "Network is unavailable"
+                else -> "Unknown network status"
+            }
+            Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show()
         }
-        Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_SHORT).show()
+
     }
 
 }
