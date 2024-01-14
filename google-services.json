@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "344969734150",
+    "project_id": "browser-app-79f67",
+    "storage_bucket": "browser-app-79f67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344969734150:android:19419a63bbaed940b63b87",
+        "android_client_info": {
+          "package_name": "com.example.browserapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgzWXB_g4xjgiIjIp11Tjad0zG1zxGb60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

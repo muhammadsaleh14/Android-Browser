@@ -1,10 +1,12 @@
 package com.example.browserapp.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.ViewStub
 import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -21,6 +23,7 @@ import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.networkManagement.NetworkConnectivityObserver
 import com.example.browserapp.viewmodels.SearchViewModel
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.launch
 
 class SearchActivity : AppCompatActivity() {
@@ -37,6 +40,9 @@ class SearchActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
+
+            val bookmarksButton = findViewById<ImageButton>(R.id.bookmarksIcon)
+            bookmarksButton.visibility = View.GONE
             //disabling night mode
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             //get values from search
@@ -44,6 +50,11 @@ class SearchActivity : AppCompatActivity() {
             //assigning ids
             val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
             val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
+            val bookmarkOption = findViewById<Button>(R.id.optionbookmarks)
+            val historyOption = findViewById<Button>(R.id.optionHistory)
+            val logoutOption = findViewById<Button>(R.id.optionLogout)
+            val newTabOption = findViewById<Button>(R.id.newTabOption)
+
             //setting view model
             val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
             viewModel.searchTerm.value = searchTerm
@@ -116,6 +127,31 @@ class SearchActivity : AppCompatActivity() {
                     showOptionsButton.setImageResource(R.drawable.arrow_left)
                 }
             }
+
+            bookmarkOption.setOnClickListener{
+                val intent = Intent(this@SearchActivity , BookmarkActivity::class.java)
+                startActivity(intent)
+            }
+
+            historyOption.setOnClickListener{
+                val intent = Intent(this@SearchActivity , HistoryActivity::class.java)
+                startActivity(intent)
+            }
+
+            logoutOption.setOnClickListener{
+                val auth = FirebaseAuth.getInstance()
+                auth.signOut()
+                val intent = Intent(this@SearchActivity , LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            }
+
+            newTabOption.setOnClickListener{
+                val intent = Intent(this@SearchActivity , MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            }
+
         } catch (e: Exception) {
             Log.e("TAGINN", e.stackTraceToString())
         }

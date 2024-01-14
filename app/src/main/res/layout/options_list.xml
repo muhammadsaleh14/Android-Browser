@@ -6,43 +6,53 @@
     android:orientation="vertical"
     android:layout_alignParentRight="true"
     android:layout_alignParentEnd="true"
+    android:divider="@drawable/divider"
     >
 
-
-    <Button
-        android:id="@+id/button"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/newTabOption"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        android:drawableLeft="@drawable/settings"
-        />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="bookmarks"
-        android:drawableLeft="@drawable/bookmark"/>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/options_button"
+        android:backgroundTint="@color/dark_blue"
+        android:textColor="@color/white"
         android:text="New Tab"
-        android:drawableLeft="@drawable/new_add"/>
+        android:layout_marginVertical="3dp"
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="All Tabs"
-        android:drawableLeft="@drawable/all_tabs"
+
         />
-    <Button
-        android:id="@+id/button5"
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/optionbookmarks"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:text="Bookmarks"
+        android:layout_height="35dp"
+        android:background="@drawable/options_button"
+        android:backgroundTint="@color/dark_blue"
+        android:textColor="@color/white"
+        android:layout_marginVertical="3dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/optionHistory"
+        android:layout_width="match_parent"
         android:text="History"
-        android:drawableLeft="@drawable/all_tabs"
+        android:layout_height="35dp"
+        android:background="@drawable/options_button"
+        android:backgroundTint="@color/dark_blue"
+        android:textColor="@color/white"
+        android:layout_marginVertical="3dp"
         />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/optionLogout"
+        android:layout_width="120dp"
+        android:text="Log out"
+        android:layout_height="35dp"
+        android:background="@drawable/options_button"
+        android:backgroundTint="@color/dark_blue"
+        android:textColor="@color/white"
+        android:layout_marginVertical="3dp"/>
+
+
 </LinearLayout>

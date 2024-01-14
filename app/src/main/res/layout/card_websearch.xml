@@ -6,7 +6,9 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="20dp"
+    android:elevation="5dp"
+    android:layout_margin="3dp"
+    android:background="@color/white"
     >
 
     <LinearLayout
@@ -34,12 +36,14 @@
 
                 <TextView
                     android:id="@+id/name"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="24dp"
+                    android:textColor="@color/dark_blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="name" />
+                    android:text="name"
+                    android:maxLength="35"
+                    android:ellipsize="end"/>
 
                 <TextView
                     android:id="@+id/displayUrl"
@@ -47,7 +51,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="displayUrl" />
+                    android:text="displayUrl"
+                    android:textSize="15dp"/>
 
                 <TextView
                     android:id="@+id/datePublished"
@@ -55,7 +60,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="datePublished" />
+                    android:text="datePublished"
+                    android:textSize="15dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -64,8 +70,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="13sp"
+            android:textSize="15dp"
             android:maxLines="3"
-            android:text="snippet" />
+            android:text="snippet"
+            android:textColor="@color/black"
+
+            />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -42,11 +42,14 @@ class VideosSearchAdapter(diffCallback: DiffUtil.ItemCallback<VideosSearch.Value
             holder.creatorNameTextView.text = currentItem?.creator?.name
             holder.nameTextView.text = currentItem?.name
             holder.descriptionTextView.text = currentItem?.description
-            onVideoCardClick(
-                holder.videoClickableCard,
-                holder.itemView.context,
-                currentItem?.hostPageUrl
-            )
+            if (currentItem != null) {
+                onVideoCardClick(
+                    holder.videoClickableCard,
+                    holder.itemView.context,
+                    currentItem.hostPageUrl,
+                    currentItem.name
+                )
+            }
         } catch (e: Exception) {
             Log.e("TAGINN3", e.stackTraceToString())
         }

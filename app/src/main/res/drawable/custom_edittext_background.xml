@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" /> <!-- Background color -->
+            <corners android:radius="8dp" /> <!-- Rounded corners, adjust radius as needed -->
+        </shape>
+    </item>
+    <item android:top="10dp">
+        <shape>
+            <solid android:color="#FFFFFF" /> <!-- Background color (same as previous item) -->
+        </shape>
+    </item>
+    <item android:top="4dp">
+        <shape>
+            <solid android:color="#000000" /> <!-- Border color -->
+            <corners android:radius="8dp" /> <!-- Rounded corners, adjust radius as needed -->
+        </shape>
+    </item>
+</layer-list>
