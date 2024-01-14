@@ -26,8 +26,8 @@ class HistoryAdapter (
 
     override fun onBindViewHolder(holder: itemViewHolder, position: Int) {
         val history = dataList[position]
-        holder.binding.bookmarkName.setText(history.name)
-        holder.binding.bookmarkUrl.setText(history.url)
+        holder.binding.historyName.setText(history.name)
+        holder.binding.historyUrl.setText(history.url)
     }
 
     override fun getItemCount(): Int {

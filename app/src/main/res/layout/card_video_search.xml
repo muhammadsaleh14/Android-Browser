@@ -8,6 +8,7 @@
     android:layout_height="wrap_content"
     app:cardElevation="4dp"
     android:layout_margin="5dp"
+    android:backgroundTint="@color/white"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
@@ -47,6 +48,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:maxLength="12"
+                    android:textSize="15dp"
                     android:layout_alignEnd="@id/videoThumbnailImageView"
                     android:layout_alignBottom="@id/videoThumbnailImageView" />
 
@@ -64,6 +66,8 @@
             android:layout_marginStart="5dp"
             android:text="publisher.nameeeeeeeeee"
             android:maxLength="15"
+            android:textSize="15dp"
+            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/videoThumbnailImageCard"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,6 +78,8 @@
             android:layout_marginStart="5dp"
             android:text="creator.nakkmeeeeeeeeeeeeeee"
             android:maxLength="15"
+            android:textSize="15dp"
+            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/videoPublisherTextView"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,6 +90,7 @@
             android:layout_marginTop="3dp"
             android:maxLength="30"
             android:text="name"
+            android:textSize="24dp"
             app:layout_constraintStart_toStartOf="@+id/videoPublisherTextView"
             app:layout_constraintTop_toBottomOf="@id/videoPublisherTextView" />
 
@@ -93,6 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:text="description"
+            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/videoNameTextView"
             app:layout_constraintTop_toBottomOf="@+id/videoNameTextView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
