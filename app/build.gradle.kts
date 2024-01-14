@@ -17,7 +17,7 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField ("String", "SUBSCRIPTION_KEY", "\"a9ec21e2545c4c368d7275059df7f799\"")
+        buildConfigField ("String", "SUBSCRIPTION_KEY", "\"fbf107a7b57f4aa1b014d263a1588d9d\"")
     }
 
 

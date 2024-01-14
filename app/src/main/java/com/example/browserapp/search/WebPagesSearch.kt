@@ -47,8 +47,8 @@ fun searchWeb(searchQuery: String, nextPageNumber: Int): SearchResults {
         val urlString = "$webSearchEndpoint?q=${URLEncoder.encode(searchQuery, "UTF-8")}" +
                 "&safeSearch=${safeSearchValue}" +
                 "&count=$webpagesCount" +
-                "&offset=$nextPageNumber"+
-                "&setLang=$setLang"
+                "&offset=$nextPageNumber"
+//                "&setLang=$setLang"
 //                "&answerCount=$answerCount"+
 //                "&responseFilter=$responseFilter"
         Log.d("qqq","url=$urlString ")

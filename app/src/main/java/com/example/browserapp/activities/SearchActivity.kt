@@ -50,13 +50,7 @@ class SearchActivity : AppCompatActivity() {
             Log.d("qqq","search term is $searchTerm")
 
             //Check Connectivity
-            connectivityObserver = NetworkConnectivityObserver(applicationContext)
-            lifecycleScope.launch {
-                connectivityObserver.observe()
-                    .collect { status ->
-                        showAlert(status)
-                    }
-            }
+            showNetworkStatus()
             val initialStatus = connectivityObserver.getCurrentStatus()
             if (initialStatus != ConnectivityObserver.Status.Available) {
                 showAlert(initialStatus)
@@ -119,6 +113,15 @@ class SearchActivity : AppCompatActivity() {
             }
         } catch (e: Exception) {
             Log.e("TAGINN", e.stackTraceToString())
+        }
+    }
+     fun showNetworkStatus() {
+        connectivityObserver = NetworkConnectivityObserver(applicationContext)
+        lifecycleScope.launch {
+            connectivityObserver.observe()
+                .collect { status ->
+                    showAlert(status)
+                }
         }
     }
 

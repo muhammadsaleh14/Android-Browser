@@ -13,13 +13,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.browserapp.R
 import com.example.browserapp.adapters.WebpagesSearchAdapter
 import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.networkManagement.NetworkConnectivityObserver
 import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.WebPagesViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
@@ -29,6 +29,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
     private var setAdapter = false
     private lateinit var searchViewModel: SearchViewModel
     private lateinit var fragmentManager: FragmentManager
+    lateinit var swipeRefreshWebpages: SwipeRefreshLayout
     private var isRefreshAdapter = false
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +39,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         // Inflate the layout and bind views
         val view = inflater.inflate(R.layout.fragment_web_pages, container, false)
         rvSearchResult = view.findViewById(R.id.rvWebpagesSearchResult)
+        swipeRefreshWebpages = view.findViewById(R.id.swipeRefreshWebpages)
         fragmentManager = requireActivity().supportFragmentManager
         // ... (other view bindings)
         return view
@@ -54,23 +56,27 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         rvSearchResult.setHasFixedSize(true)
         //recycler view adapter
         //handling connectivity
-        var connectivityObserver = NetworkConnectivityObserver(requireContext())
-        lifecycleScope.launch {
-            connectivityObserver.observe()
-                .collect { status ->
-                    Log.d("qqq", "status: $status")
-                    if (status == ConnectivityObserver.Status.Available) {
-                        Log.d("qqq", "adapter refresh")
-                        delay(2000)
-                        try {
-                            adapter.refresh()
-                        } catch (e: UninitializedPropertyAccessException) {
-                            Log.e("qqq", "adapter is no yet initialised")
-                        }
-                    }
-                    Log.e("qqq", "setting first loaded to true")
-                }
+        swipeRefreshWebpages.setOnRefreshListener {
+            // Perform your refresh actions here
+            adapter.refresh()
         }
+//        var connectivityObserver = NetworkConnectivityObserver(requireContext())
+//        lifecycleScope.launch {
+//            connectivityObserver.observe()
+//                .collect { status ->
+//                    Log.d("qqq", "status: $status")
+//                    if (status == ConnectivityObserver.Status.Available) {
+//                        Log.d("qqq", "adapter refresh")
+//                        delay(2000)
+//                        try {
+//                            adapter.refresh()
+//                        } catch (e: UninitializedPropertyAccessException) {
+//                            Log.e("qqq", "adapter is no yet initialised")
+//                        }
+//                    }
+//                    Log.e("qqq", "setting first loaded to true")
+//                }
+//        }
         //initialising adapter after
         adapter = WebpagesSearchAdapter(WebpagesSearchAdapter.DIFF_CALLBACK)
         observePagingData()
@@ -81,11 +87,13 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         Log.d("TAGINN2", "observe PAGING DATA ftn")
 
         adapter.addLoadStateListener { loadState ->
+            Log.d("sss", "swipe loading to false")
+            swipeRefreshWebpages.isRefreshing = false
             if (loadState.refresh is LoadState.Loading) {
-                Log.d("qqq", "loading")
                 searchViewModel.isLoading.value = true
                 setAdapter = false
             } else {
+
                 Log.d("qqq", "not loading")
                 searchViewModel.isLoading.value = false
                 if (!setAdapter) {
@@ -109,6 +117,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
             }
         }
     }
+
 
     private fun submitDataToAdapter() {
         viewLifecycleOwner.lifecycleScope.launch {
