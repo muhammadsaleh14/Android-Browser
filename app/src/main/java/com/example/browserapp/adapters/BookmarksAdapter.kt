@@ -1,5 +1,6 @@
 package com.example.browserapp.adapters
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -36,7 +37,9 @@ class BookmarksAdapter (
             val intent = Intent(holder.itemView.context, WebViewActivity::class.java)
             intent.putExtra("url",bookmark.url)
             intent.putExtra("name",bookmark.name)
+            val activity = holder.itemView.context as Activity
             holder.itemView.context.startActivity(intent)
+            activity.finish()
         }
     }
 

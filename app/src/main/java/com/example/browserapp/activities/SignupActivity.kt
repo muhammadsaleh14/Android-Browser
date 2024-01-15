@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -26,6 +27,7 @@ class SignupActivity : AppCompatActivity() {
         binding = ActivitySignupBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        binding.progressBar.visibility = View.INVISIBLE
 
         val button: Button = binding.btnLogin
         val signUpButtion: Button = binding.btnSignup
@@ -88,9 +90,14 @@ class SignupActivity : AppCompatActivity() {
             else if(_password!= _confirmPassword){
                 Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show()
             }
+            else if(_password.length<6){
+                Toast.makeText(this, "Weak Password , Try Again", Toast.LENGTH_SHORT).show()
+            }
             else{
+                binding.progressBar.visibility = View.VISIBLE
                 val user = User(_email,"hehe")
                 registerUser(user,_password)
+                binding.progressBar.visibility = View.INVISIBLE
             }
 
         }
@@ -109,6 +116,7 @@ class SignupActivity : AppCompatActivity() {
                     .set(user.dictionary)
                     .addOnSuccessListener {
                         Log.d("signuppp","inside success listener")
+                        Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
                         // User data added to Firestore successfully
                         val intent = Intent (this@SignupActivity , MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -124,7 +132,7 @@ class SignupActivity : AppCompatActivity() {
                 try {
                     throw task.exception!!
                 } catch (e: FirebaseAuthUserCollisionException) {
-                    Toast.makeText(this, "User with this already exists", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "User with this email already exists", Toast.LENGTH_SHORT).show()
                 } catch (e: Exception) {
                     // Handle other exceptions
                 }

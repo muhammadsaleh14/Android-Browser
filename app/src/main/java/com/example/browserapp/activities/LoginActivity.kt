@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -26,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        binding.progressBar.visibility = View.INVISIBLE
 
         val passwordEditText: EditText = binding.passwordEditText
         val passwordToggle: ImageButton = binding.passwordToggle
@@ -51,6 +53,7 @@ class LoginActivity : AppCompatActivity() {
 
         val signUpButton: Button = binding.btnSignup
         val loginButtion: Button = binding.btnLogin
+        val forgetPasswordButton : Button = binding.btnForgetPassword
 
         loginButtion.setOnClickListener {
             val _email = binding.txtiptEmail.text.toString()
@@ -60,10 +63,27 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Fill up both email and password", Toast.LENGTH_SHORT).show()
             }
             else{
+                binding.progressBar.visibility = View.VISIBLE
                 loginUser(_email,_password)
+                binding.progressBar.visibility = View.INVISIBLE
             }
 
         }
+
+        forgetPasswordButton.setOnClickListener{
+            val email = binding.txtiptEmail.text.toString()
+            FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        // Display success message
+                        Toast.makeText(this, "Password Reset email sent.", Toast.LENGTH_SHORT).show()
+                    } else {
+                        // Handle error
+                        Toast.makeText(this, "Password Reset Failed. Try Again", Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }
+
         signUpButton.setOnClickListener{
             val intent = Intent (this@LoginActivity , SignupActivity::class.java)
             startActivity(intent)
@@ -76,6 +96,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                     // User registration successful
                     // You can handle additional steps here, such as sending a verification email.
                     val intent = Intent (this@LoginActivity , MainActivity::class.java)

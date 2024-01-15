@@ -51,7 +51,7 @@ class BookmarkActivity : AppCompatActivity() {
                         val bookmark = UserBookmark(url,name, timeStamp)
                         bookmarks.add(bookmark)
                     }
-                    val temp = bookmarks.sortedBy { it.timestamp }
+                    val temp = bookmarks.sortedByDescending { it.timestamp }
                     bookmarks = temp.toMutableList()
                     bookmarksAdapter.updateList(bookmarks)
                     bookmarksAdapter.notifyDataSetChanged()

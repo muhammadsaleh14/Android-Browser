@@ -1,5 +1,6 @@
 package com.example.browserapp.adapters
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -34,7 +35,9 @@ class HistoryAdapter (
             val intent = Intent(holder.itemView.context, WebViewActivity::class.java)
             intent.putExtra("url",history.url)
             intent.putExtra("name",history.name)
+            val activity = holder.itemView.context as Activity
             holder.itemView.context.startActivity(intent)
+            activity.finish()
         }
     }
 

@@ -73,11 +73,12 @@ class WebViewActivity : AppCompatActivity() {
         val receivedName = intent.getStringExtra("name") ?: ""
         val currentUser = FirebaseAuth.getInstance().currentUser
         val userEmail = currentUser?.email?: ""
+        val currentTime = System.currentTimeMillis()
         val key = receivedName
         try {
 
             val history = UserHistory(receivedUrl,receivedName, System.currentTimeMillis())
-            val historyDocument = db.collection("users").document(userEmail).collection("history").document(key)
+            val historyDocument = db.collection("users").document(userEmail).collection("history").document()
 
             historyDocument.set(history.dictionary)
             urlEditText.setText(receivedUrl)

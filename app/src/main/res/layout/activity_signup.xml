@@ -188,7 +188,16 @@
                     android:textSize="14sp"
                     />
 
+
+
             </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:outlineAmbientShadowColor="@color/dark_blue"
+                android:outlineSpotShadowColor="@color/dark_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
