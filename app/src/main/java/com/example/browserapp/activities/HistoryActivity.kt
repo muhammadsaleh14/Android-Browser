@@ -4,16 +4,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.ItemTouchHelper
 import com.example.browserapp.R
+import com.example.browserapp.adapters.BookmarksAdapter
 import com.example.browserapp.databinding.ActivityHistoryBinding
 import com.example.browserapp.adapters.HistoryAdapter
+import com.example.browserapp.models.UserBookmark
 import com.example.browserapp.models.UserHistory
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.leadingspark.fulltkdapp.CustomClasses.SwipeHelper
 
 class HistoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHistoryBinding
     private val db = FirebaseFirestore.getInstance()
+    private lateinit var historyList: MutableList<UserHistory>
+    private val currentUser = FirebaseAuth.getInstance().currentUser
+    private val email = currentUser?.email?: ""
+    private var historyAdapter = HistoryAdapter(this, mutableListOf())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,15 +40,14 @@ class HistoryActivity : AppCompatActivity() {
         val email = currentUser?.email?: ""
         val historyCollection = db.collection("users").document(email).collection("history")
 
-        var historyList: MutableList<UserHistory>
-        var historyAdapter = HistoryAdapter(this, mutableListOf())
+        historyList = mutableListOf()
         historyCollection
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
                     // Handle errors here
                     return@addSnapshotListener
                 }
-                historyList = mutableListOf()
+
                 if (snapshot != null) {
                     for (document in snapshot.documents) {
 
@@ -49,7 +56,8 @@ class HistoryActivity : AppCompatActivity() {
                         val url = historyData?.get("url") as? String ?: ""
                         val name = historyData?.get("name") as? String ?: ""
                         val timestamp = document.get("timestamp") as? Long ?: 0
-                        val history = UserHistory(url,name, timestamp)
+                        val id = document.id
+                        val history = UserHistory(id,url,name, timestamp)
                         historyList.add(history)
                     }
                     val temp = historyList.sortedBy { it.timestamp }
@@ -61,7 +69,10 @@ class HistoryActivity : AppCompatActivity() {
         binding.historyRecyclerView.adapter = historyAdapter
 
 
+
+
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
