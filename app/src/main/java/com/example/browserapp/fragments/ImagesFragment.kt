@@ -12,7 +12,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.browserapp.R
+import com.example.browserapp.activities.SearchActivity
 import com.example.browserapp.adapters.ImageSearchAdapter
 import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.networkManagement.NetworkConnectivityObserver
@@ -27,14 +29,16 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
     private lateinit var adapter: ImageSearchAdapter
     private var setAdapter = false
     private lateinit var searchViewModel: SearchViewModel
+    lateinit var swipeRefreshImages: SwipeRefreshLayout
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_images, container, false)
         searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
         searchViewModel.isLoading.value = true
         // Inflate the layout and bind views
-        val view = inflater.inflate(R.layout.fragment_images, container, false)
+        swipeRefreshImages = view.findViewById(R.id.swipeRefreshImages)
         rvImageSearchResult = view.findViewById(R.id.rvImageSearchResult)
         // ... (other view bindings)
         return view
@@ -44,7 +48,7 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
         try {
             super.onViewCreated(view, savedInstanceState)
 //            imagesViewModel.query = searchViewModel.searchTerm.value?:"error"
-            searchViewModel.searchTerm.observe(this) { newData ->
+            searchViewModel.searchTerm.observe(viewLifecycleOwner) { newData ->
                 // Update your UI elements with the new data
                 imagesViewModel.query = newData
                 adapter.refresh()
@@ -53,17 +57,8 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
                 StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
             rvImageSearchResult.layoutManager = imagesLayoutManager
             adapter = ImageSearchAdapter(ImageSearchAdapter.DIFF_CALLBACK, this)
-            var connectivityObserver = NetworkConnectivityObserver(requireContext())
-            lifecycleScope.launch {
-                connectivityObserver.observe()
-                    .collect { status ->
-                        Log.d("qqq", "status: $status")
-                        if (status == ConnectivityObserver.Status.Available) {
-                            Log.d("qqq", "adapter refresh")
-                            delay(2000)
-                            adapter.refresh()
-                        }
-                    }
+            swipeRefreshImages.setOnRefreshListener {
+                adapter.refresh()
             }
             observePagingData()
             submitDataToAdapter()
@@ -75,11 +70,17 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
     private fun observePagingData() {
         try {
             adapter.addLoadStateListener { loadState ->
+                swipeRefreshImages.isRefreshing = false
                 if (loadState.refresh is LoadState.Loading) {
                     // Show loading indicator
                     searchViewModel.isLoading.value = true
                     setAdapter = false
                 } else {
+                    val connectivityObserver = NetworkConnectivityObserver(requireContext())
+                    val status = connectivityObserver.getCurrentStatus()
+                    if (status != ConnectivityObserver.Status.Available) {
+                        SearchActivity.showAlert(status,requireView())
+                    }
                     searchViewModel.isLoading.value = false
                     if (!setAdapter) {
                         rvImageSearchResult.adapter = adapter
