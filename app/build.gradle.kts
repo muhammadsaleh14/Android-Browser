@@ -14,6 +14,7 @@ buildscript {
 }
 
 
+
 android {
     namespace = "com.example.browserapp"
     compileSdk = 34

@@ -49,7 +49,12 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //setting search value
-        viewModel.query = searchViewModel.searchTerm.value ?: "error"
+//        viewModel.query = searchViewModel.searchTerm.value ?: "error"
+        searchViewModel.searchTerm.observe(this) { newData ->
+            // Update your UI elements with the new data
+            viewModel.query = newData
+            adapter.refresh()
+        }
         //setting loading icon
         searchViewModel.isLoading.value = true
         //setting recycler view

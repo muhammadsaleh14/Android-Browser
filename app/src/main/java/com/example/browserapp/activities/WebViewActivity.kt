@@ -4,15 +4,19 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewStub
 import android.view.animation.AnimationUtils
+import android.view.inputmethod.EditorInfo
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.browserapp.R
 import com.example.browserapp.models.UserBookmark
 import com.example.browserapp.models.UserHistory
@@ -27,6 +31,8 @@ class WebViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webpage)
+        val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
+        setSupportActionBar(toolbar)
 
 
         class MyWebViewClient : WebViewClient() {
@@ -145,6 +151,7 @@ class WebViewActivity : AppCompatActivity() {
         }
 
     }
+
 
     override fun onBackPressed() {
         val webView = findViewById<WebView>(R.id.webView) // Replace with your WebView's ID

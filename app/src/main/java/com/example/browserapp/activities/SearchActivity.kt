@@ -3,6 +3,8 @@ package com.example.browserapp.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewStub
 import android.view.animation.AnimationUtils
@@ -10,6 +12,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -37,6 +40,7 @@ class SearchActivity : AppCompatActivity() {
 //    }
     override fun onCreate(savedInstanceState: Bundle?) {
         try {
+            Log.d("qqq","inside search")
             super.onCreate(savedInstanceState)
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
@@ -155,6 +159,45 @@ class SearchActivity : AppCompatActivity() {
         } catch (e: Exception) {
             Log.e("TAGINN", e.stackTraceToString())
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.bookmarkOption -> {
+                // Handle option 1 click
+                val intent = Intent(this@SearchActivity , BookmarkActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.historyOption -> {
+                // Handle option 2 click
+                val intent = Intent(this@SearchActivity , HistoryActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.newTabOption -> {
+                // Handle option 1 click
+                val intent = Intent(this@SearchActivity , MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                return true
+            }
+            R.id.logoutOption -> {
+                // Handle option 2 click
+                val auth = FirebaseAuth.getInstance()
+                auth.signOut()
+                val intent = Intent(this@SearchActivity , LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun replaceFragment(fragment: Fragment) {

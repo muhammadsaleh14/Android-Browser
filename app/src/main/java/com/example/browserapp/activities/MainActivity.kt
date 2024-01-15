@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewStub
 import android.view.animation.AnimationUtils
@@ -12,6 +14,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.Toolbar
 import com.example.browserapp.R
 import com.google.firebase.auth.FirebaseAuth
 
@@ -31,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val logoutOption = findViewById<Button>(R.id.optionLogout)
         val searchEditText = findViewById<EditText>(R.id.searchMainEditText)
         val submitSearchBtn = findViewById<Button>(R.id.submitSearchBtn)
-        val optionsList: View? = optionsListStub.inflate()
+
         searchEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun afterTextChanged(s: Editable?) {}
@@ -50,20 +53,61 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        optionsList?.visibility = View.GONE  // Initially hide the options list
-        showOptionsButton.setOnClickListener {
-            if (optionsList?.visibility == View.GONE) {
-                // Slide in the options list
-                optionsList.visibility = View.VISIBLE
-                val slideInAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_in_from_left)
-                optionsList.startAnimation(slideInAnimation)
-                showOptionsButton.setImageResource(R.drawable.arrow_right)
-            } else {
-                // Slide out the options list
-                val slideOutAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_out_to_left)
-                optionsList?.startAnimation(slideOutAnimation)
-                optionsList?.visibility = View.GONE
-                showOptionsButton.setImageResource(R.drawable.arrow_left)
+          // Initially hide the options list
+
+//        bookmarkOption.setOnClickListener{
+//            val intent = Intent(this@MainActivity , BookmarkActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        historyOption.setOnClickListener{
+//            val intent = Intent(this@MainActivity , HistoryActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        logoutOption.setOnClickListener{
+//            val auth = FirebaseAuth.getInstance()
+//            auth.signOut()
+//            val intent = Intent(this@MainActivity , LoginActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//            startActivity(intent)
+//        }
+
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.bookmarkOption -> {
+                // Handle option 1 click
+                val intent = Intent(this@MainActivity , BookmarkActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.historyOption -> {
+                // Handle option 2 click
+                val intent = Intent(this@MainActivity , HistoryActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.newTabOption -> {
+                // Handle option 1 click
+
+                return true
+            }
+            R.id.logoutOption -> {
+                // Handle option 2 click
+                val auth = FirebaseAuth.getInstance()
+                auth.signOut()
+                val intent = Intent(this@MainActivity , LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                return true
             }
         }
 
