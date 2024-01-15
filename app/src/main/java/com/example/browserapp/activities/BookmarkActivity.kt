@@ -2,9 +2,13 @@ package com.example.browserapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.appcompat.widget.Toolbar
+import com.example.browserapp.R
 import com.example.browserapp.databinding.ActivityBookmarkBinding
 import com.example.browserapp.adapters.BookmarksAdapter
 import com.example.browserapp.models.UserBookmark
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class BookmarkActivity : AppCompatActivity() {
@@ -15,12 +19,16 @@ class BookmarkActivity : AppCompatActivity() {
         binding = ActivityBookmarkBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
+        setSupportActionBar(toolbar)
 
         if (supportActionBar != null) {
             supportActionBar?.title = "Bookmarks"
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
-        val email = intent.getStringExtra("email") ?: ""
+
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        val email = currentUser?.email?: ""
         val bookmarksCollection = db.collection("users").document(email).collection("bookmarks")
 
         var bookmarks: MutableList<UserBookmark>
@@ -51,5 +59,16 @@ class BookmarkActivity : AppCompatActivity() {
             }
         binding.bookmarksRecyclerView.adapter = bookmarksAdapter
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                // Handle the back button click here
+                onBackPressedDispatcher.onBackPressed()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 }

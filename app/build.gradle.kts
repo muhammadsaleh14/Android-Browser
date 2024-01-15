@@ -20,7 +20,7 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField ("String", "SUBSCRIPTION_KEY", "\"a9ec21e2545c4c368d7275059df7f799\"")
+        buildConfigField ("String", "SUBSCRIPTION_KEY", "\"fbf107a7b57f4aa1b014d263a1588d9d\"")
     }
 
 
@@ -39,25 +39,29 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_18
-        targetCompatibility = JavaVersion.VERSION_18
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "18"
+        jvmTarget = "1.8"
     }
 }
 
-
-
 dependencies {
+//    configurations.all {
+//        exclude("com.google.protobuf", "protobuf-java")
+//        exclude("com.sun.activation","javax.activation")
+//    }
+//    implementation ("com.android.tools.build:gradle:4.1.0")
+
+
     implementation ("com.airbnb.android:lottie:6.3.0")
     implementation ("org.threeten:threetenbp:1.6.0")
     implementation ("androidx.fragment:fragment-ktx:1.4.1")
-    implementation ("com.android.tools.build:gradle:4.1.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation ("dev.icerock.moko:resources:0.20.1") // Or a newer version
     implementation ("io.github.cdimascio:dotenv-kotlin:6.2.2") // Or a newer version
-    implementation ("com.google.code.gson:gson:2.8.9")
+    implementation ("com.google.code.gson:gson:2.8.5")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
@@ -71,13 +75,13 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    implementation ("com.google.gms:google-services:4.4.0")
 
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+
+    implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
     implementation("com.google.firebase:firebase-analytics")
-//    implementation ("com.google.protobuf:protobuf-java:3.19.3")
+    implementation ("com.google.firebase:firebase-auth") // Use the latest version
 
-    implementation ("com.google.firebase:firebase-auth:22.3.0") // Use the latest version
-    implementation ("com.google.firebase:firebase-firestore:24.10.0") // Use the latest version
-//    implementation ("com.intuit.sdp:sdp-android:1.1.0")
+//    implementation ("com.google.android.gms:play-services-auth:22.0.0")
+    implementation ("com.google.firebase:firebase-firestore") // Use the latest version
+
 }

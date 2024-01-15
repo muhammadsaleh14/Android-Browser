@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/newTabOption"
+        android:title="New Tab" />
+    <item
+        android:id="@+id/bookmarkOption"
+        android:title="Bookmarks" />
+    <item
+        android:id="@+id/historyOption"
+        android:title="History" />
+
+    <item
+        android:id="@+id/logoutOption"
+        android:title="Logout" />
+</menu>

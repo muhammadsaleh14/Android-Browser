@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import com.example.browserapp.R
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
@@ -18,10 +19,12 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             // Start the next activity (e.g., MainActivity)
             if (isUserAuthenticated()) {
+                Log.d("qqq","inside user authenticaed")
                 // User is authenticated, navigate to the main content of the app
                 navigateToMainActivity()
             } else {
                 // User is not authenticated, navigate to the login screen
+                Log.d("qqq","inside not user authenticaed")
                 navigateToLoginActivity()
             }
             finish()

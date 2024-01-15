@@ -9,9 +9,9 @@ data class UserHistory (
 
     val dictionary: Map<String, Any>
         get() = mapOf(
-            "url" to String,
+            "url" to url,
             "name" to name,
-            "timeStamp" to Long
+            "timeStamp" to timestamp
         )
 
 }

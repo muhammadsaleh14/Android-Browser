@@ -43,7 +43,12 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
             super.onViewCreated(view, savedInstanceState)
-            imagesViewModel.query = searchViewModel.searchTerm.value?:"error"
+//            imagesViewModel.query = searchViewModel.searchTerm.value?:"error"
+            searchViewModel.searchTerm.observe(this) { newData ->
+                // Update your UI elements with the new data
+                imagesViewModel.query = newData
+                adapter.refresh()
+            }
             val imagesLayoutManager =
                 StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
             rvImageSearchResult.layoutManager = imagesLayoutManager

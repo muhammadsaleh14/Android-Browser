@@ -33,6 +33,20 @@
         <activity
             android:name=".activities.SearchActivity"
             android:exported="true"/>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".activities.SignupActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".activities.BookmarkActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".activities.HistoryActivity"
+            android:exported="true"/>
+
+
     </application>
 
 </manifest>

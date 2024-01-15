@@ -4,6 +4,8 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewStub
 import android.view.animation.AnimationUtils
@@ -14,6 +16,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.browserapp.R
 import com.example.browserapp.models.UserBookmark
 import com.example.browserapp.models.UserHistory
@@ -28,6 +31,8 @@ class WebViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webpage)
+        val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
+        setSupportActionBar(toolbar)
 
 
         class MyWebViewClient : WebViewClient() {
@@ -43,10 +48,7 @@ class WebViewActivity : AppCompatActivity() {
             }
         }
 
-        val bookmarkOption = findViewById<Button>(R.id.optionbookmarks)
-        val historyOption = findViewById<Button>(R.id.optionHistory)
-        val logoutOption = findViewById<Button>(R.id.optionLogout)
-        val newTabOption = findViewById<Button>(R.id.newTabOption)
+
         var urlEditText = findViewById<EditText>(R.id.searchUrl)
 
 
@@ -71,11 +73,11 @@ class WebViewActivity : AppCompatActivity() {
         val receivedName = intent.getStringExtra("name") ?: ""
         val currentUser = FirebaseAuth.getInstance().currentUser
         val userEmail = currentUser?.email?: ""
-
+        val key = receivedName
         try {
 
             val history = UserHistory(receivedUrl,receivedName, System.currentTimeMillis())
-            val historyDocument = db.collection("users").document(userEmail).collection("history").document()
+            val historyDocument = db.collection("users").document(userEmail).collection("history").document(key)
 
             historyDocument.set(history.dictionary)
             urlEditText.setText(receivedUrl)
@@ -85,7 +87,7 @@ class WebViewActivity : AppCompatActivity() {
         }
 
         val bookmarkButton = findViewById<ImageButton>(R.id.bookmarksIcon)
-        val key = receivedName+receivedUrl
+
         val documentReference = db.collection("users").document(userEmail).collection("bookmarks").document(key)
         var bookmarked = false
         documentReference.get()
@@ -114,53 +116,74 @@ class WebViewActivity : AppCompatActivity() {
                 bookmarked = false
             }
         }
-        val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
-        val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
-        val optionsList: View? = optionsListStub.inflate()
-        if (optionsList != null) {
-            optionsList.visibility = View.GONE
-        }
-        showOptionsButton.setOnClickListener {
-            if (optionsList?.visibility == View.GONE) {
-                // Slide in the options list
-                optionsList.visibility = View.VISIBLE
-                val slideInAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_in_from_left)
-                optionsList.startAnimation(slideInAnimation)
-                showOptionsButton.setImageResource(R.drawable.arrow_right)
-            } else {
-                // Slide out the options list
-                val slideOutAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_out_to_left)
-                optionsList?.startAnimation(slideOutAnimation)
-                optionsList?.visibility = View.GONE
-                showOptionsButton.setImageResource(R.drawable.arrow_left)
-            }
-        }
 
-        bookmarkOption.setOnClickListener{
-            val intent = Intent(this@WebViewActivity , BookmarkActivity::class.java)
-            startActivity(intent)
-        }
 
-        historyOption.setOnClickListener{
-            val intent = Intent(this@WebViewActivity , HistoryActivity::class.java)
-            startActivity(intent)
-        }
 
-        logoutOption.setOnClickListener{
-            val auth = FirebaseAuth.getInstance()
-            auth.signOut()
-            val intent = Intent(this@WebViewActivity , LoginActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
-
-        newTabOption.setOnClickListener{
-            val intent = Intent(this@WebViewActivity , MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
+//        bookmarkOption.setOnClickListener{
+//            val intent = Intent(this@WebViewActivity , BookmarkActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        historyOption.setOnClickListener{
+//            val intent = Intent(this@WebViewActivity , HistoryActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        logoutOption.setOnClickListener{
+//            val auth = FirebaseAuth.getInstance()
+//            auth.signOut()
+//            val intent = Intent(this@WebViewActivity , LoginActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//            startActivity(intent)
+//        }
+//
+//        newTabOption.setOnClickListener{
+//            val intent = Intent(this@WebViewActivity , MainActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//            startActivity(intent)
+//        }
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.bookmarkOption -> {
+                // Handle option 1 click
+                val intent = Intent(this@WebViewActivity , BookmarkActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.historyOption -> {
+                // Handle option 2 click
+                val intent = Intent(this@WebViewActivity , HistoryActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.newTabOption -> {
+                // Handle option 1 click
+                val intent = Intent(this@WebViewActivity , MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                return true
+            }
+            R.id.logoutOption -> {
+                // Handle option 2 click
+                val auth = FirebaseAuth.getInstance()
+                auth.signOut()
+                val intent = Intent(this@WebViewActivity , LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
     override fun onBackPressed() {
         val webView = findViewById<WebView>(R.id.webView) // Replace with your WebView's ID

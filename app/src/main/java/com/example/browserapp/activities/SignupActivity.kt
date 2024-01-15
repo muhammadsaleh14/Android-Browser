@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -98,13 +99,16 @@ class SignupActivity : AppCompatActivity() {
         }
     }
     fun registerUser(user:User, password: String) {
+
         auth.createUserWithEmailAndPassword(user.email, password)
             .addOnCompleteListener(this) {task ->
+
                 if (task.isSuccessful) {
                 db.collection("users")
                     .document(user.email)
                     .set(user.dictionary)
                     .addOnSuccessListener {
+                        Log.d("signuppp","inside success listener")
                         // User data added to Firestore successfully
                         val intent = Intent (this@SignupActivity , MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -115,6 +119,7 @@ class SignupActivity : AppCompatActivity() {
                         // Handle errors here
                     }
             } else {
+                    Log.d("signuppp","inside task not successful")
 //                Toast.makeText(this, "Fill up both email and password", Toast.LENGTH_SHORT).show()
                 try {
                     throw task.exception!!

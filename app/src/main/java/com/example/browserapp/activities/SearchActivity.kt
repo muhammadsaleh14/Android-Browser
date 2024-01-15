@@ -3,6 +3,8 @@ package com.example.browserapp.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewStub
 import android.view.animation.AnimationUtils
@@ -12,6 +14,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -39,23 +42,19 @@ class SearchActivity : AppCompatActivity() {
 //    }
     override fun onCreate(savedInstanceState: Bundle?) {
         try {
+            Log.d("qqq","inside search")
             super.onCreate(savedInstanceState)
             binding = ActivitySearchBinding.inflate(layoutInflater)
             setContentView(binding.root)
+            val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
+            setSupportActionBar(toolbar)
 
-            val bookmarksButton = findViewById<ImageButton>(R.id.bookmarksIcon)
-            bookmarksButton.visibility = View.GONE
             //disabling night mode
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             //get values from search
             val searchTerm = intent.getStringExtra ("searchTerm")
             //assigning ids
-            val showOptionsButton = findViewById<ImageButton>(R.id.showOptionsBtn)
-            val optionsListStub = findViewById<ViewStub>(R.id.options_list_stub)
-            val bookmarkOption = findViewById<Button>(R.id.optionbookmarks)
-            val historyOption = findViewById<Button>(R.id.optionHistory)
-            val logoutOption = findViewById<Button>(R.id.optionLogout)
-            val newTabOption = findViewById<Button>(R.id.newTabOption)
+
             val urlEditText = findViewById<EditText>(R.id.searchUrl)
 
 
@@ -63,10 +62,14 @@ class SearchActivity : AppCompatActivity() {
             val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
             viewModel.searchTerm.value = searchTerm
             Log.d("qqq","search term is $searchTerm")
+            urlEditText.setText(searchTerm)
             urlEditText.setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                     // Perform search action here
                     viewModel.searchTerm.value = urlEditText.text.toString()
+//                    replaceFragment(WebPagesFragment())
+//                    replaceFragment(ImagesFragment())
+//                    replaceFragment(VideosFragment())
                 }
                 false
             }
@@ -117,55 +120,75 @@ class SearchActivity : AppCompatActivity() {
                 replaceFragment(VideosFragment())
 //                replaceFragment(VideosFragment())
             }
-            val optionsList: View? = optionsListStub.inflate()
-            if (optionsList != null) {
-                optionsList.visibility = View.GONE
-            }
-            showOptionsButton.setOnClickListener {
-                if (optionsList?.visibility == View.GONE) {
-                    // Slide in the options list
-                    optionsList.visibility = View.VISIBLE
-                    val slideInAnimation =
-                        AnimationUtils.loadAnimation(this, R.anim.slide_in_from_left)
-                    optionsList.startAnimation(slideInAnimation)
-                    showOptionsButton.setImageResource(R.drawable.arrow_right)
-                } else {
-                    // Slide out the options list
-                    val slideOutAnimation =
-                        AnimationUtils.loadAnimation(this, R.anim.slide_out_to_left)
-                    optionsList?.startAnimation(slideOutAnimation)
-                    optionsList?.visibility = View.GONE
-                    showOptionsButton.setImageResource(R.drawable.arrow_left)
-                }
-            }
 
-            bookmarkOption.setOnClickListener{
+
+//            bookmarkOption.setOnClickListener{
+//                val intent = Intent(this@SearchActivity , BookmarkActivity::class.java)
+//                startActivity(intent)
+//            }
+//
+//            historyOption.setOnClickListener{
+//                val intent = Intent(this@SearchActivity , HistoryActivity::class.java)
+//                startActivity(intent)
+//            }
+//
+//            logoutOption.setOnClickListener{
+//
+        //                val auth = FirebaseAuth.getInstance()
+//                auth.signOut()
+//                val intent = Intent(this@SearchActivity , LoginActivity::class.java)
+//                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//                startActivity(intent)
+//            }
+//
+//            newTabOption.setOnClickListener{
+//                val intent = Intent(this@SearchActivity , MainActivity::class.java)
+//                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//                startActivity(intent)
+//            }
+
+        } catch (e: Exception) {
+            Log.e("TAGINN", e.stackTraceToString())
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.bookmarkOption -> {
+                // Handle option 1 click
                 val intent = Intent(this@SearchActivity , BookmarkActivity::class.java)
                 startActivity(intent)
+                return true
             }
-
-            historyOption.setOnClickListener{
+            R.id.historyOption -> {
+                // Handle option 2 click
                 val intent = Intent(this@SearchActivity , HistoryActivity::class.java)
                 startActivity(intent)
+                return true
             }
-
-            logoutOption.setOnClickListener{
+            R.id.newTabOption -> {
+                // Handle option 1 click
+                val intent = Intent(this@SearchActivity , MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                return true
+            }
+            R.id.logoutOption -> {
+                // Handle option 2 click
                 val auth = FirebaseAuth.getInstance()
                 auth.signOut()
                 val intent = Intent(this@SearchActivity , LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
+                return true
             }
-
-            newTabOption.setOnClickListener{
-                val intent = Intent(this@SearchActivity , MainActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-            }
-
-        } catch (e: Exception) {
-            Log.e("TAGINN", e.stackTraceToString())
         }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun replaceFragment(fragment: Fragment) {

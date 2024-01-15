@@ -33,13 +33,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <ImageButton
-        android:id="@+id/showOptionsBtn"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/arrow_left"
-        android:background="@android:color/transparent"
-        android:minWidth="40dp"/>
+
 
 
 

@@ -28,10 +28,16 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
     private lateinit var searchViewModel: SearchViewModel
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
+
             searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
             searchViewModel.isLoading.value = true
             super.onViewCreated(view, savedInstanceState)
-            viewModel.query = searchViewModel.searchTerm.value?:"error"
+//            viewModel.query = searchViewModel.searchTerm.value?:"error"
+            searchViewModel.searchTerm.observe(this) { newData ->
+                // Update your UI elements with the new data
+                viewModel.query = newData
+                adapter.refresh()
+            }
             rvVideosSearchResult = view.findViewById(R.id.rvVideosSearchResult)
             rvVideosSearchResult.layoutManager = LinearLayoutManager(context)
             rvVideosSearchResult.setHasFixedSize(true)
