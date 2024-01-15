@@ -78,12 +78,12 @@ class SearchActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 connectivityObserver.observe()
                     .collect { status ->
-                        showAlert(status)
+                        showAlert(status,findViewById(android.R.id.content))
                     }
             }
             val initialStatus = connectivityObserver.getCurrentStatus()
             if (initialStatus != ConnectivityObserver.Status.Available) {
-                showAlert(initialStatus)
+                showAlert(initialStatus,findViewById(android.R.id.content))
             }
             //control loading
             val loadingAnimation = LoadingAnimation(binding.loadingAnimation)
@@ -210,13 +210,16 @@ class SearchActivity : AppCompatActivity() {
     }
 
     //alert for network
-    private fun showAlert(status: ConnectivityObserver.Status) {
-        val message = when (status) {
-            ConnectivityObserver.Status.Available -> "Network is available"
-            ConnectivityObserver.Status.Unavailable -> "Network is unavailable"
-            else -> "Unknown network status"
+    companion object {
+        fun showAlert(status: ConnectivityObserver.Status,view:View) {
+            val message = when (status) {
+                ConnectivityObserver.Status.Available -> "Network is available"
+                ConnectivityObserver.Status.Unavailable -> "Network is unavailable"
+                else -> "Unknown network status"
+            }
+            Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show()
         }
-        Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_SHORT).show()
+
     }
 
 }
