@@ -73,11 +73,11 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation ("com.google.gms:google-services:4.4.0")
 
-    implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-analytics")
 //    implementation ("com.google.protobuf:protobuf-java:3.19.3")
 
-    implementation ("com.google.firebase:firebase-auth") // Use the latest version
-    implementation ("com.google.firebase:firebase-firestore") // Use the latest version
-    implementation ("com.intuit.sdp:sdp-android:1.1.0")
+    implementation ("com.google.firebase:firebase-auth:22.3.0") // Use the latest version
+    implementation ("com.google.firebase:firebase-firestore:24.10.0") // Use the latest version
+//    implementation ("com.intuit.sdp:sdp-android:1.1.0")
 }

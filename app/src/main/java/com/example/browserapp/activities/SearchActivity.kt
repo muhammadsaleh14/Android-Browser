@@ -6,7 +6,9 @@ import android.util.Log
 import android.view.View
 import android.view.ViewStub
 import android.view.animation.AnimationUtils
+import android.view.inputmethod.EditorInfo
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -54,12 +56,20 @@ class SearchActivity : AppCompatActivity() {
             val historyOption = findViewById<Button>(R.id.optionHistory)
             val logoutOption = findViewById<Button>(R.id.optionLogout)
             val newTabOption = findViewById<Button>(R.id.newTabOption)
+            val urlEditText = findViewById<EditText>(R.id.searchUrl)
+
 
             //setting view model
             val viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
             viewModel.searchTerm.value = searchTerm
             Log.d("qqq","search term is $searchTerm")
-
+            urlEditText.setOnEditorActionListener { _, actionId, _ ->
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    // Perform search action here
+                    viewModel.searchTerm.value = urlEditText.text.toString()
+                }
+                false
+            }
             //Check Connectivity
             connectivityObserver = NetworkConnectivityObserver(applicationContext)
             lifecycleScope.launch {

@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.view.ViewStub
 import android.view.animation.AnimationUtils
+import android.view.inputmethod.EditorInfo
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
@@ -46,7 +47,22 @@ class WebViewActivity : AppCompatActivity() {
         val historyOption = findViewById<Button>(R.id.optionHistory)
         val logoutOption = findViewById<Button>(R.id.optionLogout)
         val newTabOption = findViewById<Button>(R.id.newTabOption)
-        var urlEditEditText = findViewById<EditText>(R.id.searchUrl)
+        var urlEditText = findViewById<EditText>(R.id.searchUrl)
+
+
+
+        urlEditText.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                val intent = Intent(this, SearchActivity::class.java)
+                // Put the arguments you want to pass into the Intent
+                intent.putExtra("searchTerm", urlEditText.text.toString())
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                // Start the new Activity
+                startActivity(intent)
+            }
+            false
+        }
+
         val webView = findViewById<WebView>(R.id.webView) // Replace with your WebView's ID
         webView.webViewClient = MyWebViewClient()
 
@@ -62,7 +78,7 @@ class WebViewActivity : AppCompatActivity() {
             val historyDocument = db.collection("users").document(userEmail).collection("history").document()
 
             historyDocument.set(history.dictionary)
-            urlEditEditText.setText(receivedUrl)
+            urlEditText.setText(receivedUrl)
             webView.loadUrl(receivedUrl ?: "")
         } catch (e: Exception) {
             Log.e("TAGINN1", e.stackTraceToString())

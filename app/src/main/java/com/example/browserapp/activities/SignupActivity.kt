@@ -103,7 +103,7 @@ class SignupActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                 db.collection("users")
                     .document(user.email)
-                    .set(user)
+                    .set(user.dictionary)
                     .addOnSuccessListener {
                         // User data added to Firestore successfully
                         val intent = Intent (this@SignupActivity , MainActivity::class.java)
@@ -111,10 +111,11 @@ class SignupActivity : AppCompatActivity() {
                         startActivity(intent)
                     }
                     .addOnFailureListener { e ->
+                        Toast.makeText(this, "Signup Failed. Please try again.", Toast.LENGTH_SHORT).show()
                         // Handle errors here
                     }
             } else {
-                Toast.makeText(this, "Fill up both email and password", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "Fill up both email and password", Toast.LENGTH_SHORT).show()
                 try {
                     throw task.exception!!
                 } catch (e: FirebaseAuthUserCollisionException) {

@@ -27,6 +27,7 @@
             android:inputType="text"
             android:gravity="center"
             android:text="tingle.com"
+            android:imeOptions="actionSearch"
             />
 
     </com.google.android.material.textfield.TextInputLayout>

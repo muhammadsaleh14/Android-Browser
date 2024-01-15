@@ -83,6 +83,7 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                 } else {
                     // If registration fails, display a message to the user.
+                    Toast.makeText(this, "Login Failed. Please try again.", Toast.LENGTH_SHORT).show()
                     try {
                         throw task.exception!!
                     } catch (e: FirebaseAuthUserCollisionException) {
