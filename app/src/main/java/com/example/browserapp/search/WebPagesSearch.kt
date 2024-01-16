@@ -63,6 +63,7 @@ fun searchWeb(searchQuery: String, nextPageNumber: Int): SearchResults {
 
         val results = SearchResults(HashMap(), response)
         connection.headerFields.forEach { (header, values) ->
+            Log.d("headers","$header : ${results.relevantHeaders[header]}" )
             if (header != null && (header.startsWith("BingAPIs-") || header.startsWith("X-MSEdge-"))) {
                 results.relevantHeaders[header] = values[0]
             }

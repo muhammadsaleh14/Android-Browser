@@ -20,12 +20,11 @@ import com.example.browserapp.networkManagement.ConnectivityObserver
 import com.example.browserapp.networkManagement.NetworkConnectivityObserver
 import com.example.browserapp.viewmodels.ImagesViewModel
 import com.example.browserapp.viewmodels.SearchViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class ImagesFragment : Fragment(R.layout.fragment_images) {
     private lateinit var rvImageSearchResult: RecyclerView
-    private val imagesViewModel: ImagesViewModel by activityViewModels()
+    private val viewModel: ImagesViewModel by activityViewModels()
     private lateinit var adapter: ImageSearchAdapter
     private var setAdapter = false
     private lateinit var searchViewModel: SearchViewModel
@@ -50,9 +49,11 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
             super.onViewCreated(view, savedInstanceState)
 //            imagesViewModel.query = searchViewModel.searchTerm.value?:"error"
             searchViewModel.searchTerm.observe(viewLifecycleOwner) { newData ->
-                // Update your UI elements with the new data
-                imagesViewModel.query = newData
-                adapter.refresh()
+              if (!searchViewModel.imagesLoaded) {
+                    viewModel.query = newData
+                    adapter.refresh()
+                    searchViewModel.imagesLoaded = true
+                }
             }
             val imagesLayoutManager =
                 StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
@@ -110,7 +111,7 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
         Log.d("TAGINN3", "submitting data to adapter")
         viewLifecycleOwner.lifecycleScope.launch {
             try {
-                imagesViewModel.flow.collect { pagingData ->
+                viewModel.flow.collect { pagingData ->
                     try {
                         Log.e("TAGINN3", "submitting data to adapter ${pagingData.toString()}")
                         adapter.submitData(pagingData)

@@ -66,7 +66,14 @@ class SearchActivity : AppCompatActivity() {
             urlEditText.setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                     // Perform search action here
-                    viewModel.searchTerm.value = urlEditText.text.toString()
+                    val prevVal = viewModel.searchTerm.value
+                    val newVal = urlEditText.text.toString()
+                    if(prevVal!= newVal){
+                        viewModel.webPagesLoaded = false
+                        viewModel.imagesLoaded = false
+                        viewModel.videosLoaded = false
+                    }
+                    viewModel.searchTerm.value = newVal
 //                    replaceFragment(WebPagesFragment())
 //                    replaceFragment(ImagesFragment())
 //                    replaceFragment(VideosFragment())

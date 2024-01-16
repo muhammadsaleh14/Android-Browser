@@ -39,9 +39,12 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
             super.onViewCreated(view, savedInstanceState)
 //            viewModel.query = searchViewModel.searchTerm.value?:"error"
             searchViewModel.searchTerm.observe(viewLifecycleOwner) { newData ->
-                // Update your UI elements with the new data
-                viewModel.query = newData
-                adapter.refresh()
+                Log.d("observer","value $newData loaded ${searchViewModel.videosLoaded}")
+              if (!searchViewModel.videosLoaded) {
+                    viewModel.query = newData
+                    adapter.refresh()
+                    searchViewModel.videosLoaded = true
+                }
             }
             swipeRefreshVideos = view.findViewById(R.id.swipeRefreshVideos)
             rvVideosSearchResult = view.findViewById(R.id.rvVideosSearchResult)
