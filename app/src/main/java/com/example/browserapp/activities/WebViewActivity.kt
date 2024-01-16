@@ -76,9 +76,9 @@ class WebViewActivity : AppCompatActivity() {
         val currentTime = System.currentTimeMillis()
         val key = receivedName
         try {
-
-            val history = UserHistory(receivedUrl,receivedName, System.currentTimeMillis())
             val historyDocument = db.collection("users").document(userEmail).collection("history").document()
+            val history = UserHistory(historyDocument.id,receivedUrl,receivedName, System.currentTimeMillis())
+
 
             historyDocument.set(history.dictionary)
             urlEditText.setText(receivedUrl)
@@ -89,30 +89,39 @@ class WebViewActivity : AppCompatActivity() {
 
         val bookmarkButton = findViewById<ImageButton>(R.id.bookmarksIcon)
 
-        val documentReference = db.collection("users").document(userEmail).collection("bookmarks").document(key)
+        val documentCollection = db.collection("users").document(userEmail).collection("bookmarks")
         var bookmarked = false
-        documentReference.get()
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    val documentSnapshot: DocumentSnapshot? = task.result
-                    if (documentSnapshot != null && documentSnapshot.exists()) {
-                        bookmarkButton.setImageResource(R.drawable.star_bookmark)
-                        bookmarked = true
+        var bookmarkId = ""
+        documentCollection.get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    val bookmarkData = document.data
+                    val url = bookmarkData?.get("url") as? String ?: ""
+                    if ( url == receivedUrl){
+                        bookmarkId = document.id
+                        break
                     }
+                    // ... Use the document data
                 }
             }
+            .addOnFailureListener { exception ->
+                // Handle errors
+            }
+
         bookmarkButton.setOnClickListener{
             // if not already bookmarked
             if(!bookmarked){
-                val bookmark = UserBookmark(receivedUrl,receivedName,System.currentTimeMillis())
-                val bookmarkDocument = db.collection("users").document(userEmail).collection("bookmarks").document(key)
+
+                val bookmarkDocument = db.collection("users").document(userEmail).collection("bookmarks").document()
+                val bookmark = UserBookmark(bookmarkDocument.id,receivedUrl,receivedName,System.currentTimeMillis())
+                bookmarkId = bookmarkDocument.id
                 bookmarkDocument.set(bookmark.dictionary)
                 bookmarked = true
                 bookmarkButton.setImageResource(R.drawable.star_bookmark)
             }
             else{
                 // if bookmarked already
-                db.collection("users").document(userEmail).collection("bookmarks").document(key).delete()
+                db.collection("users").document(userEmail).collection("bookmarks").document(bookmarkId).delete()
                 bookmarkButton.setImageResource(R.drawable.star_empty)
                 bookmarked = false
             }

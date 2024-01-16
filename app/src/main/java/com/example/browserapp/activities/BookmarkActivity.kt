@@ -1,19 +1,26 @@
 package com.example.browserapp.activities
 
+import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.ItemTouchHelper
 import com.example.browserapp.R
 import com.example.browserapp.databinding.ActivityBookmarkBinding
 import com.example.browserapp.adapters.BookmarksAdapter
 import com.example.browserapp.models.UserBookmark
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.leadingspark.fulltkdapp.CustomClasses.SwipeHelper
 
 class BookmarkActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBookmarkBinding
     private val db = FirebaseFirestore.getInstance()
+    private lateinit var bookmarks: MutableList<UserBookmark>
+    private val currentUser = FirebaseAuth.getInstance().currentUser
+    private val email = currentUser?.email?: ""
+    private var bookmarksAdapter = BookmarksAdapter(this, mutableListOf())
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBookmarkBinding.inflate(layoutInflater)
@@ -31,8 +38,8 @@ class BookmarkActivity : AppCompatActivity() {
         val email = currentUser?.email?: ""
         val bookmarksCollection = db.collection("users").document(email).collection("bookmarks")
 
-        var bookmarks: MutableList<UserBookmark>
-        var bookmarksAdapter = BookmarksAdapter(this, mutableListOf())
+        bookmarks = mutableListOf()
+
         bookmarksCollection
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
@@ -48,7 +55,8 @@ class BookmarkActivity : AppCompatActivity() {
                         val url = bookmarkData?.get("url") as? String ?: ""
                         val name = bookmarkData?.get("name") as? String ?: ""
                         val timeStamp = document.get("timeStamp") as? Long ?: 0
-                        val bookmark = UserBookmark(url,name, timeStamp)
+                        val key = document.id as? String ?: ""
+                        val bookmark = UserBookmark(key,url,name, timeStamp)
                         bookmarks.add(bookmark)
                     }
                     val temp = bookmarks.sortedByDescending { it.timestamp }
@@ -59,6 +67,33 @@ class BookmarkActivity : AppCompatActivity() {
             }
         binding.bookmarksRecyclerView.adapter = bookmarksAdapter
 
+        val itemTouchHelper = ItemTouchHelper(object : SwipeHelper(binding.bookmarksRecyclerView) {
+            override fun instantiateUnderlayButton(position: Int): List<UnderlayButton> {
+                var buttons = listOf<UnderlayButton>()
+                val deleteButton = deleteButton(position)
+                buttons = listOf(deleteButton)
+                return buttons
+            }
+        })
+
+        itemTouchHelper.attachToRecyclerView(binding.bookmarksRecyclerView)
+
+    }
+
+    private fun deleteButton(position: Int,
+                             ) : SwipeHelper.UnderlayButton {
+        return SwipeHelper.UnderlayButton(
+            this,
+            "Delete",
+            14.0f,
+            android.R.color.holo_red_light,
+            object : SwipeHelper.UnderlayButtonClickListener {
+                override fun onClick() {
+                    db.collection("users").document(email).collection("bookmarks")
+                        .document(bookmarks[position].key).delete()
+                    bookmarksAdapter.notifyDataSetChanged()
+                }
+            })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
 
         val signUpButton: Button = binding.btnSignup
         val loginButtion: Button = binding.btnLogin
-        val forgetPasswordButton : Button = binding.btnForgetPassword
+        val forgetPassButton : Button = binding.btnForgetPassword
 
         loginButtion.setOnClickListener {
             val _email = binding.txtiptEmail.text.toString()
@@ -70,19 +70,10 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
-        forgetPasswordButton.setOnClickListener{
-            val email = binding.txtiptEmail.text.toString()
-            FirebaseAuth.getInstance().sendPasswordResetEmail(email)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        // Display success message
-                        Toast.makeText(this, "Password Reset email sent.", Toast.LENGTH_SHORT).show()
-                    } else {
-                        // Handle error
-                        Toast.makeText(this, "Password Reset Failed. Try Again", Toast.LENGTH_SHORT).show()
-                    }
-                }
+        forgetPassButton.setOnClickListener{
+
         }
+
 
         signUpButton.setOnClickListener{
             val intent = Intent (this@LoginActivity , SignupActivity::class.java)
