@@ -41,6 +41,7 @@ class ImagesFragment : Fragment(R.layout.fragment_images) {
         swipeRefreshImages = view.findViewById(R.id.swipeRefreshImages)
         rvImageSearchResult = view.findViewById(R.id.rvImageSearchResult)
         // ... (other view bindings)
+
         return view
     }
 
