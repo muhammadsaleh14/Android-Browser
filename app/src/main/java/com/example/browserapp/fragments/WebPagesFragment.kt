@@ -50,7 +50,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         super.onViewCreated(view, savedInstanceState)
         //setting search value
 //        viewModel.query = searchViewModel.searchTerm.value ?: "error"
-        searchViewModel.searchTerm.observe(this) { newData ->
+        searchViewModel.searchTerm.observe(viewLifecycleOwner) { newData ->
             // Update your UI elements with the new data
             viewModel.query = newData
             adapter.refresh()
@@ -63,6 +63,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
 
         swipeRefreshWebpages.setOnRefreshListener {
             // Perform your refresh actions here
+            Log.d("ssss","swipe refresh")
             adapter.refresh()
         }
         //initialising adapter after
