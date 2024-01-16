@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
 
         val signUpButton: Button = binding.btnSignup
         val loginButtion: Button = binding.btnLogin
-
+        val forgetPassButton : Button = binding.btnForgetPassword
 
         loginButtion.setOnClickListener {
             val _email = binding.txtiptEmail.text.toString()
@@ -67,6 +67,10 @@ class LoginActivity : AppCompatActivity() {
                 loginUser(_email,_password)
                 binding.progressBar.visibility = View.INVISIBLE
             }
+
+        }
+
+        forgetPassButton.setOnClickListener{
 
         }
 
