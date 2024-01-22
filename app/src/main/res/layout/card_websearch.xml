@@ -42,8 +42,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="name"
-                    android:maxLength="35"
-                    android:ellipsize="end"/>
+
+                    android:ellipsize="end"
+                    android:maxLines="1"/>
 
                 <TextView
                     android:id="@+id/displayUrl"
@@ -52,7 +53,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="displayUrl"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"/>
 
                 <TextView
                     android:id="@+id/datePublished"
@@ -60,6 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:maxLength="10"
                     android:text="datePublished"
                     android:textSize="15dp"/>
             </LinearLayout>
@@ -72,6 +76,7 @@
             android:layout_weight="1"
             android:textSize="15dp"
             android:maxLines="3"
+            android:ellipsize="end"
             android:text="snippet"
             android:textColor="@color/black"
 

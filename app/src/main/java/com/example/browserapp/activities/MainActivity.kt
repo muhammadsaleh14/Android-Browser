@@ -26,6 +26,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
         setSupportActionBar(toolbar)
+        val user= FirebaseAuth.getInstance().currentUser
+        FirebaseAuth.getInstance().addAuthStateListener { auth ->
+            val user = auth.currentUser
+            if (user == null) {
+                // User is no longer authenticated, navigate to login screen
+                navigateToLoginActivity()
+                finish()
+            }
+        }
 
 
 
@@ -48,6 +57,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("email",email)
             // Start the new Activity
             startActivity(intent)
+            searchEditText.setText("")
         }
 
           // Initially hide the options list
@@ -71,6 +81,11 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 
+    }
+
+    private fun navigateToLoginActivity() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

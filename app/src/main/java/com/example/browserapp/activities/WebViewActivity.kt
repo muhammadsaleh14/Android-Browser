@@ -28,6 +28,9 @@ import java.util.Stack
 class WebViewActivity : AppCompatActivity() {
     private val urlStack = Stack<String>()
     private val db = FirebaseFirestore.getInstance()
+    private val currentUser = FirebaseAuth.getInstance().currentUser
+    private val userEmail = currentUser?.email?: ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webpage)
@@ -42,6 +45,7 @@ class WebViewActivity : AppCompatActivity() {
                 val editText =
                     findViewById<EditText>(R.id.searchUrl) // Replace with your EditText's ID
                 editText.setText(url)
+
                 if (!urlStack.contains(url)) {
                     urlStack.push(url)
                 }
@@ -71,8 +75,7 @@ class WebViewActivity : AppCompatActivity() {
         // Load a specific URL
         val receivedUrl = intent.getStringExtra("url") ?: ""
         val receivedName = intent.getStringExtra("name") ?: ""
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        val userEmail = currentUser?.email?: ""
+
         val currentTime = System.currentTimeMillis()
         val key = receivedName
         try {
