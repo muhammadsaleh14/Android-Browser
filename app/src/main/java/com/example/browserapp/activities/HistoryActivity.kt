@@ -61,6 +61,7 @@ class HistoryActivity : AppCompatActivity() {
                         val historyData = document.data
                         val url = historyData?.get("url") as? String ?: ""
                         val name = historyData?.get("name") as? String ?: ""
+
                         timestamp = document.get("timeStamp") as? Long ?: 0
                         val id = document.id as? String ?: ""
                         val history = UserHistory(id,url,name, timestamp)
