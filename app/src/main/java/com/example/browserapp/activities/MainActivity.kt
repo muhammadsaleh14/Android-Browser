@@ -15,11 +15,18 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.RecyclerView
 import com.example.browserapp.R
+import com.example.browserapp.adapters.BookmarksAdapter
+import com.example.browserapp.models.UserBookmark
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 // TODO: image not showing
 class MainActivity : AppCompatActivity() {
+    private val db = FirebaseFirestore.getInstance()
+    private var bookmarksAdapter = BookmarksAdapter(this, mutableListOf())
+    private lateinit var bookmarks: MutableList<UserBookmark>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -59,6 +66,37 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             searchEditText.setText("")
         }
+        val bookmarksCollection = db.collection("users").document(email?:"").collection("bookmarks")
+
+        bookmarks = mutableListOf()
+
+        bookmarksCollection
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) {
+                    // Handle errors here
+                    return@addSnapshotListener
+                }
+                bookmarks = mutableListOf()
+                if (snapshot != null) {
+                    for (document in snapshot.documents) {
+
+                        // fetching data fields to make a new tournament
+                        val bookmarkData = document.data
+                        val url = bookmarkData?.get("url") as? String ?: ""
+                        val name = bookmarkData?.get("name") as? String ?: ""
+                        val timeStamp = document.get("timeStamp") as? Long ?: 0
+                        val key = document.id as? String ?: ""
+                        val bookmark = UserBookmark(key,url,name, timeStamp)
+                        bookmarks.add(bookmark)
+                    }
+                    val temp = bookmarks.sortedByDescending { it.timestamp }
+                    bookmarks = temp.toMutableList()
+                    bookmarksAdapter.updateList(bookmarks)
+                    bookmarksAdapter.notifyDataSetChanged()
+                }
+            }
+        val bookmarksRecyclerView = findViewById<RecyclerView>(R.id.bookmarksRV)
+        bookmarksRecyclerView.adapter = bookmarksAdapter
 
           // Initially hide the options list
 
@@ -79,6 +117,7 @@ class MainActivity : AppCompatActivity() {
 //            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 //            startActivity(intent)
 //        }
+
 
 
     }
