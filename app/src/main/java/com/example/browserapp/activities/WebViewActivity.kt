@@ -28,6 +28,9 @@ import java.util.Stack
 class WebViewActivity : AppCompatActivity() {
     private val urlStack = Stack<String>()
     private val db = FirebaseFirestore.getInstance()
+    private val currentUser = FirebaseAuth.getInstance().currentUser
+    private val userEmail = currentUser?.email?: ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webpage)
@@ -42,6 +45,7 @@ class WebViewActivity : AppCompatActivity() {
                 val editText =
                     findViewById<EditText>(R.id.searchUrl) // Replace with your EditText's ID
                 editText.setText(url)
+
                 if (!urlStack.contains(url)) {
                     urlStack.push(url)
                 }
@@ -71,8 +75,7 @@ class WebViewActivity : AppCompatActivity() {
         // Load a specific URL
         val receivedUrl = intent.getStringExtra("url") ?: ""
         val receivedName = intent.getStringExtra("name") ?: ""
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        val userEmail = currentUser?.email?: ""
+
         val currentTime = System.currentTimeMillis()
         val key = receivedName
         try {
@@ -92,21 +95,33 @@ class WebViewActivity : AppCompatActivity() {
         val documentCollection = db.collection("users").document(userEmail).collection("bookmarks")
         var bookmarked = false
         var bookmarkId = ""
-        documentCollection.get()
-            .addOnSuccessListener { documents ->
-                for (document in documents) {
-                    val bookmarkData = document.data
-                    val url = bookmarkData?.get("url") as? String ?: ""
-                    if ( url == receivedUrl){
-                        bookmarkId = document.id
-                        break
+
+        documentCollection
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) {
+                    // Handle errors here
+                    return@addSnapshotListener
+                }
+
+                if (snapshot != null) {
+                    bookmarkId = ""
+                    bookmarked = false
+                    for (document in snapshot.documents) {
+                        val bookmarkData = document.data
+                        val url = bookmarkData?.get("url") as? String ?: ""
+                        if ( url == receivedUrl){
+                            bookmarkId = document.id
+                            bookmarkButton.setImageResource(R.drawable.star_bookmark)
+                            bookmarked = true
+                            break
+                        }
                     }
-                    // ... Use the document data
+                    if (bookmarkId == ""){
+                        bookmarkButton.setImageResource(R.drawable.star_empty)
+                    }
                 }
             }
-            .addOnFailureListener { exception ->
-                // Handle errors
-            }
+
 
         bookmarkButton.setOnClickListener{
             // if not already bookmarked
@@ -123,6 +138,7 @@ class WebViewActivity : AppCompatActivity() {
                 // if bookmarked already
                 db.collection("users").document(userEmail).collection("bookmarks").document(bookmarkId).delete()
                 bookmarkButton.setImageResource(R.drawable.star_empty)
+                bookmarkId = ""
                 bookmarked = false
             }
         }

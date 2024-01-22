@@ -95,7 +95,7 @@ class SignupActivity : AppCompatActivity() {
             }
             else{
                 binding.progressBar.visibility = View.VISIBLE
-                val user = User(_email,"hehe")
+                val user = User(_email)
                 registerUser(user,_password)
                 binding.progressBar.visibility = View.INVISIBLE
             }
@@ -105,27 +105,39 @@ class SignupActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    private fun sendVerificationEmail() {
+        val firebaseuser = FirebaseAuth.getInstance().currentUser
+        firebaseuser?.sendEmailVerification()
+            ?.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Email sent successfully
+                    // Display success message to user
+                    Toast.makeText(this, "Verification email sent", Toast.LENGTH_SHORT).show()
+                    // User data added to Firestore successfully
+//                    val intent = Intent (this@SignupActivity , MainActivity::class.java)
+//                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//                    startActivity(intent)
+
+                    val auth = FirebaseAuth.getInstance()
+                    auth.signOut()
+                    finish()
+                } else {
+                    // Handle error
+                    Toast.makeText(this, "Email could not be verified", Toast.LENGTH_SHORT).show()
+                    binding.progressBar.visibility = View.INVISIBLE
+                }
+            }
+    }
     fun registerUser(user:User, password: String) {
 
         auth.createUserWithEmailAndPassword(user.email, password)
             .addOnCompleteListener(this) {task ->
 
                 if (task.isSuccessful) {
-                db.collection("users")
-                    .document(user.email)
-                    .set(user.dictionary)
-                    .addOnSuccessListener {
-                        Log.d("signuppp","inside success listener")
-                        Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
-                        // User data added to Firestore successfully
-                        val intent = Intent (this@SignupActivity , MainActivity::class.java)
-                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(intent)
-                    }
-                    .addOnFailureListener { e ->
-                        Toast.makeText(this, "Signup Failed. Please try again.", Toast.LENGTH_SHORT).show()
-                        // Handle errors here
-                    }
+                    binding.progressBar.visibility = View.VISIBLE
+                    sendVerificationEmail()
+
             } else {
                     Log.d("signuppp","inside task not successful")
 //                Toast.makeText(this, "Fill up both email and password", Toast.LENGTH_SHORT).show()

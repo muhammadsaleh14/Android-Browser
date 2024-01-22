@@ -65,12 +65,29 @@ class LoginActivity : AppCompatActivity() {
             else{
                 binding.progressBar.visibility = View.VISIBLE
                 loginUser(_email,_password)
-                binding.progressBar.visibility = View.INVISIBLE
+//                binding.progressBar.visibility = View.INVISIBLE
             }
 
         }
 
         forgetPassButton.setOnClickListener{
+            val _email = binding.txtiptEmail.text.toString()
+            if (_email=="" ) {
+                Toast.makeText(this, "Fill up the email first", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val email = binding.txtiptEmail.text.toString()
+                auth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            // Display success message
+                            Toast.makeText(this, "Password Reset email was sent.", Toast.LENGTH_SHORT).show()
+                        } else {
+                            // Handle error
+                            Toast.makeText(this, "Failed to send email", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+            }
 
         }
 
@@ -87,12 +104,24 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+
                     // User registration successful
                     // You can handle additional steps here, such as sending a verification email.
-                    val intent = Intent (this@LoginActivity , MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
+                    val user = FirebaseAuth.getInstance().currentUser
+                    if (user != null) {
+                        if (user.isEmailVerified) {
+                            val intent = Intent (this@LoginActivity , MainActivity::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            startActivity(intent)
+                            finish()
+                            // Email is verified
+                        } else {
+                            // Email is not verified
+                            Toast.makeText(this, "Verify your email first", Toast.LENGTH_SHORT).show()
+                            binding.progressBar.visibility = View.INVISIBLE
+                        }
+                    }
+
                 } else {
                     // If registration fails, display a message to the user.
                     Toast.makeText(this, "Login Failed. Please try again.", Toast.LENGTH_SHORT).show()

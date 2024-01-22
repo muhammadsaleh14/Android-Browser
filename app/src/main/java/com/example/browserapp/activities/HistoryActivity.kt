@@ -47,7 +47,7 @@ class HistoryActivity : AppCompatActivity() {
                     // Handle errors here
                     return@addSnapshotListener
                 }
-
+                historyList = mutableListOf()
                 if (snapshot != null) {
                     for (document in snapshot.documents) {
 
@@ -56,11 +56,11 @@ class HistoryActivity : AppCompatActivity() {
                         val url = historyData?.get("url") as? String ?: ""
                         val name = historyData?.get("name") as? String ?: ""
                         val timestamp = document.get("timestamp") as? Long ?: 0
-                        val id = document.id
+                        val id = document.id as? String ?: ""
                         val history = UserHistory(id,url,name, timestamp)
                         historyList.add(history)
                     }
-                    val temp = historyList.sortedBy { it.timestamp }
+                    val temp = historyList.sortedByDescending { it.timestamp }
                     historyList = temp.toMutableList()
                     historyAdapter.updateList(historyList)
                     historyAdapter.notifyDataSetChanged()
@@ -68,9 +68,37 @@ class HistoryActivity : AppCompatActivity() {
             }
         binding.historyRecyclerView.adapter = historyAdapter
 
+        val itemTouchHelper = ItemTouchHelper(object : SwipeHelper(binding.historyRecyclerView) {
+            override fun instantiateUnderlayButton(position: Int): List<UnderlayButton> {
+                var buttons = listOf<UnderlayButton>()
+                val deleteButton = deleteButton(position)
+                buttons = listOf(deleteButton)
+                return buttons
+            }
+        })
+
+        itemTouchHelper.attachToRecyclerView(binding.historyRecyclerView)
 
 
 
+
+    }
+
+    private fun deleteButton(position: Int,
+    ) : SwipeHelper.UnderlayButton {
+        return SwipeHelper.UnderlayButton(
+            this,
+            "Delete",
+            14.0f,
+            android.R.color.holo_red_light,
+            object : SwipeHelper.UnderlayButtonClickListener {
+                override fun onClick() {
+                    db.collection("users").document(email).collection("history")
+                        .document(historyList[position].key).delete()
+
+                    historyAdapter.notifyDataSetChanged()
+                }
+            })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
