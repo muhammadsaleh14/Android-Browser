@@ -71,7 +71,17 @@ class LoginActivity : AppCompatActivity() {
         }
 
         forgetPassButton.setOnClickListener{
-
+            val email = binding.txtiptEmail.text.toString()
+            auth.sendPasswordResetEmail(email)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        // Display success message
+                        Toast.makeText(this, "Password Reset email sent.", Toast.LENGTH_SHORT).show()
+                    } else {
+                        // Handle error
+                        Toast.makeText(this, "Password Reset Failed. Try Again", Toast.LENGTH_SHORT).show()
+                    }
+                }
         }
 
 

@@ -92,21 +92,33 @@ class WebViewActivity : AppCompatActivity() {
         val documentCollection = db.collection("users").document(userEmail).collection("bookmarks")
         var bookmarked = false
         var bookmarkId = ""
-        documentCollection.get()
-            .addOnSuccessListener { documents ->
-                for (document in documents) {
-                    val bookmarkData = document.data
-                    val url = bookmarkData?.get("url") as? String ?: ""
-                    if ( url == receivedUrl){
-                        bookmarkId = document.id
-                        break
+
+        documentCollection
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) {
+                    // Handle errors here
+                    return@addSnapshotListener
+                }
+
+                if (snapshot != null) {
+                    bookmarkId = ""
+                    bookmarked = false
+                    for (document in snapshot.documents) {
+                        val bookmarkData = document.data
+                        val url = bookmarkData?.get("url") as? String ?: ""
+                        if ( url == receivedUrl){
+                            bookmarkId = document.id
+                            bookmarkButton.setImageResource(R.drawable.star_bookmark)
+                            bookmarked = true
+                            break
+                        }
                     }
-                    // ... Use the document data
+                    if (bookmarkId == ""){
+                        bookmarkButton.setImageResource(R.drawable.star_empty)
+                    }
                 }
             }
-            .addOnFailureListener { exception ->
-                // Handle errors
-            }
+
 
         bookmarkButton.setOnClickListener{
             // if not already bookmarked
@@ -123,6 +135,7 @@ class WebViewActivity : AppCompatActivity() {
                 // if bookmarked already
                 db.collection("users").document(userEmail).collection("bookmarks").document(bookmarkId).delete()
                 bookmarkButton.setImageResource(R.drawable.star_empty)
+                bookmarkId = ""
                 bookmarked = false
             }
         }
