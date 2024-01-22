@@ -12,6 +12,7 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
@@ -60,6 +61,32 @@ class MainActivity : AppCompatActivity() {
             searchEditText.setText("")
         }
 
+        val sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE)
+        with(sharedPreferences.edit()) {
+            putLong("lastLoginTime", System.currentTimeMillis())
+            apply()
+        }
+
+        FirebaseAuth.getInstance().addAuthStateListener { auth ->
+            if (auth.currentUser != null) {
+                // Check last login time and calculate difference
+                val sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE)
+                val lastLoginTime = sharedPreferences.getLong("lastLoginTime", 0L)
+                val now = System.currentTimeMillis()
+                val timeDifference = now - lastLoginTime
+                if (timeDifference > 10 * 24 * 60 * 60 * 1000) { // 5 days in milliseconds
+                    // User inactive for 5 days, prompt for re-login
+                    showLoginDialog()
+                } else {
+                    // Update last login time if necessary
+                    with(sharedPreferences.edit()) {
+                        putLong("lastLoginTime", now)
+                        apply()
+                    }
+                }
+            }
+        }
+
           // Initially hide the options list
 
 //        bookmarkOption.setOnClickListener{
@@ -81,6 +108,22 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 
+    }
+
+    private fun showLoginDialog() {
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("Please Re-login")
+            .setMessage("You haven't logged in for 5 days. Please sign in again to continue using the app.")
+            .setPositiveButton("Login") { dialog, _ ->
+                // Start your login activity or fragment
+                val auth = FirebaseAuth.getInstance()
+                auth.signOut()
+                navigateToLoginActivity()
+                finish()
+            }
+            .setCancelable(false) // Prevent dismissing the dialog without logging in
+            .create()
+        dialog.show()
     }
 
     private fun navigateToLoginActivity() {

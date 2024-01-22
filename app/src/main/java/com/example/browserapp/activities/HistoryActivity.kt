@@ -55,9 +55,9 @@ class HistoryActivity : AppCompatActivity() {
                         val historyData = document.data
                         val url = historyData?.get("url") as? String ?: ""
                         val name = historyData?.get("name") as? String ?: ""
-                        val timestamp = document.get("timestamp") as? Long ?: 0
+                        val timeStamp = document.get("timeStamp") as? Long ?: 0
                         val id = document.id as? String ?: ""
-                        val history = UserHistory(id,url,name, timestamp)
+                        val history = UserHistory(id,url,name, timeStamp)
                         historyList.add(history)
                     }
                     val temp = historyList.sortedByDescending { it.timestamp }
