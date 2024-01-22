@@ -3,6 +3,7 @@ package com.example.browserapp.adapters
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.browserapp.activities.WebViewActivity
 import com.example.browserapp.databinding.HistoryItemLayoutBinding
 import com.example.browserapp.models.UserHistory
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class HistoryAdapter (
     private val context: Context,
@@ -29,8 +33,16 @@ class HistoryAdapter (
 
     override fun onBindViewHolder(holder: itemViewHolder, position: Int) {
         val history = dataList[position]
-        holder.binding.historyName.setText(history.name)
-        holder.binding.historyUrl.setText(history.url)
+        holder.binding.historyName.text = history.name
+        holder.binding.historyUrl.text = history.url
+        val timeStamp = history.timestamp
+        val date = Date(timeStamp)
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())  // Adjust format as needed
+        val readableTime = dateFormat.format(date)
+        holder.binding.timeStamp.text = readableTime
+//        Log.d("timestampa","${timeStamp}")
+
+
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, WebViewActivity::class.java)
             intent.putExtra("url",history.url)
