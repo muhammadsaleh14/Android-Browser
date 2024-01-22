@@ -23,6 +23,7 @@ import com.example.browserapp.viewmodels.SearchViewModel
 import com.example.browserapp.viewmodels.WebPagesViewModel
 import kotlinx.coroutines.launch
 
+
 class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
     private lateinit var rvSearchResult: RecyclerView
     private val viewModel: WebPagesViewModel by activityViewModels()
@@ -50,10 +51,15 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
         super.onViewCreated(view, savedInstanceState)
         //setting search value
 //        viewModel.query = searchViewModel.searchTerm.value ?: "error"
-        searchViewModel.searchTerm.observe(this) { newData ->
+        //so that adapter doesnt refresh every time fragment is focused
+        searchViewModel.searchTerm.observe(viewLifecycleOwner) { newData ->
+            Log.d("observer","value $newData loaded ${searchViewModel.webPagesLoaded}")
             // Update your UI elements with the new data
-            viewModel.query = newData
-            adapter.refresh()
+            if (!searchViewModel.webPagesLoaded) {
+                viewModel.query = newData
+                adapter.refresh()
+                searchViewModel.webPagesLoaded = true
+            }
         }
         //setting loading icon
         searchViewModel.isLoading.value = true
@@ -63,6 +69,7 @@ class WebPagesFragment() : Fragment(R.layout.fragment_web_pages) {
 
         swipeRefreshWebpages.setOnRefreshListener {
             // Perform your refresh actions here
+            Log.d("ssss", "swipe refresh")
             adapter.refresh()
         }
         //initialising adapter after

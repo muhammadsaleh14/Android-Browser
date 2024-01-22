@@ -6,4 +6,7 @@ import androidx.lifecycle.ViewModel
 class SearchViewModel:ViewModel() {
     val isLoading = MutableLiveData(false)
     val searchTerm: MutableLiveData<String> = MutableLiveData("error")
+    var webPagesLoaded = false
+    var videosLoaded = false
+    var imagesLoaded = false
 }

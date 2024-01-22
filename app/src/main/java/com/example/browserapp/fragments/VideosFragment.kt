@@ -31,7 +31,6 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
     private var setAdapter = false
     private lateinit var searchViewModel: SearchViewModel
     private lateinit var swipeRefreshVideos: SwipeRefreshLayout
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
 
@@ -39,10 +38,13 @@ class VideosFragment : Fragment(R.layout.fragment_videos) {
             searchViewModel.isLoading.value = true
             super.onViewCreated(view, savedInstanceState)
 //            viewModel.query = searchViewModel.searchTerm.value?:"error"
-            searchViewModel.searchTerm.observe(this) { newData ->
-                // Update your UI elements with the new data
-                viewModel.query = newData
-                adapter.refresh()
+            searchViewModel.searchTerm.observe(viewLifecycleOwner) { newData ->
+                Log.d("observer","value $newData loaded ${searchViewModel.videosLoaded}")
+              if (!searchViewModel.videosLoaded) {
+                    viewModel.query = newData
+                    adapter.refresh()
+                    searchViewModel.videosLoaded = true
+                }
             }
             swipeRefreshVideos = view.findViewById(R.id.swipeRefreshVideos)
             rvVideosSearchResult = view.findViewById(R.id.rvVideosSearchResult)
