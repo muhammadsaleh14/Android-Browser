@@ -2,6 +2,7 @@ package com.example.browserapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -14,6 +15,11 @@ import com.example.browserapp.models.UserHistory
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.leadingspark.fulltkdapp.CustomClasses.SwipeHelper
+import java.sql.Timestamp
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import kotlin.properties.Delegates
 
 class HistoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHistoryBinding
@@ -22,7 +28,7 @@ class HistoryActivity : AppCompatActivity() {
     private val currentUser = FirebaseAuth.getInstance().currentUser
     private val email = currentUser?.email?: ""
     private var historyAdapter = HistoryAdapter(this, mutableListOf())
-
+    private var timestamp by Delegates.notNull<Long>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryBinding.inflate(layoutInflater)
@@ -55,12 +61,20 @@ class HistoryActivity : AppCompatActivity() {
                         val historyData = document.data
                         val url = historyData?.get("url") as? String ?: ""
                         val name = historyData?.get("name") as? String ?: ""
-                        val timestamp = document.get("timestamp") as? Long ?: 0
+                        timestamp = document.get("timeStamp") as? Long ?: 0
                         val id = document.id as? String ?: ""
                         val history = UserHistory(id,url,name, timestamp)
                         historyList.add(history)
                     }
                     val temp = historyList.sortedByDescending { it.timestamp }
+                    temp.forEach {
+                        val date = Date(it.timestamp)
+                        val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())  // Adjust format as needed
+                        val readableTime = dateFormat.format(date)
+                        Log.d("timestampa","${it.timestamp}")
+                    }
+
+
                     historyList = temp.toMutableList()
                     historyAdapter.updateList(historyList)
                     historyAdapter.notifyDataSetChanged()
